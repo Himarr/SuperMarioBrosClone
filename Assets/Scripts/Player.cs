@@ -93,4 +93,4 @@ public class Player : MonoBehaviour
         // Mover
         this.transform.position += new Vector3(speed, 0) * Time.deltaTime * dir;
     }
-}
+}//jdjdjdjd
