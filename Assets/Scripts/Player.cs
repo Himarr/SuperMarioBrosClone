@@ -44,19 +44,16 @@ public class Player : MonoBehaviour
             speed = minSpeed;
             dir = 1;
         }
-        if (Input.GetKey(KeyCode.D) && dir == 1)
+        if (Input.GetKey(KeyCode.D))
             // Añadir aceleración
         {
-            isMoving = true;
+            if (speed <= 0 && dir == -1) { dir = 1; speed = minSpeed; }
 
-            if (speed <= maxSpeed)
+            if (dir == 1) { isMoving = true; }
+
+            if (speed <= maxSpeed && dir == 1)
             {
                 speed += acceleration * Time.deltaTime;
-            }
-            if (speed <= 0 && dir == -1)
-            {
-                speed = minSpeed;
-                dir = 1;
             }
         }
 
@@ -66,22 +63,18 @@ public class Player : MonoBehaviour
             speed = minSpeed;
             dir = -1;
         }
-        if (Input.GetKey(KeyCode.A) && dir == -1)
+        if (Input.GetKey(KeyCode.A))
         // Añadir aceleración
         {
-            isMoving = true;
+            if (speed <= 0 && dir == 1) { dir = -1; speed = minSpeed; }
 
-            if (speed <= maxSpeed)
+            if (dir == -1) { isMoving = true; }
+
+            if (speed <= maxSpeed && dir == -1)
             {
                 speed += acceleration * Time.deltaTime;
             }
-            if (speed <= 0 && dir == 1) 
-            { 
-                speed = minSpeed; 
-                dir = -1;
-            }
         }
-
 
         if (speed > 0 && !isMoving)
         {
