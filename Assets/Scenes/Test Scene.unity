@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 1532839081}
   m_Layer: 0
   m_Name: w
-  m_TagString: Untagged
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -453,7 +453,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -556,6 +556,11 @@ MonoBehaviour:
   maxSpeed: 3
   minSpeed: 0.5
   deceleration: 6
+  jumpForce: 5
+  holdJumpForce: 0.02
+  maxJumpForce: 12
+  initialJumpForce: 5
+  rb: {fileID: 1911256981}
 --- !u!4 &1911256985
 Transform:
   m_ObjectHideFlags: 0

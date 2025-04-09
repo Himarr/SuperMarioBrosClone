@@ -17,6 +17,13 @@ public class Player : MonoBehaviour
     bool isMoving;
     private int dir;
 
+    public float jumpForce;
+    public float holdJumpForce;
+    public float maxJumpForce;
+    public float initialJumpForce;
+    bool isJumping;
+    public Rigidbody2D rb;
+
 
     void Start()
     {
@@ -36,8 +43,20 @@ public class Player : MonoBehaviour
         Debug.Log(dir);
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Block"))
+        {
+            isJumping = false;
+            jumpForce = initialJumpForce;
+        }
+    }
+
     private void HandleMovement()
     {
+        /* 
+            Se encarga del Input y los cálculos de velocidad y aceleración de Mario.
+        */
         if (Input.GetKeyDown(KeyCode.D) && speed <= 0)
             // Velocidad inicial
         {
@@ -85,5 +104,18 @@ public class Player : MonoBehaviour
 
         // Mover
         this.transform.position += new Vector3(speed, 0) * Time.deltaTime * dir;
+
+        // Saltar
+        if (Input.GetKeyDown(KeyCode.W) && !isJumping)
+        {
+            isJumping = true;
+            rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+        }
+        if (isJumping && Input.GetKey(KeyCode.W) && jumpForce < maxJumpForce && rb.velocity.y > 0) 
+        {
+            rb.AddForce(new Vector2(0, holdJumpForce), ForceMode2D.Impulse);
+            jumpForce += holdJumpForce;
+        }
+        //if (isJumping && Input.GetKeyUp(KeyCode.W)) { isJumping = false; }
     }
 }
