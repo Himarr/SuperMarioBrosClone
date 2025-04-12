@@ -106,16 +106,31 @@ public class Player : MonoBehaviour
         this.transform.position += new Vector3(speed, 0) * Time.deltaTime * dir;
 
         // Saltar
-        if (Input.GetKeyDown(KeyCode.W) && !isJumping)
+        if (Input.GetKeyDown(KeyCode.L) && !isJumping)
         {
             isJumping = true;
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
         }
-        if (isJumping && Input.GetKey(KeyCode.W) && jumpForce < maxJumpForce && rb.velocity.y > 0) 
+        if (isJumping && Input.GetKey(KeyCode.L) && jumpForce < maxJumpForce && rb.velocity.y > 0) 
         {
             rb.AddForce(new Vector2(0, holdJumpForce), ForceMode2D.Impulse);
             jumpForce += holdJumpForce;
         }
-        //if (isJumping && Input.GetKeyUp(KeyCode.W)) { isJumping = false; }
+        //if (isJumping && Input.GetKeyUp(KeyCode.L)) { canJump = false; }
+
+        // Correr
+        if (Input.GetKeyDown(KeyCode.K) && !isJumping)
+        {
+            maxSpeed *= 2;
+        }
+        else if (Input.GetKeyUp(KeyCode.K))
+        {
+            maxSpeed /= 2;
+        }
+
+        if (speed > maxSpeed)
+        {
+            speed -= deceleration * Time.deltaTime;
+        }
     }
 }
