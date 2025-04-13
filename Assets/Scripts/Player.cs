@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
     bool isJumping;
     public Rigidbody2D rb;
 
+    public Camera cam;
 
     void Start()
     {
@@ -35,12 +36,20 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.A)) { isMoving = false; }
         HandleMovement();
+        MoveCamera(cam);
+    }
+
+    private void MoveCamera(Camera cam)
+    {
+        if (cam.transform.position.x < this.transform.position.x)
+        {
+            cam.transform.position = new Vector3(this.transform.position.x, 0.5f, -10);
+        }
     }
 
     private void FixedUpdate()
     {
-        
-        Debug.Log(dir);
+        // Debug.Log(dir);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -57,6 +66,9 @@ public class Player : MonoBehaviour
         /* 
             Se encarga del Input y los cálculos de velocidad y aceleración de Mario.
         */
+
+        
+
         if (Input.GetKeyDown(KeyCode.D) && speed <= 0)
             // Velocidad inicial
         {
