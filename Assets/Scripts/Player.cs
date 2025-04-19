@@ -6,7 +6,6 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     // Variables iniciales
-
     public float gravity;
     public float speed;
     public float acceleration;
@@ -24,21 +23,25 @@ public class Player : MonoBehaviour
     public float maxJumpForce;
     public float initialJumpForce;
 
-
     public Rigidbody2D rb;
     public Camera cam;
     public Animator anim;
     public Collider2D col;
     public SpriteRenderer sprite;
 
+    // Estado de mario
+    string[] status = {"small", "big", "fire", "star"};
+    public string currentStatus;
+
 
     void Start()
     {
         speed = 0;
         isJumping = true;
+        jumpForce = 0;
+        currentStatus = "small";
     }
 
-    
     void Update()
     {
         if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.A)) { isMoving = false; }
@@ -60,33 +63,26 @@ public class Player : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (!collision.gameObject.CompareTag("Block"))
-            return;
-
         float minPosition = col.bounds.min.y;
-        bool grounded = false;
 
-        foreach (ContactPoint2D contact in collision.contacts)
+        if (collision.GetContact(0).point.y < minPosition)
         {
-            if (contact.point.y < minPosition + 0.05f) // tolerancia para no fallar por un píxel
-            {
-                grounded = true;
-                break;
-            }
+            isGrounded = true;
+            jumpForce = 0;
+        }
+        else
+        {
+            isGrounded = false;
+            jumpForce = 0;
         }
 
-        isGrounded = grounded;
-        isJumping = !grounded;
-        anim.SetBool("isJumping", !grounded);
+        isJumping = !isGrounded;
+        anim.SetBool("isJumping", isJumping);
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Block"))
-        {
-            isGrounded = false;
-            Debug.Log(isGrounded);
-        }
+        isGrounded = false;
     }
 
     private void HandleMovement()
@@ -107,7 +103,6 @@ public class Player : MonoBehaviour
         {
             speed = minSpeed;
             dir = 1;
-            Debug.Log("d");
         }
         if (Input.GetKey(KeyCode.D))
         // Añadir aceleración
