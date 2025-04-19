@@ -15,20 +15,26 @@ public class Player : MonoBehaviour
     public float deceleration;
 
     bool isMoving;
+    bool isJumping;
+    bool isGrounded;
     private int dir;
 
     public float jumpForce;
     public float holdJumpForce;
     public float maxJumpForce;
     public float initialJumpForce;
-    bool isJumping;
-    public Rigidbody2D rb;
 
+
+    public Rigidbody2D rb;
     public Camera cam;
+    public Animator animator;
+    public Collider2D col;
+
 
     void Start()
     {
         speed = 0;
+        isJumping = true;
     }
 
     
@@ -49,15 +55,28 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // Debug.Log(dir);
+         // Debug.Log(isJumping);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Block"))
         {
             isJumping = false;
-            jumpForce = initialJumpForce;
+            jumpForce = 0;
+            isGrounded = true;
+        }
+        
+        // Para detectar la posicion del collider
+        Debug.Log(collision.GetContact(0).point);
+        Debug.Log(col.bounds.min.y);
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Block"))
+        {
+            isGrounded = false;
         }
     }
 
@@ -117,20 +136,41 @@ public class Player : MonoBehaviour
         // Mover
         this.transform.position += new Vector3(speed, 0) * Time.deltaTime * dir;
 
+        if (isJumping || !isGrounded)
+        {
+            transform.position += new Vector3(0, jumpForce) * Time.deltaTime;
+            jumpForce += gravity * Time.deltaTime;
+        }
+        
+
+        // TODO - ARREGLAR ESTA PUTISIMA MIERDA
         // Saltar
-        if (Input.GetKeyDown(KeyCode.L) && !isJumping)
+        if (Input.GetKeyDown(KeyCode.L) && isGrounded)
         {
             isJumping = true;
-            rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+            jumpForce = initialJumpForce;
         }
-        if (isJumping && Input.GetKey(KeyCode.L) && jumpForce < maxJumpForce && rb.velocity.y > 0) 
+        
+        
+            
+        if(Input.GetKeyUp(KeyCode.L))
         {
-            rb.AddForce(new Vector2(0, holdJumpForce), ForceMode2D.Impulse);
-            jumpForce += holdJumpForce;
+            jumpForce /= 2;
         }
-        //if (isJumping && Input.GetKeyUp(KeyCode.L)) { canJump = false; }
 
-        // Correr
+            //if (Input.GetKeyDown(KeyCode.L) && !isJumping)
+            //{
+            //    isJumping = true;
+            //    rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+            //}
+            //if (isJumping && Input.GetKey(KeyCode.L) && jumpForce < maxJumpForce && rb.velocity.y > 0) 
+            //{
+            //    rb.AddForce(new Vector2(0, holdJumpForce), ForceMode2D.Impulse);
+            //    jumpForce += holdJumpForce;
+            //}
+            //if (isJumping && Input.GetKeyUp(KeyCode.L)) { canJump = false; }
+
+            // Correr
         if (Input.GetKeyDown(KeyCode.K) && !isJumping)
         {
             maxSpeed *= 2;
