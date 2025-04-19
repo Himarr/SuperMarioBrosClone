@@ -1591,8 +1591,9 @@ MonoBehaviour:
   initialJumpForce: 10
   rb: {fileID: 1911256981}
   cam: {fileID: 1708041454}
-  animator: {fileID: 1911256982}
+  anim: {fileID: 1911256982}
   col: {fileID: 1911256980}
+  sprite: {fileID: 1911256983}
 --- !u!4 &1911256985
 Transform:
   m_ObjectHideFlags: 0
