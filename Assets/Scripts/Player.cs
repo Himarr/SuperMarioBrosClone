@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
     public Rigidbody2D rb;
     public Camera cam;
     public Animator anim;
-    public Collider2D col;
+    public BoxCollider2D col;
     public SpriteRenderer sprite;
 
     // Estado de mario
@@ -48,6 +48,7 @@ public class Player : MonoBehaviour
         HandleMovement();
         MoveCamera(cam);
     }
+
 
     private void MoveCamera(Camera cam)
     {
