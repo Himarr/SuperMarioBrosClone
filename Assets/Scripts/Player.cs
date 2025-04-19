@@ -27,8 +27,9 @@ public class Player : MonoBehaviour
 
     public Rigidbody2D rb;
     public Camera cam;
-    public Animator animator;
+    public Animator anim;
     public Collider2D col;
+    public SpriteRenderer sprite;
 
 
     void Start()
@@ -55,21 +56,28 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-         // Debug.Log(isJumping);
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Block"))
+        if (!collision.gameObject.CompareTag("Block"))
+            return;
+
+        float minPosition = col.bounds.min.y;
+        bool grounded = false;
+
+        foreach (ContactPoint2D contact in collision.contacts)
         {
-            isJumping = false;
-            jumpForce = 0;
-            isGrounded = true;
+            if (contact.point.y < minPosition + 0.05f) // tolerancia para no fallar por un píxel
+            {
+                grounded = true;
+                break;
+            }
         }
-        
-        // Para detectar la posicion del collider
-        Debug.Log(collision.GetContact(0).point);
-        Debug.Log(col.bounds.min.y);
+
+        isGrounded = grounded;
+        isJumping = !grounded;
+        anim.SetBool("isJumping", !grounded);
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -77,6 +85,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Block"))
         {
             isGrounded = false;
+            Debug.Log(isGrounded);
         }
     }
 
@@ -86,24 +95,42 @@ public class Player : MonoBehaviour
             Se encarga del Input y los cálculos de velocidad y aceleración de Mario.
         */
 
-        
+        // Idle
+        if (speed == 0) 
+        {
+            anim.SetBool("isMoving", false);
+            anim.SetBool("isBraking", false);
+        }
 
         if (Input.GetKeyDown(KeyCode.D) && speed <= 0)
             // Velocidad inicial
         {
             speed = minSpeed;
             dir = 1;
+            Debug.Log("d");
         }
         if (Input.GetKey(KeyCode.D))
-            // Añadir aceleración
+        // Añadir aceleración
         {
             if (speed <= 0 && dir == -1) { dir = 1; speed = minSpeed; }
 
-            if (dir == 1) { isMoving = true; }
+            if (dir == 1)
+            {
+                isMoving = true;
+                anim.SetBool("isMoving", true);
+                sprite.flipX = false;
+            }
 
             if (speed <= maxSpeed && dir == 1)
             {
                 speed += acceleration * Time.deltaTime;
+            }
+
+            // Frenar
+            if (speed <= maxSpeed && dir != 1)
+            {
+                speed -= deceleration * Time.deltaTime;
+                anim.SetBool("isBraking", true);
             }
         }
 
@@ -118,11 +145,23 @@ public class Player : MonoBehaviour
         {
             if (speed <= 0 && dir == 1) { dir = -1; speed = minSpeed; }
 
-            if (dir == -1) { isMoving = true; }
+            if (dir == -1)
+            { 
+                isMoving = true; 
+                anim.SetBool("isMoving", true);
+                sprite.flipX = true;
+            }
 
             if (speed <= maxSpeed && dir == -1)
             {
                 speed += acceleration * Time.deltaTime;
+            }
+
+            // Frenar
+            if (speed <= maxSpeed && dir != -1)
+            {
+                speed -= deceleration * Time.deltaTime;
+                anim.SetBool("isBraking", true);
             }
         }
 
@@ -136,42 +175,29 @@ public class Player : MonoBehaviour
         // Mover
         this.transform.position += new Vector3(speed, 0) * Time.deltaTime * dir;
 
-        if (isJumping || !isGrounded)
-        {
-            transform.position += new Vector3(0, jumpForce) * Time.deltaTime;
-            jumpForce += gravity * Time.deltaTime;
-        }
         
-
-        // TODO - ARREGLAR ESTA PUTISIMA MIERDA
+        
         // Saltar
-        if (Input.GetKeyDown(KeyCode.L) && isGrounded)
+        if (Input.GetKey(KeyCode.L) && isGrounded)
         {
             isJumping = true;
+            anim.SetBool("isJumping", true);
             jumpForce = initialJumpForce;
+            Debug.Log("Juimp");
         }
-        
-        
-            
         if(Input.GetKeyUp(KeyCode.L))
         {
             jumpForce /= 2;
         }
 
-            //if (Input.GetKeyDown(KeyCode.L) && !isJumping)
-            //{
-            //    isJumping = true;
-            //    rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-            //}
-            //if (isJumping && Input.GetKey(KeyCode.L) && jumpForce < maxJumpForce && rb.velocity.y > 0) 
-            //{
-            //    rb.AddForce(new Vector2(0, holdJumpForce), ForceMode2D.Impulse);
-            //    jumpForce += holdJumpForce;
-            //}
-            //if (isJumping && Input.GetKeyUp(KeyCode.L)) { canJump = false; }
+        if (isJumping || !isGrounded)
+        {
+            transform.position += new Vector3(0, jumpForce) * Time.deltaTime;
+            jumpForce += gravity * Time.deltaTime;
+        }
 
-            // Correr
-        if (Input.GetKeyDown(KeyCode.K) && !isJumping)
+        // Correr
+        if (Input.GetKeyDown(KeyCode.K))
         {
             maxSpeed *= 2;
         }
