@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     bool isMoving;
     bool isJumping;
     bool isGrounded;
+    bool canMove = true;
     private int dir;
 
     public float jumpForce;
@@ -169,9 +170,10 @@ public class Player : MonoBehaviour
         if (speed < 0) { speed = 0; }
 
         // Mover
-        this.transform.position += new Vector3(speed, 0) * Time.deltaTime * dir;
-
-        
+        if (canMove)
+        {
+            this.transform.position += new Vector3(speed, 0) * Time.deltaTime * dir;
+        }
         
         // Saltar
         if (Input.GetKey(KeyCode.L) && isGrounded)

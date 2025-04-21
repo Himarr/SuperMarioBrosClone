@@ -27,7 +27,7 @@ public class Mushroom : MonoBehaviour
             if (player.currentStatus == "small")
             {
                 player.currentStatus = "big";
-                player.transform.position += new Vector3(0, 1);
+                player.transform.position += new Vector3(0, 0.5f);
                 Destroy(gameObject);
 
                 player.anim.SetTrigger("Big");
