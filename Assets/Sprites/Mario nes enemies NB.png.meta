@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -134,7 +134,2968 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Mario nes enemies NB_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 355
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9521d3433e01d14488851649300fa9f2
+      internalID: 1772628717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 355
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f71432b59151d354d86f0e4cb41752f8
+      internalID: 1771177320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_2
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 355
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f3d2ca2c9a23cc4395a540cafa62eff
+      internalID: -1988816804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_3
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 355
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3613483725029de41a2c456021f0a530
+      internalID: 679622946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_4
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 355
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0759e1a2eb55c14981c6bb954762f44
+      internalID: -1284207215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_5
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 355
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29ca3a4a99dfb064da51c2346efe70c2
+      internalID: -1350209324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_6
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 355
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf4144ffcf5ca334a8feff2e36de3ee4
+      internalID: -1299350038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_7
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 355
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5917fe3a586c4b4ea36c3a39deff999
+      internalID: 138554185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_8
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 355
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2dcce69523baa4448c0f87af3829601
+      internalID: 805847537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_9
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 355
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43a3563ed276c9042a909dcd851f712a
+      internalID: -728913869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_10
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 355
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b928c421fa0b804b924a411daee170a
+      internalID: -1857484260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_11
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 355
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20b608f78f2a301439136a4a0bf81166
+      internalID: -496225307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_12
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 337
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a10246e77a913a4eb5d8d31f27ffe5f
+      internalID: -1894959162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_13
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 337
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a717154e10b22441abf3b639c247ec6
+      internalID: -1456386158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_14
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 337
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 182e1c440b93a104ea44256f4e93ae15
+      internalID: 2109080111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_15
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 337
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ab57cf9a7caecc4aa0eff3e11e8624c
+      internalID: -972008982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_16
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 337
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95a86bac5cb097e48b9aa4e0ec243f16
+      internalID: 1456521686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_17
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 337
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 905442dd002faec48a412165d890bde7
+      internalID: -1148499832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_18
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 337
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8515715b344362c478da22d64ae11cbf
+      internalID: 970198844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_19
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 337
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8bf24791a6ee5448ab78220bc1eb90b
+      internalID: -337108042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_20
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 337
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 132017d541b9e864192ad202f69db9de
+      internalID: 2100781467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_21
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 337
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9c6829762fdf9947b3af005f4a69b20
+      internalID: 1973896568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_22
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 337
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e23f611a455fae94487b234582b3266e
+      internalID: -2082517714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_23
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 337
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bbd267379b140d40987cbb2bcebf83e
+      internalID: -1816395621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_24
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 311
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d3cc67efccc42748b717cec5d5c42ad
+      internalID: 913490946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_25
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 319
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd7649a4e83f4254f92799998d1f06d6
+      internalID: -158298084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_26
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 320
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 129903e3769fd8e429409863a8e8395a
+      internalID: -1588611686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_27
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 311
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eaeaee05d573a7458f77c7220f5c00d
+      internalID: -1365801906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_28
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 319
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61d0bdbae0ca86e4aa32a4a924572126
+      internalID: 1210259568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_29
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 320
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05850ad9a7b6aea4d863caf4572b01d1
+      internalID: -2142548522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_30
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 311
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6badf58bbfc93240b80d4d9b2f6c9e5
+      internalID: 622929987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_31
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 319
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9608dba9d39358c47b9692b41ed18b0a
+      internalID: 1406319122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_32
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 320
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75d5624d51b39774f8bf16bcf6cae7fc
+      internalID: 1881480378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_33
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 311
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a391cb7d22f418b4e9cd53ad93132592
+      internalID: -959476337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_34
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 319
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e9ad751761cb7a41912f324806053c9
+      internalID: 1465715676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_35
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 320
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afd8d5125727fbe4daacb33febeaea50
+      internalID: -484217600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_36
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 293
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f7b96879d3217648a3035c8444ace88
+      internalID: 1894182423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_37
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 297
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c38bc27b1907bf14983fa5561b448616
+      internalID: 1106807681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_38
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 293
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 041fab91e04735d499f1b20fb7b9c963
+      internalID: -2096895912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_39
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 297
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e6287c150a70cd4fa80b709b4918db3
+      internalID: 1246071271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_40
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 293
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac960034e00a8624d8aafe40a596534c
+      internalID: -441777209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_41
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 297
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35de73ffac0de2047ae343fe7635ae18
+      internalID: 301107201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_42
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 293
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1750e420d93ae3a409783b8983cc008e
+      internalID: -905685816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_43
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 297
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e828863562333d42bf60886e49e95dc
+      internalID: -1448135510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_44
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 293
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d55c3a1074f3fa74db4964a66637d73b
+      internalID: 591826937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_45
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 297
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee04d67f67ff40246929d68ed96fbfca
+      internalID: 1201084515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_46
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 293
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 496c8b0b49f09ec4c922dff85cf55adc
+      internalID: -1029055463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_47
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 297
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 340b9a6f82064c340b4933c0634a4c8f
+      internalID: -1192629855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_48
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 293
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d63fdef2f76371c4c889aedfdbadc41e
+      internalID: 1480193655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_49
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 297
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47451b1c53740f34184c76639e5f0ba7
+      internalID: 575656965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_50
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 293
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 295a7a6e07604624ba61c9ce9db45cb9
+      internalID: -664469764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_51
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 297
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b787169658f0e0429705f6a700441d1
+      internalID: 404456040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_52
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 251
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fad67d2a15b012540a0eefa60864b975
+      internalID: 1332761506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_53
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 251
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b22cb9fde41f9b7479652547e0760f4e
+      internalID: -887278788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_54
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 251
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58e0df1095574f6419b7d4f4aed5e38f
+      internalID: -787671297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_55
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 251
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfbe0d6304d31cd41b1a2d1bdce275e2
+      internalID: 1585513092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_56
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 253
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2a0aa903bba51b4c9819f306b0d83e1
+      internalID: 1203045499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_57
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 252
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 670f0eae6903deb4482104a977f0608e
+      internalID: 1851869739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_58
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 251
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d57ba3731c61bf4e82adb623ffd0c7c
+      internalID: -1205014229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_59
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 251
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eec59b31fd688f74388503c55b462e5d
+      internalID: -1996247797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_60
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 251
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bc43264f48b2e842990201cac88a9f8
+      internalID: 1013127866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_61
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 251
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87eadb02f23a96d429d4d52e7774be38
+      internalID: -2071512334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_62
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 253
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 564a239dead4b4040a67789c8432aa30
+      internalID: -1210659505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_63
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 252
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16eb13f7feb33244faea230c6cd394b3
+      internalID: 362473975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_64
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 251
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fef516ee4bdc80b4abdfabd5fb8781ad
+      internalID: -709992222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_65
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 251
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bea6ba5506e27b0419a966d4a65cdc09
+      internalID: 1810435008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_66
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 251
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 934e29abbb5270741b26e9b31980c2ef
+      internalID: -2087671142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_67
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 251
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f71e8d49f321084e806dbb0f916063d
+      internalID: -1481551315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_68
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 253
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8efe17d42e01ab741a1919f77a3cf85b
+      internalID: 1023288960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_69
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 252
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a966be751ed484742913908bd102cf53
+      internalID: -376592548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_70
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 225
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 948eaf7dee308b140837b97d11326703
+      internalID: 1233112322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_71
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 225
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1854df8878ea7514e86d2bb59f522550
+      internalID: -1365388827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_72
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 225
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f8a280f0b639014aabc008f53eaef0e
+      internalID: 395676579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_73
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 225
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d94db7c32b45b9d42937e098d48ad022
+      internalID: 1721873012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_74
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 225
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eec83b2b5d161145b664d6797d52b19
+      internalID: 2004945723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_75
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 225
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9ae9e9ecba707e46ac930e4d06fa6e2
+      internalID: 686500989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_76
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 225
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 814270d5f541a294fae457e779b32d0a
+      internalID: 1927640723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_77
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 225
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4473dfcb97d2e1446bfda7a866c634b9
+      internalID: -1450661643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_78
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 225
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36ea239bcfeb49c43a3765c433cdf521
+      internalID: -820154529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_79
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 225
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17704869a6ed9554682230d03d05f0db
+      internalID: -328195622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_80
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 225
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af2b3d2830b30ce448037197d80c9b6c
+      internalID: 328180392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_81
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 225
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f89122334d8f9ed4ab7ff1ae5c7d679f
+      internalID: -1491819624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_82
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 207
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4228b341f04cb9145843f72ef57628a9
+      internalID: 1094704909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_83
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 207
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2cb3f4ecb94850449df76fcf77d563e
+      internalID: -456629154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_84
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 181
+        width: 15
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d13820646ac59ca43bfab719f9a195c9
+      internalID: -1801708801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_85
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 181
+        width: 15
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99f65e4c2a23a2c43b77392bcc5bdddc
+      internalID: 424740900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_86
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 181
+        width: 15
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6d3f3e73ecad2a46a864e22be4b2ee4
+      internalID: 1267896538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_87
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 181
+        width: 15
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2923d29aff82a6d48891b9a951750380
+      internalID: -1989210032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_88
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 207
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 676d7eba7cd1be84f96dffbe538c8394
+      internalID: -1716082041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_89
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 207
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbb8d1b3ed77d124a8e51162016def80
+      internalID: 823362795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_90
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 181
+        width: 15
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 612c5a098c5381741bc00e43cbc0c3c3
+      internalID: 1812546719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_91
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 181
+        width: 15
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86e9da06e8994704b99828b0b057190b
+      internalID: 1969291802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_92
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 181
+        width: 15
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2256e00f90769b445a4714b76559acf2
+      internalID: -772953636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_93
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 181
+        width: 15
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b86623478796e5e48a86ea4f1c498d69
+      internalID: 663054086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_94
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 207
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 462784f26f1e1354182331357d1edfb2
+      internalID: -720780056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_95
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 207
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66848fcdc806c6e448bd6629d2aa80f1
+      internalID: -1326769525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_96
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 181
+        width: 15
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc1def38ed678e84d83c9c3a87a5cd73
+      internalID: -1802691373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_97
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 181
+        width: 15
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd7e82402effe8e469f4385b9026e063
+      internalID: 939673193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_98
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 181
+        width: 15
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e82c80c1c8004640b5704977e8d3bec
+      internalID: -946267325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_99
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 181
+        width: 15
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1225543063d7564eacd0d28f629758c
+      internalID: -452900933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_100
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 181
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cd7df775fda4b34e811a2b10278c57a
+      internalID: -794213608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_101
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 181
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 703716cb4a6ebe943be986cf0fae50fb
+      internalID: 9149104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_102
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 181
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed2e20022ba9cd54897daeae95b6da07
+      internalID: -1988617067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_103
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 181
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fd2d83939e1332448f926e4e57ffeb2
+      internalID: -82315720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_104
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 181
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 488770858e3cb1149a83ec1f40c157af
+      internalID: -1173350203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_105
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 181
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20f14ec2fba23b5438c46fc656be6de6
+      internalID: 844585375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_106
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 181
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 841e81d4786c6484290cc6ff97f57508
+      internalID: 1615044164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_107
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 181
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b49f3874db80734e9d09260f260320b
+      internalID: -2105268320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_108
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 181
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bce6dd428e167e146b8077c3a37d0359
+      internalID: -247894573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_109
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 181
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6519ca0c290bbd45b6f3732114d7632
+      internalID: 1480271035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_110
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 181
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4ff349e912068c4ca74c689f506e39a
+      internalID: -176832199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_111
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 181
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f8ac0eb05540b843bf9d93c5f5b0a8f
+      internalID: -973956286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_112
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 147
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 646e9740661091a4fb87fd4ec4ad52a3
+      internalID: 1612448967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_113
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 147
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2194c6a71edc9548a24fec0d16abae9
+      internalID: -573983802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_114
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 147
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b2fffa1bd3c7fd4ca91c8eded6d323e
+      internalID: 1059955420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_115
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 147
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 636cd20cac8f10549bff2a578c5e6b97
+      internalID: 1529450225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_116
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 147
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f80af61d664f09b44875fee6d06c8edb
+      internalID: 238003628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_117
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 147
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce8b466ab2f012249ac7a37a0ba9a92e
+      internalID: -1533830806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_118
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 147
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b97b754d75342c4094d35286fa63219
+      internalID: -1328758980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_119
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 147
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a0f18f6afd370b4d84dc71bbd5ec349
+      internalID: -997214757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_120
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 147
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe8485302ba43a54d87896e0633bb126
+      internalID: 1155741862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_121
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 147
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fa2cae5572e7e047880e0ad2a3b4bd0
+      internalID: -1415268471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_122
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 147
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aa2a762c4949494e9846d414bcdeee0
+      internalID: 1479123296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_123
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 147
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55c9fd7dc092ba74fba8738a94f563c8
+      internalID: 1450754055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_124
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 137
+        width: 24
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9446f6d98fdad944e8ad8ca30636c4b6
+      internalID: -710848037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_125
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 127
+        width: 24
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e26cf64c0e5ff94c8aa129258f04413
+      internalID: 657716868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_126
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 45
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cadaa019d54d1642bb7e3db459fb5de
+      internalID: -279711152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_127
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 45
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b48663ade14e54441893a89f9052002c
+      internalID: -1639144859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_128
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 45
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b1a6486f12884a438d1f7b0df66cf62
+      internalID: 65997591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_129
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 45
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98518f5b92b6fbb4eac202dc1b0da14b
+      internalID: 1544526763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_130
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 47
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a4eb20f5ec2a2d41963cab9e414b2aa
+      internalID: 1272217829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_131
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 46
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a716e21ea377ad649a2876c62efbaa57
+      internalID: 241924527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_132
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 19
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9ef759eaee4e7e418225fdd0dd6d359
+      internalID: -1047265271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_133
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 19
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d22441078cd44084eb6833e4cb944823
+      internalID: 579490219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_134
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 19
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1997cfa039e02694799e71e7e8aeccab
+      internalID: -462010653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_135
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 19
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7798829231a693e4d8a90eadc1f400a1
+      internalID: -134647507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_136
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 19
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57cdb6956f710864f88ef1e6fa9b80dc
+      internalID: 1309014635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_137
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 19
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 693f243ac0bcef44494f0f8befab6149
+      internalID: 1055828248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_138
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3af19e7c063dcc14c9c9c8bfbfb24dbe
+      internalID: -145980864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_139
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89e7df48166e7ea4f9248012132bdadf
+      internalID: 1988665187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario nes enemies NB_140
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 1
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce20b9cdf024b6546a19ed0031fb124d
+      internalID: -2144057298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +3106,148 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Mario nes enemies NB_0: 1772628717
+      Mario nes enemies NB_1: 1771177320
+      Mario nes enemies NB_10: -1857484260
+      Mario nes enemies NB_100: -794213608
+      Mario nes enemies NB_101: 9149104
+      Mario nes enemies NB_102: -1988617067
+      Mario nes enemies NB_103: -82315720
+      Mario nes enemies NB_104: -1173350203
+      Mario nes enemies NB_105: 844585375
+      Mario nes enemies NB_106: 1615044164
+      Mario nes enemies NB_107: -2105268320
+      Mario nes enemies NB_108: -247894573
+      Mario nes enemies NB_109: 1480271035
+      Mario nes enemies NB_11: -496225307
+      Mario nes enemies NB_110: -176832199
+      Mario nes enemies NB_111: -973956286
+      Mario nes enemies NB_112: 1612448967
+      Mario nes enemies NB_113: -573983802
+      Mario nes enemies NB_114: 1059955420
+      Mario nes enemies NB_115: 1529450225
+      Mario nes enemies NB_116: 238003628
+      Mario nes enemies NB_117: -1533830806
+      Mario nes enemies NB_118: -1328758980
+      Mario nes enemies NB_119: -997214757
+      Mario nes enemies NB_12: -1894959162
+      Mario nes enemies NB_120: 1155741862
+      Mario nes enemies NB_121: -1415268471
+      Mario nes enemies NB_122: 1479123296
+      Mario nes enemies NB_123: 1450754055
+      Mario nes enemies NB_124: -710848037
+      Mario nes enemies NB_125: 657716868
+      Mario nes enemies NB_126: -279711152
+      Mario nes enemies NB_127: -1639144859
+      Mario nes enemies NB_128: 65997591
+      Mario nes enemies NB_129: 1544526763
+      Mario nes enemies NB_13: -1456386158
+      Mario nes enemies NB_130: 1272217829
+      Mario nes enemies NB_131: 241924527
+      Mario nes enemies NB_132: -1047265271
+      Mario nes enemies NB_133: 579490219
+      Mario nes enemies NB_134: -462010653
+      Mario nes enemies NB_135: -134647507
+      Mario nes enemies NB_136: 1309014635
+      Mario nes enemies NB_137: 1055828248
+      Mario nes enemies NB_138: -145980864
+      Mario nes enemies NB_139: 1988665187
+      Mario nes enemies NB_14: 2109080111
+      Mario nes enemies NB_140: -2144057298
+      Mario nes enemies NB_15: -972008982
+      Mario nes enemies NB_16: 1456521686
+      Mario nes enemies NB_17: -1148499832
+      Mario nes enemies NB_18: 970198844
+      Mario nes enemies NB_19: -337108042
+      Mario nes enemies NB_2: -1988816804
+      Mario nes enemies NB_20: 2100781467
+      Mario nes enemies NB_21: 1973896568
+      Mario nes enemies NB_22: -2082517714
+      Mario nes enemies NB_23: -1816395621
+      Mario nes enemies NB_24: 913490946
+      Mario nes enemies NB_25: -158298084
+      Mario nes enemies NB_26: -1588611686
+      Mario nes enemies NB_27: -1365801906
+      Mario nes enemies NB_28: 1210259568
+      Mario nes enemies NB_29: -2142548522
+      Mario nes enemies NB_3: 679622946
+      Mario nes enemies NB_30: 622929987
+      Mario nes enemies NB_31: 1406319122
+      Mario nes enemies NB_32: 1881480378
+      Mario nes enemies NB_33: -959476337
+      Mario nes enemies NB_34: 1465715676
+      Mario nes enemies NB_35: -484217600
+      Mario nes enemies NB_36: 1894182423
+      Mario nes enemies NB_37: 1106807681
+      Mario nes enemies NB_38: -2096895912
+      Mario nes enemies NB_39: 1246071271
+      Mario nes enemies NB_4: -1284207215
+      Mario nes enemies NB_40: -441777209
+      Mario nes enemies NB_41: 301107201
+      Mario nes enemies NB_42: -905685816
+      Mario nes enemies NB_43: -1448135510
+      Mario nes enemies NB_44: 591826937
+      Mario nes enemies NB_45: 1201084515
+      Mario nes enemies NB_46: -1029055463
+      Mario nes enemies NB_47: -1192629855
+      Mario nes enemies NB_48: 1480193655
+      Mario nes enemies NB_49: 575656965
+      Mario nes enemies NB_5: -1350209324
+      Mario nes enemies NB_50: -664469764
+      Mario nes enemies NB_51: 404456040
+      Mario nes enemies NB_52: 1332761506
+      Mario nes enemies NB_53: -887278788
+      Mario nes enemies NB_54: -787671297
+      Mario nes enemies NB_55: 1585513092
+      Mario nes enemies NB_56: 1203045499
+      Mario nes enemies NB_57: 1851869739
+      Mario nes enemies NB_58: -1205014229
+      Mario nes enemies NB_59: -1996247797
+      Mario nes enemies NB_6: -1299350038
+      Mario nes enemies NB_60: 1013127866
+      Mario nes enemies NB_61: -2071512334
+      Mario nes enemies NB_62: -1210659505
+      Mario nes enemies NB_63: 362473975
+      Mario nes enemies NB_64: -709992222
+      Mario nes enemies NB_65: 1810435008
+      Mario nes enemies NB_66: -2087671142
+      Mario nes enemies NB_67: -1481551315
+      Mario nes enemies NB_68: 1023288960
+      Mario nes enemies NB_69: -376592548
+      Mario nes enemies NB_7: 138554185
+      Mario nes enemies NB_70: 1233112322
+      Mario nes enemies NB_71: -1365388827
+      Mario nes enemies NB_72: 395676579
+      Mario nes enemies NB_73: 1721873012
+      Mario nes enemies NB_74: 2004945723
+      Mario nes enemies NB_75: 686500989
+      Mario nes enemies NB_76: 1927640723
+      Mario nes enemies NB_77: -1450661643
+      Mario nes enemies NB_78: -820154529
+      Mario nes enemies NB_79: -328195622
+      Mario nes enemies NB_8: 805847537
+      Mario nes enemies NB_80: 328180392
+      Mario nes enemies NB_81: -1491819624
+      Mario nes enemies NB_82: 1094704909
+      Mario nes enemies NB_83: -456629154
+      Mario nes enemies NB_84: -1801708801
+      Mario nes enemies NB_85: 424740900
+      Mario nes enemies NB_86: 1267896538
+      Mario nes enemies NB_87: -1989210032
+      Mario nes enemies NB_88: -1716082041
+      Mario nes enemies NB_89: 823362795
+      Mario nes enemies NB_9: -728913869
+      Mario nes enemies NB_90: 1812546719
+      Mario nes enemies NB_91: 1969291802
+      Mario nes enemies NB_92: -772953636
+      Mario nes enemies NB_93: 663054086
+      Mario nes enemies NB_94: -720780056
+      Mario nes enemies NB_95: -1326769525
+      Mario nes enemies NB_96: -1802691373
+      Mario nes enemies NB_97: 939673193
+      Mario nes enemies NB_98: -946267325
+      Mario nes enemies NB_99: -452900933
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

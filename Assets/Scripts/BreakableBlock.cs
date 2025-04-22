@@ -33,6 +33,12 @@ public class BreakableBlock : MonoBehaviour
         {
             StartCoroutine(Mover(startPosition, endPosition, time));
         }
+
+        //El siguiente if lo puso Pablo para que Mario grande rompa bloques
+        if (collision.gameObject.CompareTag("Player") && contactY > maxPosition && player.currentStatus == "big")
+        {
+            gameObject.GetComponent<BlockBreaks>().BlockBreak();
+        }
     }
     IEnumerator Mover(Vector3 startPosition, Vector3 endPosition, float time)
     {

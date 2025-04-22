@@ -32,6 +32,10 @@ public class Player : MonoBehaviour
     public BoxCollider2D col;
     public SpriteRenderer sprite;
 
+    //Variables declarada por Pablo
+    bool playerCanInput = true;
+    bool bounceOnEnenemy = false;
+
     // Estado de mario
     string[] status = {"small", "big", "fire", "star"};
     public string currentStatus;
@@ -48,7 +52,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.A)) { isMoving = false; }
-        HandleMovement();
+        if (playerCanInput) { HandleMovement(); }
         MoveCamera(cam);
     }
 
@@ -237,5 +241,38 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         canMove = true;
+    }
+
+
+
+
+    //COSAS PUESTAS POR PABLO
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Goomba goomba = collision.gameObject.GetComponent<Goomba>();
+        if (goomba != null && jumpForce < 0)
+        {
+            goomba.goombaDead();
+
+
+            jumpForce += 10;
+            bounceOnEnenemy = true;
+        }
+
+        if (collision.gameObject.CompareTag("Block") || collision.gameObject.CompareTag("Breakable"))
+        {
+            bounceOnEnenemy = false;
+        }
+
+        //Muerte de Mario por tocar un enemigo
+        if (collision.gameObject.CompareTag("Enemy") && jumpForce >= 0f && currentStatus == "small" && bounceOnEnenemy == false)
+        {
+            playerCanInput = false;
+            speed = 0;
+            gameObject.GetComponent<Animator>().SetBool("IsDead", true);
+            gameObject.layer = LayerMask.NameToLayer("NoColission");
+
+            //También haz que caiga hacia abajo, con el cambio de capa ya puede atravesar el suelo al morir, que yo no se hacerlo ahora
+        }
     }
 }
