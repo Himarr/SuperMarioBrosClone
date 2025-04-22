@@ -793,7 +793,7 @@ TextureImporter:
         x: 20
         y: 372
         width: 16
-        height: 30
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -813,8 +813,8 @@ TextureImporter:
         serializedVersion: 2
         x: 39
         y: 372
-        width: 14
-        height: 31
+        width: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -898,9 +898,9 @@ TextureImporter:
         x: 116
         y: 372
         width: 16
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -916,10 +916,10 @@ TextureImporter:
       name: NES - Super Mario Bros - Mario & Luigi NB_37
       rect:
         serializedVersion: 2
-        x: 138
+        x: 137
         y: 373
-        width: 14
-        height: 30
+        width: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1402,9 +1402,9 @@ TextureImporter:
         x: 18
         y: 332
         width: 16
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1423,7 +1423,7 @@ TextureImporter:
         x: 36
         y: 332
         width: 16
-        height: 31
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1444,7 +1444,7 @@ TextureImporter:
         x: 56
         y: 332
         width: 16
-        height: 31
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1819,9 +1819,9 @@ TextureImporter:
       name: NES - Super Mario Bros - Mario & Luigi NB_80
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 332
-        width: 12
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

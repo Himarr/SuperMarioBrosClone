@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     bool isJumping;
     bool isGrounded;
     bool canMove = true;
+    bool isCrouching;
     private int dir;
 
     public float jumpForce;
@@ -124,7 +125,7 @@ public class Player : MonoBehaviour
                 sprite.flipX = false;
             }
 
-            if (speed <= maxSpeed && dir == 1)
+            if (speed <= maxSpeed && dir == 1 && !isCrouching)
             {
                 speed += acceleration * Time.deltaTime;
             }
@@ -155,7 +156,7 @@ public class Player : MonoBehaviour
                 sprite.flipX = true;
             }
 
-            if (speed <= maxSpeed && dir == -1)
+            if (speed <= maxSpeed && dir == -1 && !isCrouching)
             {
                 speed += acceleration * Time.deltaTime;
             }
@@ -168,7 +169,7 @@ public class Player : MonoBehaviour
             }
         }
 
-        if (speed > 0 && !isMoving)
+        if (speed > 0 && !isMoving || isCrouching)
         {
             speed -= deceleration * Time.deltaTime;
         }
@@ -204,15 +205,34 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.K))
         {
             maxSpeed *= 2;
+            anim.SetBool("isRunning", true);
         }
         else if (Input.GetKeyUp(KeyCode.K))
         {
             maxSpeed /= 2;
+            anim.SetBool("isRunning", false);
         }
 
         if (speed > maxSpeed)
         {
             speed -= deceleration * Time.deltaTime;
+        }
+
+        // Agacharse
+        if (currentStatus != "small")
+        {
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                isCrouching = true;
+                anim.SetBool("isCrouching", isCrouching);
+                ResetCollider();
+            }
+            else if (Input.GetKeyUp(KeyCode.S))
+            {
+                isCrouching = false;
+                anim.SetBool("isCrouching", isCrouching);
+                ExtendCollider();
+            }
         }
     }
 
@@ -226,21 +246,29 @@ public class Player : MonoBehaviour
         Vector2 higherRay = new Vector2(col.bounds.center.x, maxYPosition);
         Vector2 rayDir = new Vector2(dir, 0);
         float distance = 0.5f;
+        float distanceBig = 0.6f;
 
-        if (Physics2D.Raycast(lowerRay, rayDir, distance, mask) || Physics2D.Raycast(higherRay, rayDir, distance, mask))
+        if ((Physics2D.Raycast(lowerRay, rayDir, distance, mask) || Physics2D.Raycast(higherRay, rayDir, distance, mask)) && currentStatus == "small")
+        {
+            Debug.Log("Hit");
+            canMove = false;
+            speed = 0;
+            StartCoroutine(Wait(0.25f));
+        } 
+        else if (Physics2D.Raycast(lowerRay, rayDir, distanceBig, mask) || Physics2D.Raycast(higherRay, rayDir, distanceBig, mask) || Physics2D.Raycast(col.bounds.center, rayDir, distanceBig, mask))
         {
             Debug.Log("Hit");
             canMove = false;
             speed = 0;
             StartCoroutine(Wait(0.25f));
         }
-        
     }
 
     private IEnumerator Wait(float time)
     {
         yield return new WaitForSeconds(time);
         canMove = true;
+        speed = 0;
     }
 
 
@@ -274,5 +302,32 @@ public class Player : MonoBehaviour
 
             //También haz que caiga hacia abajo, con el cambio de capa ya puede atravesar el suelo al morir, que yo no se hacerlo ahora
         }
+    }
+
+    // Manejo de PowerUps
+    // Seta
+    public void Grow()
+    {
+        StartCoroutine(GrowCoroutine());
+    }
+
+    private IEnumerator GrowCoroutine()
+    {
+        anim.SetTrigger("Big");
+        canMove = false;
+        yield return new WaitForSeconds(0.30f);
+        ExtendCollider();
+    }
+    private void ExtendCollider()
+    {
+        transform.position += new Vector3(0, 0.5f);
+        col.size = new Vector2(1, col.size.y * 2);
+        canMove = true;
+    }
+
+    private void ResetCollider()
+    {
+        transform.position -= new Vector3(0, 0.5f);
+        col.size = new Vector2(0.75f, col.size.y / 2);
     }
 }
