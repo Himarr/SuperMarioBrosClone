@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -50,6 +52,10 @@ public class Player : MonoBehaviour
         MoveCamera(cam);
     }
 
+    private void FixedUpdate()
+    {
+        StopMovement();
+    }
 
     private void MoveCamera(Camera cam)
     {
@@ -57,10 +63,6 @@ public class Player : MonoBehaviour
         {
             cam.transform.position = new Vector3(this.transform.position.x, 0.5f, -10);
         }
-    }
-
-    private void FixedUpdate()
-    {
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -181,12 +183,12 @@ public class Player : MonoBehaviour
             isJumping = true;
             anim.SetBool("isJumping", true);
             jumpForce = initialJumpForce;
-            Debug.Log("Juimp");
         }
         if(Input.GetKeyUp(KeyCode.L))
         {
             jumpForce /= 2;
         }
+        if (jumpForce < -8) { jumpForce = -8; }
 
         if (isJumping || !isGrounded)
         {
@@ -208,5 +210,32 @@ public class Player : MonoBehaviour
         {
             speed -= deceleration * Time.deltaTime;
         }
+    }
+
+    private void StopMovement()
+    {
+        LayerMask mask = LayerMask.GetMask("Wall");
+
+        float minYPosition = col.bounds.min.y + 0.2f;
+        float maxYPosition = col.bounds.max.y;
+        Vector2 lowerRay = new Vector2(col.bounds.center.x, minYPosition);
+        Vector2 higherRay = new Vector2(col.bounds.center.x, maxYPosition);
+        Vector2 rayDir = new Vector2(dir, 0);
+        float distance = 0.5f;
+
+        if (Physics2D.Raycast(lowerRay, rayDir, distance, mask) || Physics2D.Raycast(higherRay, rayDir, distance, mask))
+        {
+            Debug.Log("Hit");
+            canMove = false;
+            speed = 0;
+            StartCoroutine(Wait(0.25f));
+        }
+        
+    }
+
+    private IEnumerator Wait(float time)
+    {
+        yield return new WaitForSeconds(time);
+        canMove = true;
     }
 }
