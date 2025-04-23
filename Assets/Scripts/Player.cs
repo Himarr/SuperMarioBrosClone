@@ -277,6 +277,7 @@ public class Player : MonoBehaviour
     //COSAS PUESTAS POR PABLO
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        //Colision con Goomba
         Goomba goomba = collision.gameObject.GetComponent<Goomba>();
         if (goomba != null && jumpForce < 0)
         {
@@ -285,6 +286,18 @@ public class Player : MonoBehaviour
 
             jumpForce += 10;
             bounceOnEnenemy = true;
+        }
+
+        //Colision con Koopa
+        Koopa koopa = collision.gameObject.GetComponent<Koopa>();
+        if (koopa != null && jumpForce < 0)
+        {
+            koopa.koopaInShell();
+
+            jumpForce += 10;
+            bounceOnEnenemy = true;
+
+            koopa.ThrowShell();
         }
 
         if (collision.gameObject.CompareTag("Block") || collision.gameObject.CompareTag("Breakable"))
@@ -302,7 +315,14 @@ public class Player : MonoBehaviour
 
             //También haz que caiga hacia abajo, con el cambio de capa ya puede atravesar el suelo al morir, que yo no se hacerlo ahora
         }
+
+        //Mario tira la concha
+        if (collision.gameObject.CompareTag("KoopaInShell"))
+        {
+            koopa.KoopaSlide();
+        }
     }
+    
 
     // Manejo de PowerUps
     // Seta

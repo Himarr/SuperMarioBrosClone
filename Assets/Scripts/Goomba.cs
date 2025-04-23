@@ -19,12 +19,12 @@ public class Goomba : MonoBehaviour
     {
             goombaVelocity = goombaVelocity * -1;
         }
-
     }
 
     //Muerte del goomba
     public void goombaDead()
     {
+
         gameObject.layer = LayerMask.NameToLayer("OnlyGround");
         gameObject.GetComponent<Animator>().SetBool("IsDead", true);
         goombaVelocity = 0f;
