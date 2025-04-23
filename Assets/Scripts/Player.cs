@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     bool isGrounded;
     bool canMove = true;
     bool isCrouching;
+    bool isInvincible;
     private int dir;
 
     public float jumpForce;
@@ -48,6 +49,7 @@ public class Player : MonoBehaviour
         isJumping = true;
         jumpForce = 0;
         currentStatus = "small";
+        anim.SetBool("isSmall", true);
     }
 
     void Update()
@@ -293,41 +295,98 @@ public class Player : MonoBehaviour
         }
 
         //Muerte de Mario por tocar un enemigo
-        if (collision.gameObject.CompareTag("Enemy") && jumpForce >= 0f && currentStatus == "small" && bounceOnEnenemy == false)
+        if (collision.gameObject.CompareTag("Enemy") && jumpForce >= 0f && bounceOnEnenemy == false && !isInvincible)
         {
-            playerCanInput = false;
-            speed = 0;
-            gameObject.GetComponent<Animator>().SetBool("IsDead", true);
-            gameObject.layer = LayerMask.NameToLayer("NoColission");
-
+            onHit();
             //También haz que caiga hacia abajo, con el cambio de capa ya puede atravesar el suelo al morir, que yo no se hacerlo ahora
         }
     }
 
     // Manejo de PowerUps
     // Seta
-    public void Grow()
+    public void Grow(string trigger)
     {
-        StartCoroutine(GrowCoroutine());
+        StartCoroutine(GrowCoroutine(trigger));
     }
 
-    private IEnumerator GrowCoroutine()
+    private IEnumerator GrowCoroutine(string trigger)
     {
-        anim.SetTrigger("Big");
+        if (trigger == "Big")
+        {
+            anim.SetBool("isBig", true);
+            anim.SetBool("isSmall", false);
+            ExtendCollider();
+        }
+        else if (trigger == "Hit")
+        {
+            anim.SetBool("isSmall", true);
+            anim.SetBool("isBig", false);
+            ResetCollider();
+        }
+        else if (trigger == "Fire")
+        {
+            anim.SetBool("isFire", true);
+            if (currentStatus == "small")
+            {
+                currentStatus = "fire";
+                ExtendCollider();
+                Debug.Log("fuego a la cachimba");
+            }
+        }
+
+        anim.SetTrigger(trigger);
+        
         canMove = false;
+        isInvincible = true;
+
         yield return new WaitForSeconds(0.30f);
-        ExtendCollider();
+        
+        canMove = true;
+        Debug.Log(isInvincible);
+        yield return new WaitForSeconds(1f);
+        isInvincible = false;
+        Debug.Log(isInvincible);
+
+
     }
     private void ExtendCollider()
     {
         transform.position += new Vector3(0, 0.5f);
         col.size = new Vector2(1, col.size.y * 2);
         canMove = true;
+        Debug.Log("ta grande");
     }
 
     private void ResetCollider()
     {
         transform.position -= new Vector3(0, 0.5f);
         col.size = new Vector2(0.75f, col.size.y / 2);
+        canMove = true;
+        Debug.Log("chikito");
+    }
+
+    public void onHit()
+    {
+        if (currentStatus == "small")
+        {
+            // Die
+            playerCanInput = false;
+            speed = 0;
+            gameObject.GetComponent<Animator>().SetBool("IsDead", true);
+            gameObject.layer = LayerMask.NameToLayer("NoColission");
+
+            // Hacer que caiga
+        }
+        else if (currentStatus == "big" || currentStatus == "fire")
+        {
+            // Hacer chikito
+            currentStatus = "small";
+            anim.SetTrigger("Hit");
+            Grow("Hit");
+        }
+        else if (currentStatus == "star")
+        {
+            // Quitar flor de fuego
+        }
     }
 }
