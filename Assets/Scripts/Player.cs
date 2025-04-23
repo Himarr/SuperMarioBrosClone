@@ -300,6 +300,7 @@ public class Player : MonoBehaviour
             koopa.ThrowShell();
         }
 
+        //Hacer que Mario vuelva a poder recibir daño tras saltar sobre un enemigo
         if (collision.gameObject.CompareTag("Block") || collision.gameObject.CompareTag("Breakable"))
         {
             bounceOnEnenemy = false;

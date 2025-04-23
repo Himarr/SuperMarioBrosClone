@@ -14,7 +14,7 @@ public class Koopa : MonoBehaviour
 
     void Update()
     {
-        //Movimiento del goomba
+        //Movimiento del koopa
         gameObject.transform.Translate(koopaVelocity * Time.deltaTime, 0, 0);
     }
 
@@ -56,6 +56,7 @@ public class Koopa : MonoBehaviour
 
     public void KoopaSlide()
     {
+        Debug.Log("Mario patea al koopa");
         gameObject.transform.Translate(koopaVelocity * 2 * Time.deltaTime, 0, 0);
     }
 }
