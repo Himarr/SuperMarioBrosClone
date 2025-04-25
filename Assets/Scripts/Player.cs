@@ -257,7 +257,7 @@ public class Player : MonoBehaviour
             speed = 0;
             StartCoroutine(Wait(0.25f));
         } 
-        else if (Physics2D.Raycast(lowerRay, rayDir, distanceBig, mask) || Physics2D.Raycast(higherRay, rayDir, distanceBig, mask) || Physics2D.Raycast(col.bounds.center, rayDir, distanceBig, mask))
+        else if (currentStatus != "small" && Physics2D.Raycast(lowerRay, rayDir, distanceBig, mask) || Physics2D.Raycast(higherRay, rayDir, distanceBig, mask) || Physics2D.Raycast(col.bounds.center, rayDir, distanceBig, mask))
         {
             Debug.Log("Hit");
             canMove = false;
@@ -311,43 +311,52 @@ public class Player : MonoBehaviour
 
     private IEnumerator GrowCoroutine(string trigger)
     {
+        anim.SetTrigger(trigger);
+        
+        canMove = false;
+        isInvincible = true;
+
+        if (currentStatus != "small") { ResetCollider(); }
+
+        yield return new WaitForSeconds(0.4f);
+
+        if (currentStatus != "small") { ExtendCollider(); }
+
         if (trigger == "Big")
         {
             anim.SetBool("isBig", true);
             anim.SetBool("isSmall", false);
             ExtendCollider();
+            currentStatus = "big";
         }
         else if (trigger == "Hit")
         {
             anim.SetBool("isSmall", true);
             anim.SetBool("isBig", false);
+            anim.SetBool("isFire", false);
             ResetCollider();
+            currentStatus = "small";
         }
         else if (trigger == "Fire")
         {
             anim.SetBool("isFire", true);
             if (currentStatus == "small")
             {
-                currentStatus = "fire";
                 ExtendCollider();
+                
                 Debug.Log("fuego a la cachimba");
-            }
+            } 
+            
+            anim.SetBool("isSmall", false);
+            anim.SetBool("isBig", false);
+            currentStatus = "fire";
         }
 
-        anim.SetTrigger(trigger);
-        
-        canMove = false;
-        isInvincible = true;
-
-        yield return new WaitForSeconds(0.30f);
-        
         canMove = true;
         Debug.Log(isInvincible);
         yield return new WaitForSeconds(1f);
         isInvincible = false;
         Debug.Log(isInvincible);
-
-
     }
     private void ExtendCollider()
     {
@@ -360,7 +369,7 @@ public class Player : MonoBehaviour
     private void ResetCollider()
     {
         transform.position -= new Vector3(0, 0.5f);
-        col.size = new Vector2(0.75f, col.size.y / 2);
+        col.size = new Vector2(0.75f, 0.95f);
         canMove = true;
         Debug.Log("chikito");
     }
@@ -380,13 +389,11 @@ public class Player : MonoBehaviour
         else if (currentStatus == "big" || currentStatus == "fire")
         {
             // Hacer chikito
-            currentStatus = "small";
-            anim.SetTrigger("Hit");
             Grow("Hit");
         }
         else if (currentStatus == "star")
         {
-            // Quitar flor de fuego
+            // Hacer invulnerable
         }
     }
 }

@@ -917,7 +917,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 137
-        y: 373
+        y: 372
         width: 16
         height: 32
       alignment: 0
@@ -2410,7 +2410,7 @@ TextureImporter:
         x: 20
         y: 264
         width: 16
-        height: 30
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2428,10 +2428,10 @@ TextureImporter:
       name: NES - Super Mario Bros - Mario & Luigi NB_109
       rect:
         serializedVersion: 2
-        x: 39
+        x: 38
         y: 264
-        width: 14
-        height: 31
+        width: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2515,7 +2515,7 @@ TextureImporter:
         x: 116
         y: 264
         width: 16
-        height: 22
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

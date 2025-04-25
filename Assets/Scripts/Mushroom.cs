@@ -26,7 +26,6 @@ public class Mushroom : MonoBehaviour
             // Cambiar estado de Mario
             if (player.currentStatus == "small")
             {
-                player.currentStatus = "big";
                 player.Grow("Big");
                 Destroy(gameObject);
             }
