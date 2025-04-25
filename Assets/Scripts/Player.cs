@@ -299,6 +299,10 @@ public class Player : MonoBehaviour
 
             koopa.ThrowShell();
         }
+        if (koopa != null && koopa.tag == "KoopaInShell")
+        {
+            koopa.KoopaSlide();
+        }
 
         //Hacer que Mario vuelva a poder recibir daño tras saltar sobre un enemigo
         if (collision.gameObject.CompareTag("Block") || collision.gameObject.CompareTag("Breakable"))
@@ -317,11 +321,6 @@ public class Player : MonoBehaviour
             //También haz que caiga hacia abajo, con el cambio de capa ya puede atravesar el suelo al morir, que yo no se hacerlo ahora
         }
 
-        //Mario tira la concha
-        if (collision.gameObject.CompareTag("KoopaInShell"))
-        {
-            koopa.KoopaSlide();
-        }
     }
     
 
