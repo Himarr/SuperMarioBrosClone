@@ -12,6 +12,14 @@ public class Goomba : MonoBehaviour
         gameObject.transform.Translate(goombaVelocity * Time.deltaTime, 0, 0);
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("KoopaInShell"))
+        {
+            goombaDead();
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Rebote en la pared
@@ -31,4 +39,6 @@ public class Goomba : MonoBehaviour
         Destroy(gameObject, 0.5f);
 
     }
+
+    
 }

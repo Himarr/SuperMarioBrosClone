@@ -299,10 +299,7 @@ public class Player : MonoBehaviour
 
             koopa.ThrowShell();
         }
-        if (koopa != null && koopa.tag == "KoopaInShell")
-        {
-            koopa.KoopaSlide();
-        }
+        
 
         //Hacer que Mario vuelva a poder recibir daño tras saltar sobre un enemigo
         if (collision.gameObject.CompareTag("Block") || collision.gameObject.CompareTag("Breakable"))
@@ -311,7 +308,7 @@ public class Player : MonoBehaviour
         }
 
         //Muerte de Mario por tocar un enemigo
-        if (collision.gameObject.CompareTag("Enemy") && jumpForce >= 0f && currentStatus == "small" && bounceOnEnenemy == false)
+        if ((collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("KoopaInShell")) && jumpForce >= 0f && currentStatus == "small" && bounceOnEnenemy == false)
         {
             playerCanInput = false;
             speed = 0;

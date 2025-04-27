@@ -39,6 +39,14 @@ public class BreakableBlock : MonoBehaviour
         {
             gameObject.GetComponent<BlockBreaks>().BlockBreak();
         }
+
+        //El siguiente if lo puso Pablo para que el koopa en caparazon rompa bloques
+        Koopa koopa = collision.gameObject.GetComponent<Koopa>();
+        if (koopa != null && koopa.tag == "KoopaInShell")
+        {
+            gameObject.GetComponent<BlockBreaks>().BlockBreak();
+        }
+
     }
     IEnumerator Mover(Vector3 startPosition, Vector3 endPosition, float time)
     {

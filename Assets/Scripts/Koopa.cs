@@ -20,6 +20,7 @@ public class Koopa : MonoBehaviour
         //Movimiento del koopa
         gameObject.transform.Translate(koopaVelocity * Time.deltaTime, 0, 0);
 
+        
 
     }
 
@@ -43,6 +44,18 @@ public class Koopa : MonoBehaviour
 
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Player player = collision.gameObject.GetComponent<Player>();
+        if (player != null && gameObject.tag == "KoopaInShell")
+        {
+            Debug.Log("Mario patea al koopa");
+            koopaVelocity = 6;
+            rb2D.AddForce(new Vector2(koopaVelocity * Time.deltaTime, 0));
+            //gameObject.transform.Translate(shellVelocity * Time.deltaTime, 0, 0);
+        }
+    }
+
     public void koopaInShell()
     {
         gameObject.GetComponent<Animator>().SetBool("IsInShell", true);
@@ -60,11 +73,11 @@ public class Koopa : MonoBehaviour
         }
     }
 
-    public void KoopaSlide()
-    {
-        Debug.Log("Mario patea al koopa");
-        //rb2D.AddForce (new Vector2(shellVelocity, 0));
-        //gameObject.transform.Translate(new Vector2(shellVelocity,0));
+    //public void KoopaSlide()
+    //{
+    //    Debug.Log("Mario patea al koopa");
+    //    //rb2D.AddForce (new Vector2(shellVelocity, 0));
+    //    //gameObject.transform.Translate(new Vector2(shellVelocity,0));
 
-    }
+    //}
 }
