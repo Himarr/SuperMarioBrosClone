@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class BreakableBlock : MonoBehaviour
 {
-    public Player player;
+    Player player;
 
     public float moveSpeed;
     public bool isMoving;
@@ -14,6 +14,7 @@ public class BreakableBlock : MonoBehaviour
     void Start()
     {
         isMoving = false;
+        player = GameObject.Find("Mario").GetComponent<Player>();
     }
 
     // Update is called once per frame
@@ -35,9 +36,9 @@ public class BreakableBlock : MonoBehaviour
         }
 
         //El siguiente if lo puso Pablo para que Mario grande rompa bloques
-        if (collision.gameObject.CompareTag("Player") && contactY > maxPosition && player.currentStatus == "big")
+        if (collision.gameObject.CompareTag("Player") && contactY > maxPosition && (player.currentStatus == "big" || player.currentStatus == "fire"))
         {
-            gameObject.GetComponent<BlockBreaks>().BlockBreak();
+            BlockBreak();
         }
     }
     IEnumerator Mover(Vector3 startPosition, Vector3 endPosition, float time)
@@ -59,6 +60,39 @@ public class BreakableBlock : MonoBehaviour
             yield return null;
         }
         transform.position = fin;
+    }
+
+    public void BlockBreak()
+    {
+        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        gameObject.GetComponent<BoxCollider2D>().enabled = false;
+
+
+
+        Component[] rbs = GetComponentsInChildren<Rigidbody2D>();
+
+        foreach (Rigidbody2D rb in rbs)
+        {
+            rb.bodyType = RigidbodyType2D.Dynamic;
+            rb.gravityScale = 4;
+
+        }
+
+
+
+        transform.Find("Bloques rotos_1").GetComponent<Rigidbody2D>().AddForce(new Vector2(-70f, 800f));
+        Destroy(transform.Find("Bloques rotos_1").gameObject, 3f);
+
+        transform.Find("Bloques rotos_2").GetComponent<Rigidbody2D>().AddForce(new Vector2(70f, 800f));
+        Destroy(transform.Find("Bloques rotos_2").gameObject, 3f);
+
+        transform.Find("Bloques rotos_3").GetComponent<Rigidbody2D>().AddForce(new Vector2(70f, 700f));
+        Destroy(transform.Find("Bloques rotos_3").gameObject, 3f);
+
+        transform.Find("Bloques rotos_4").GetComponent<Rigidbody2D>().AddForce(new Vector2(-70f, 700f));
+        Destroy(transform.Find("Bloques rotos_4").gameObject, 3f);
+
+        Destroy(gameObject, 3f);
     }
 }
 

@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
     bool canMove = true;
     bool isCrouching;
     bool isInvincible;
-    private int dir;
+    public int dir;
 
     public float jumpForce;
     public float holdJumpForce;
@@ -33,6 +33,7 @@ public class Player : MonoBehaviour
     public Animator anim;
     public BoxCollider2D col;
     public SpriteRenderer sprite;
+    public GameObject fireBall;
 
     //Variables declarada por Pablo
     bool playerCanInput = true;
@@ -236,6 +237,12 @@ public class Player : MonoBehaviour
                 ExtendCollider();
             }
         }
+
+        // Disparar
+        if (currentStatus == "fire" && Input.GetKeyDown(KeyCode.K))
+        {
+            Shoot();
+        }
     }
 
     private void StopMovement()
@@ -395,5 +402,11 @@ public class Player : MonoBehaviour
         {
             // Hacer invulnerable
         }
+    }
+
+    private void Shoot()
+    {
+        Debug.Log("Pium Pium");
+        Instantiate(fireBall, new Vector3(transform.position.x + (0.2f * dir), transform.position.y + 0.25f), Quaternion.identity);
     }
 }

@@ -8,6 +8,7 @@ TagManager:
   - Breakable
   - Mushroom
   - Enemy
+  - FireBall
   layers:
   - Default
   - TransparentFX
