@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
 
     //Variables declarada por Pablo
     bool playerCanInput = true;
-    bool bounceOnEnenemy = false;
+    public bool bounceOnEnenemy = false;
 
     // Estado de mario
     string[] status = {"small", "big", "fire", "star"};
@@ -287,19 +287,6 @@ public class Player : MonoBehaviour
             jumpForce += 10;
             bounceOnEnenemy = true;
         }
-
-        //Colision con Koopa
-        Koopa koopa = collision.gameObject.GetComponent<Koopa>();
-        if (koopa != null && jumpForce < 0)
-        {
-            koopa.koopaInShell();
-
-            jumpForce += 10;
-            bounceOnEnenemy = true;
-
-            koopa.ThrowShell();
-        }
-        
 
         //Hacer que Mario vuelva a poder recibir daño tras saltar sobre un enemigo
         if (collision.gameObject.CompareTag("Block") || collision.gameObject.CompareTag("Breakable"))

@@ -54,6 +54,17 @@ public class Koopa : MonoBehaviour
             rb2D.AddForce(new Vector2(koopaVelocity * Time.deltaTime, 0));
            
         }
+
+        if (player != null && player.jumpForce < 0)
+        {
+            koopaInShell();
+
+            player.jumpForce += 10;
+            player.bounceOnEnenemy = true;
+
+            ThrowShell();
+        }
+
     }
 
     public void koopaInShell()
@@ -73,11 +84,5 @@ public class Koopa : MonoBehaviour
         }
     }
 
-    //public void KoopaSlide()
-    //{
-    //    Debug.Log("Mario patea al koopa");
-    //    //rb2D.AddForce (new Vector2(shellVelocity, 0));
-    //    //gameObject.transform.Translate(new Vector2(shellVelocity,0));
-
-    //}
+    
 }
