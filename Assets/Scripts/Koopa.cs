@@ -52,7 +52,7 @@ public class Koopa : MonoBehaviour
             Debug.Log("Mario patea al koopa");
             koopaVelocity = 6;
             rb2D.AddForce(new Vector2(koopaVelocity * Time.deltaTime, 0));
-            //gameObject.transform.Translate(shellVelocity * Time.deltaTime, 0, 0);
+           
         }
     }
 
