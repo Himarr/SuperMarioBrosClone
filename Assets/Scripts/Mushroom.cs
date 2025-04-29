@@ -1,22 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor.Rendering;
 using UnityEngine;
+using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
+using UnityEngine.UI;
 
-public class Mushroom : MonoBehaviour
+public class Mushroom : PowerUp
 {
-    GameObject playerObject;
-    Player player;
-    // Start is called before the first frame update
+    float speed = 3;
+    BoxCollider2D col;
     void Start()
     {
-        playerObject = GameObject.Find("Mario");
-        player = playerObject.GetComponent<Player>();
+        Player = GameObject.Find("Mario").GetComponent<Player>();
+        col = gameObject.GetComponent<BoxCollider2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (canMove)
+        {
+            transform.position += new Vector3(speed * Time.deltaTime, 0);
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        ForwardRaycast();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -24,15 +34,28 @@ public class Mushroom : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             // Cambiar estado de Mario
-            if (player.currentStatus == "small")
+            if (Player.currentStatus == "small")
             {
-                player.Grow("Big");
-                Destroy(gameObject);
+                Player.Grow("Big");
             }
-            else if (player.currentStatus == "fire")
-            {
-                Destroy(gameObject);
-            }
+            Destroy(gameObject);
+        }
+    }
+
+    private void ForwardRaycast()
+    {
+        LayerMask mask = LayerMask.GetMask("Wall");
+
+        Vector2 ray = col.bounds.center;
+        int dir;
+        if (speed > 0) dir = 1;
+        else dir = -1;
+        Vector2 rayDir = new Vector2(dir, 0);
+        float distance = 0.6f;
+
+        if (Physics2D.Raycast(ray, rayDir, distance, mask))
+        {
+            speed *= -1;
         }
     }
 }

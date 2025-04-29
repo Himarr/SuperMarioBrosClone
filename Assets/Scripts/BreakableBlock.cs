@@ -8,12 +8,10 @@ public class BreakableBlock : MonoBehaviour
     Player player;
 
     public float moveSpeed;
-    public bool isMoving;
     public float time;
     // Start is called before the first frame update
     void Start()
     {
-        isMoving = false;
         player = GameObject.Find("Mario").GetComponent<Player>();
     }
 

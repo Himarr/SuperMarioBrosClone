@@ -309,8 +309,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    // Manejo de PowerUps
-    // Seta
     public void Grow(string trigger)
     {
         StartCoroutine(GrowCoroutine(trigger));
@@ -318,6 +316,8 @@ public class Player : MonoBehaviour
 
     private IEnumerator GrowCoroutine(string trigger)
     {
+        // Corrutina que maneja los cambios en el collider durante la animación de PowerUp.
+
         anim.SetTrigger(trigger);
         
         canMove = false;
@@ -367,6 +367,8 @@ public class Player : MonoBehaviour
     }
     private void ExtendCollider()
     {
+        // Extiende el collider de Mario a su versión grande.
+
         transform.position += new Vector3(0, 0.5f);
         col.size = new Vector2(1, col.size.y * 2);
         canMove = true;
@@ -375,6 +377,8 @@ public class Player : MonoBehaviour
 
     private void ResetCollider()
     {
+        // Devuelve el collider a su tamaño original.
+
         transform.position -= new Vector3(0, 0.5f);
         col.size = new Vector2(0.75f, 0.95f);
         canMove = true;
@@ -391,7 +395,7 @@ public class Player : MonoBehaviour
             gameObject.GetComponent<Animator>().SetBool("IsDead", true);
             gameObject.layer = LayerMask.NameToLayer("NoColission");
 
-            // Hacer que caiga
+            // TODO - Hacer que caiga
         }
         else if (currentStatus == "big" || currentStatus == "fire")
         {

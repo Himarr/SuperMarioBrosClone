@@ -2,35 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireFlower : MonoBehaviour
+public class FireFlower : PowerUp
 {
-    GameObject playerObject;
-    Player player;
-
-    // Start is called before the first frame update
     void Start()
     {
-        playerObject = GameObject.Find("Mario");
-        player = playerObject.GetComponent<Player>();
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        Player = GameObject.Find("Mario").GetComponent<Player>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        // Cambia el estado de mario y ejecuta la animación.
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (player.currentStatus == "small" || player.currentStatus == "big")
+            if (Player.currentStatus == "small" || Player.currentStatus == "big")
             {
-                player.Grow("Fire");
+                Player.Grow("Fire");
                 Debug.Log("colision");
             }
-        }
         Destroy(gameObject);
+        }
     }
 }
