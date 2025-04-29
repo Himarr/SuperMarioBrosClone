@@ -21,6 +21,7 @@ public class Koopa : MonoBehaviour
         gameObject.transform.Translate(koopaVelocity * Time.deltaTime, 0, 0);
 
         
+        //
 
     }
 
@@ -49,7 +50,6 @@ public class Koopa : MonoBehaviour
         Player player = collision.gameObject.GetComponent<Player>();
         if (player != null && gameObject.tag == "KoopaInShell")
         {
-            Debug.Log("Mario patea al koopa");
             koopaVelocity = 6;
             rb2D.AddForce(new Vector2(koopaVelocity * Time.deltaTime, 0));
            

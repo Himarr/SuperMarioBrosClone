@@ -3928,6 +3928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goombaVelocity: -2
+  canMove: 1
 --- !u!61 &125984298
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5574,6 +5575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goombaVelocity: -2
+  canMove: 1
 --- !u!61 &172025415
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7833,6 +7835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goombaVelocity: -2
+  canMove: 1
 --- !u!61 &259087100
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12570,6 +12573,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goombaVelocity: -2
+  canMove: 1
 --- !u!61 &413239763
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16992,6 +16996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goombaVelocity: 2
+  canMove: 1
 --- !u!61 &628622879
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19108,6 +19113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goombaVelocity: -2
+  canMove: 1
 --- !u!61 &704684137
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19303,6 +19309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goombaVelocity: -2
+  canMove: 1
 --- !u!61 &705114726
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20025,7 +20032,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.76, y: 0.3089857}
+  m_Size: {x: 0.66, y: 0.3089857}
   m_EdgeRadius: 0
 --- !u!1 &715397677
 GameObject:
@@ -25495,6 +25502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goombaVelocity: -2
+  canMove: 1
 --- !u!61 &910373988
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28277,6 +28285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goombaVelocity: -2
+  canMove: 1
 --- !u!61 &1020521154
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39527,6 +39536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   koopaVelocity: -2
+  shellVelocity: 0
 --- !u!61 &1387086161
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39559,7 +39569,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.030000001, y: -0.23982549}
+  m_Offset: {x: 0.06, y: -0.23982549}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -39570,7 +39580,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.69, y: 0.8226466}
+  m_Size: {x: 0.59, y: 0.8226466}
   m_EdgeRadius: 0
 --- !u!50 &1387086162
 Rigidbody2D:
@@ -43121,6 +43131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goombaVelocity: -2
+  canMove: 1
 --- !u!61 &1510774821
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -45196,6 +45207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goombaVelocity: -2
+  canMove: 1
 --- !u!61 &1578456100
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -46263,6 +46275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goombaVelocity: -2
+  canMove: 1
 --- !u!61 &1603698383
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -49957,6 +49970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goombaVelocity: -2
+  canMove: 1
 --- !u!61 &1680086212
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -58161,6 +58175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goombaVelocity: -2
+  canMove: 1
 --- !u!61 &1954199039
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -62709,6 +62724,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goombaVelocity: -2
+  canMove: 1
 --- !u!61 &2091921398
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -63016,6 +63032,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goombaVelocity: -2
+  canMove: 1
 --- !u!61 &2098925774
 BoxCollider2D:
   m_ObjectHideFlags: 0

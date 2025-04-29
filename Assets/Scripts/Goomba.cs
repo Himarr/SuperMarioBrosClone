@@ -25,7 +25,7 @@ public class Goomba : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
+        Koopa koopa = gameObject.GetComponent<Koopa>();
         if (collision.gameObject.CompareTag("KoopaInShell"))
         {
             goombaDeadByShellOrFire();
