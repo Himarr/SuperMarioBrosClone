@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 223185652711302967}
   - component: {fileID: 6192399079419374979}
   - component: {fileID: 2896548611471239731}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mario
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.923588, y: -1.74, z: 0}
-  m_LocalScale: {x: 6, y: 6, z: 5}
+  m_LocalScale: {x: 1, y: 1, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -54,15 +54,16 @@ MonoBehaviour:
   maxSpeed: 3
   minSpeed: 0.5
   deceleration: 6
+  dir: 0
   jumpForce: 10
   holdJumpForce: 0.1
   maxJumpForce: 12
   initialJumpForce: 10
   rb: {fileID: 6192399079419374979}
-  cam: {fileID: 0}
   anim: {fileID: 223185652711302967}
   col: {fileID: 2896548611471239731}
   sprite: {fileID: 6009284312523568197}
+  fireBall: {fileID: 1005791740582593381, guid: 287f3f20f786b264fb57e9c8576bdac5, type: 3}
   currentStatus: 
 --- !u!212 &6009284312523568197
 SpriteRenderer:
@@ -196,16 +197,16 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.0051610395}
+  m_Offset: {x: 0, y: 0.03}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.12, y: 0.16}
+    oldSize: {x: 0.75, y: 1}
     newSize: {x: 0.12, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.12, y: 0.14967792}
+  m_Size: {x: 0.75, y: 0.95}
   m_EdgeRadius: 0

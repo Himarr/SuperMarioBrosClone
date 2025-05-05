@@ -9,6 +9,7 @@ TagManager:
   - Mushroom
   - Enemy
   - FireBall
+  - Spawn
   layers:
   - Default
   - TransparentFX

@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
     public float initialJumpForce;
 
     public Rigidbody2D rb;
-    public Camera cam;
+    Camera cam;
     public Animator anim;
     public BoxCollider2D col;
     public SpriteRenderer sprite;
@@ -43,6 +43,10 @@ public class Player : MonoBehaviour
     string[] status = {"small", "big", "fire", "star"};
     public string currentStatus;
 
+    private void Awake()
+    {
+        cam = GameObject.Find("Main Camera").GetComponent<Camera>();
+    }
 
     void Start()
     {
@@ -365,7 +369,7 @@ public class Player : MonoBehaviour
         isInvincible = false;
         Debug.Log(isInvincible);
     }
-    private void ExtendCollider()
+    public void ExtendCollider()
     {
         // Extiende el collider de Mario a su versión grande.
 
@@ -375,7 +379,7 @@ public class Player : MonoBehaviour
         Debug.Log("ta grande");
     }
 
-    private void ResetCollider()
+    public void ResetCollider()
     {
         // Devuelve el collider a su tamaño original.
 
