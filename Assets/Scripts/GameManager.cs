@@ -65,9 +65,10 @@ public class GameManager : MonoBehaviour
         score += amount;
     }
 
-    public void AddLives(int amount)
+    public void AddLives(int amount = 1)
     {
         lives += amount;
+        Debug.Log(lives);
     }
 
     public void AddCoins(int amount = 1)
