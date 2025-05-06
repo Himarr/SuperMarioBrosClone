@@ -9,17 +9,12 @@ public class BreakableBlock : MonoBehaviour
 
     public float moveSpeed;
     public float time;
-    // Start is called before the first frame update
+
     void Start()
     {
         player = GameObject.Find("Mario").GetComponent<Player>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         float contactY = collision.GetContact(0).point.y;
@@ -65,8 +60,6 @@ public class BreakableBlock : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
         gameObject.GetComponent<BoxCollider2D>().enabled = false;
 
-
-
         Component[] rbs = GetComponentsInChildren<Rigidbody2D>();
 
         foreach (Rigidbody2D rb in rbs)
@@ -75,8 +68,6 @@ public class BreakableBlock : MonoBehaviour
             rb.gravityScale = 4;
 
         }
-
-
 
         transform.Find("Bloques rotos_1").GetComponent<Rigidbody2D>().AddForce(new Vector2(-70f, 800f));
         Destroy(transform.Find("Bloques rotos_1").gameObject, 3f);

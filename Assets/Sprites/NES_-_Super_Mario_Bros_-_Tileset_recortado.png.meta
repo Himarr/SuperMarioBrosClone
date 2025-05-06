@@ -2966,10 +2966,10 @@ TextureImporter:
       name: NES_-_Super_Mario_Bros_-_Tileset_recortado_134
       rect:
         serializedVersion: 2
-        x: 301
-        y: 653
-        width: 10
-        height: 14
+        x: 298
+        y: 652
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2987,10 +2987,10 @@ TextureImporter:
       name: NES_-_Super_Mario_Bros_-_Tileset_recortado_135
       rect:
         serializedVersion: 2
-        x: 318
-        y: 653
-        width: 10
-        height: 14
+        x: 315
+        y: 652
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3008,10 +3008,10 @@ TextureImporter:
       name: NES_-_Super_Mario_Bros_-_Tileset_recortado_136
       rect:
         serializedVersion: 2
-        x: 335
-        y: 653
-        width: 10
-        height: 14
+        x: 332
+        y: 652
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

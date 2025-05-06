@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     int score;
     int lives = 3;
+    int coins = 0;
     string playerState;
 
     public bool playerOnScene = false;
@@ -67,6 +68,14 @@ public class GameManager : MonoBehaviour
     public void AddLives(int amount)
     {
         lives += amount;
+    }
+
+    public void AddCoins(int amount = 1)
+    {
+        coins += amount;
+        Debug.Log(coins);
+
+        // TODO - Si tiene 100 monedas transformar en una vida.
     }
 
     public void SavePlayerState()
