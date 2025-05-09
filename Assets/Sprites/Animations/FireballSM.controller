@@ -6,7 +6,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: NES - Super Mario Bros - Mario & Luigi NB_66
+  m_Name: FireballSM
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:

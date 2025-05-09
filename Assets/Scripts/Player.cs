@@ -46,6 +46,8 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         cam = GameObject.Find("Main Camera").GetComponent<Camera>();
+        currentStatus = "small";
+        anim.SetBool("isSmall", true);
     }
 
     void Start()
@@ -53,8 +55,7 @@ public class Player : MonoBehaviour
         speed = 0;
         isJumping = true;
         jumpForce = 0;
-        currentStatus = "small";
-        anim.SetBool("isSmall", true);
+
     }
 
     void Update()

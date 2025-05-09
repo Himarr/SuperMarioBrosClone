@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2518520800134653989}
+  - component: {fileID: 5867959413610872904}
   - component: {fileID: 3408777377691583128}
   - component: {fileID: 6185275971209981286}
-  - component: {fileID: 5867959413610872904}
   m_Layer: 6
   m_Name: Breakable Block
   m_TagString: Breakable
@@ -38,6 +38,20 @@ Transform:
   - {fileID: 7244165871247700370}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5867959413610872904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632935041407327363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d5befd4d1cbce44282dc9d89e602d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0.01
+  time: 0.2
 --- !u!212 &3408777377691583128
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -135,22 +149,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &5867959413610872904
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1632935041407327363}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d5befd4d1cbce44282dc9d89e602d23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  moveSpeed: 0.01
-  isMoving: 0
-  time: 0.2
 --- !u!1 &2857205138442141075
 GameObject:
   m_ObjectHideFlags: 0

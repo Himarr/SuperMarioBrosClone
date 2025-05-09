@@ -46,13 +46,8 @@ public class GameManager : MonoBehaviour
         player = FindAnyObjectByType<Player>();
         
         // TODO - quitar spawnpoint
-        GameObject spawnPoint = GameObject.Find("SpawnPoint");
 
-        if (spawnPoint != null)
-        {
-            Destroy(spawnPoint);
-            SetPlayerState();
-        }
+        SetPlayerState();
     }
 
     public Player GetPlayer()
@@ -82,10 +77,13 @@ public class GameManager : MonoBehaviour
     public void SavePlayerState()
     {
         playerState = player.currentStatus;
+        Debug.Log(playerState);
     }
 
     public void SetPlayerState()
     {
+        player = FindAnyObjectByType<Player>();
+
         if (playerState == "big")
         {
             player.anim.SetBool("isBig", true);
@@ -95,6 +93,7 @@ public class GameManager : MonoBehaviour
             int animHash = Animator.StringToHash("Base Layer.Big Mario.BigMario_Idle");
             player.anim.Play(animHash);
             player.ExtendCollider();
+            player.currentStatus = playerState;
         }
         else if (playerState == "fire")
         {
@@ -106,6 +105,8 @@ public class GameManager : MonoBehaviour
             player.anim.Play(animHash);
 
             player.ExtendCollider();
+            player.currentStatus = playerState;
+            Debug.Log(playerState);
         }
     }
 }
