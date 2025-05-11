@@ -10,12 +10,20 @@ public class QuestionBlock : MonoBehaviour
     float time = 0.25f;
 
     bool isEmpty = false;
+    public bool isInvisible = false;
 
     public PowerUp powerUp;
+    SpriteRenderer spriteRenderer;
 
     void Start()
     {
         player = GameObject.Find("Mario").GetComponent<Player>();
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+
+        if (isInvisible)
+        {
+            spriteRenderer.enabled = false;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -36,6 +44,7 @@ public class QuestionBlock : MonoBehaviour
             {
                 StartCoroutine(MoveCoroutine(startPosition, endPosition, time, this.gameObject));
                 isEmpty = true;
+                spriteRenderer.enabled = true;
             }
         }
     }

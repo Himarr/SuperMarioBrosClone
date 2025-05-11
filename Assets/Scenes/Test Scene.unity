@@ -1617,6 +1617,10 @@ PrefabInstance:
       propertyPath: powerUp
       value: 
       objectReference: {fileID: 157340763301656438, guid: e3a067db0d33a3044867f7fb4621ce23, type: 3}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: isInvisible
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3943493526646256773, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.5
