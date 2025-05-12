@@ -6,13 +6,24 @@ using UnityEngine;
 public class BreakableBlock : MonoBehaviour
 {
     Player player;
+    Animator anim;
 
     public float moveSpeed;
     public float time;
 
+    bool canMove = true;
+
+    public bool hasCoins;
+    int coinAmount;
+
+    public GameObject coin;
+
     void Start()
     {
         player = GameObject.Find("Mario").GetComponent<Player>();
+        anim = gameObject.GetComponent<Animator>();
+        coinAmount = 10;
+        anim.SetBool("HasCoins", true);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -25,7 +36,21 @@ public class BreakableBlock : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player") && contactY > maxPosition && player.currentStatus == "small")
         {
-            StartCoroutine(Mover(startPosition, endPosition, time));
+            if (canMove)
+            {
+                StartCoroutine(Mover(startPosition, endPosition, time, gameObject));
+
+                if (hasCoins)
+                {
+                    StartCoroutine(SpawnCoin(startPosition, endPosition + new Vector3(0, 2), time));
+                }
+            }
+            if (coinAmount == 0)
+            {
+                hasCoins = false;
+                canMove = false;
+                anim.SetBool("HasCoins", hasCoins);
+            }
         }
 
         //El siguiente if lo puso Pablo para que Mario grande rompa bloques
@@ -38,29 +63,30 @@ public class BreakableBlock : MonoBehaviour
         Koopa koopa = collision.gameObject.GetComponent<Koopa>();
         if (koopa != null && koopa.tag == "KoopaInShell")
         {
-            gameObject.GetComponent<BlockBreaks>().BlockBreak();
+            BlockBreak();
         }
 
     }
-    IEnumerator Mover(Vector3 startPosition, Vector3 endPosition, float time)
+    IEnumerator Mover(Vector3 startPosition, Vector3 endPosition, float time, GameObject gameObj)
     {
         // Subir
-        yield return StartCoroutine(MoveObject(startPosition, endPosition, time));
+        canMove = false;
+        yield return StartCoroutine(MoveObject(startPosition, endPosition, time, gameObject));
         // Bajar
-        yield return StartCoroutine(MoveObject(endPosition, startPosition, time));
-        
+        yield return StartCoroutine(MoveObject(endPosition, startPosition, time, gameObject));
+        canMove = true;
     }
 
-    IEnumerator MoveObject(Vector3 inicio, Vector3 fin, float tiempo)
+    IEnumerator MoveObject(Vector3 inicio, Vector3 fin, float tiempo, GameObject gameObj)
     {
         float elapsed = 0;
         while (elapsed < tiempo)
         {
-            transform.position = Vector3.Lerp(inicio, fin, elapsed / tiempo);
+            gameObj.transform.position = Vector3.Lerp(inicio, fin, elapsed / tiempo);
             elapsed += Time.deltaTime;
             yield return null;
         }
-        transform.position = fin;
+        gameObj.transform.position = fin;
     }
 
     public void BlockBreak()
@@ -90,6 +116,19 @@ public class BreakableBlock : MonoBehaviour
         Destroy(transform.Find("Bloques rotos_4").gameObject, 3f);
 
         Destroy(gameObject, 3f);
+    }
+    IEnumerator SpawnCoin(Vector3 startPosition, Vector3 endPosition, float time)
+    {
+        if (coin != null)
+        {
+            GameObject coinObject = Instantiate(coin, startPosition, Quaternion.identity).gameObject;
+            yield return MoveObject(startPosition, endPosition, time, coinObject);
+            GameManager.Instance.AddCoins();
+            coinAmount--;
+
+            
+            Destroy(coinObject);
+        }
     }
 }
 

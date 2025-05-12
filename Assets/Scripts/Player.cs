@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
 
     //Variables declarada por Pablo
     bool playerCanInput = true;
-    bool bounceOnEnenemy = false;
+    public bool bounceOnEnenemy = false;
 
     // Estado de mario
     string[] status = {"small", "big", "fire", "star"};

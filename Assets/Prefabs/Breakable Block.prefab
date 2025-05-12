@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5867959413610872904}
   - component: {fileID: 3408777377691583128}
   - component: {fileID: 6185275971209981286}
+  - component: {fileID: 146308644443426870}
   m_Layer: 6
   m_Name: Breakable Block
   m_TagString: Breakable
@@ -52,6 +53,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0.01
   time: 0.2
+  hasCoins: 0
+  coin: {fileID: 2687851848151669744, guid: 4ccf2c56e90ea2546aa701c1d41e6b65, type: 3}
 --- !u!212 &3408777377691583128
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -149,6 +152,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &146308644443426870
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632935041407327363}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8665fc5744d9d5d4e98fe612e2a8e871, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2857205138442141075
 GameObject:
   m_ObjectHideFlags: 0
