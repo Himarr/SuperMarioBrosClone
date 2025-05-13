@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class MovingPlatforms : MonoBehaviour
 {
@@ -52,4 +53,25 @@ public class MovingPlatforms : MonoBehaviour
             gameObject.transform.position = new Vector2(initialPositionX, -6.2f);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        Player player = collision.gameObject.GetComponent<Player>();
+        if (player != null)
+        {
+            player.transform.parent = gameObject.transform;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        Player player = collision.gameObject.GetComponent<Player>();
+        if (player != null)
+        {
+            player.transform.parent = null;
+        }
+        
+    }
+
 }

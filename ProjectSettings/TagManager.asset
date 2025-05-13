@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - FireBall
   - Spawn
+  - KoopaInShell
   layers:
   - Default
   - TransparentFX
