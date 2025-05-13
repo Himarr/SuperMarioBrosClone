@@ -20,9 +20,6 @@ public class Koopa : MonoBehaviour
         //Movimiento del koopa
         gameObject.transform.Translate(koopaVelocity * Time.deltaTime, 0, 0);
 
-        
-        //
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -7,6 +7,9 @@ public class BreakableBlock : MonoBehaviour
 {
     Player player;
     Animator anim;
+    SpriteRenderer spriteRenderer;
+    public Sprite underground;
+    public Sprite overworld;
 
     public float moveSpeed;
     public float time;
@@ -18,12 +21,24 @@ public class BreakableBlock : MonoBehaviour
 
     public GameObject coin;
 
+    public bool isOverworld;
+
     void Start()
     {
         player = GameObject.Find("Mario").GetComponent<Player>();
         anim = gameObject.GetComponent<Animator>();
         coinAmount = 10;
         anim.SetBool("HasCoins", true);
+
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        
+        if (isOverworld)
+        {
+            spriteRenderer.sprite = overworld;
+        } else
+        {
+            spriteRenderer.sprite = underground;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

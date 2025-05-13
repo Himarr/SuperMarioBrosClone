@@ -51,10 +51,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d5befd4d1cbce44282dc9d89e602d23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  underground: {fileID: 1723631838, guid: 79e9bca9372349a4fa3d6be7e7c55d7f, type: 3}
+  overworld: {fileID: -402511694, guid: 92f2c9aae99fe124887cb1f833aa013d, type: 3}
   moveSpeed: 0.01
   time: 0.2
   hasCoins: 0
   coin: {fileID: 2687851848151669744, guid: 4ccf2c56e90ea2546aa701c1d41e6b65, type: 3}
+  isOverworld: 0
 --- !u!212 &3408777377691583128
 SpriteRenderer:
   m_ObjectHideFlags: 0
