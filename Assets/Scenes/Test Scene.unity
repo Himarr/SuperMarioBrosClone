@@ -1434,6 +1434,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 146308644443426870, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ccaa28092a7e8a74a82f2a9a3e1431c2, type: 2}
     - target: {fileID: 1632935041407327363, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: m_Name
       value: Breakable Block
@@ -1480,6 +1484,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: hasCoins
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: isOverworld
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

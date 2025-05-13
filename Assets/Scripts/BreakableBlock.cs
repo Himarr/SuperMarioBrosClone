@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BreakableBlock : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class BreakableBlock : MonoBehaviour
     public float moveSpeed;
     public float time;
 
-    bool canMove = true;
+    public bool canMove = true;
 
     public bool hasCoins;
     int coinAmount;
@@ -28,16 +29,17 @@ public class BreakableBlock : MonoBehaviour
         player = GameObject.Find("Mario").GetComponent<Player>();
         anim = gameObject.GetComponent<Animator>();
         coinAmount = 10;
-        anim.SetBool("HasCoins", true);
 
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         
         if (isOverworld)
         {
             spriteRenderer.sprite = overworld;
+            anim.SetBool("isOverworld", isOverworld);
         } else
         {
             spriteRenderer.sprite = underground;
+            anim.SetBool("isOverworld", isOverworld);
         }
     }
 
@@ -64,7 +66,8 @@ public class BreakableBlock : MonoBehaviour
             {
                 hasCoins = false;
                 canMove = false;
-                anim.SetBool("HasCoins", hasCoins);
+
+                anim.SetBool("isLocked", true);
             }
         }
 
@@ -90,6 +93,8 @@ public class BreakableBlock : MonoBehaviour
         // Bajar
         yield return StartCoroutine(MoveObject(endPosition, startPosition, time, gameObject));
         canMove = true;
+
+        if (coinAmount == 0) { canMove = false;}
     }
 
     IEnumerator MoveObject(Vector3 inicio, Vector3 fin, float tiempo, GameObject gameObj)
