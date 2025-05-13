@@ -8,11 +8,15 @@ public class Koopa : MonoBehaviour
     public float shellVelocity;
     Animator anim;
     Rigidbody2D rb2D;
+    BoxCollider2D boxCollider;
+    Player player;
 
     private void Start()
     {
         anim = GetComponent<Animator>();
         rb2D = GetComponent<Rigidbody2D>();
+        boxCollider = GetComponent<BoxCollider2D>();
+        player = GameObject.Find("Mario").GetComponent<Player>();
     }
 
     void Update()
@@ -44,16 +48,32 @@ public class Koopa : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Player player = collision.gameObject.GetComponent<Player>();
-        if (player != null && gameObject.tag == "KoopaInShell")
+        float koopaCenter = boxCollider.bounds.center.x;
+        float marioCenter = player.col.bounds.center.x;
+
+        if(koopaCenter > marioCenter)
         {
-            koopaVelocity = 6;
-            rb2D.AddForce(new Vector2(koopaVelocity * Time.deltaTime, 0));
-           
+            if (player != null && gameObject.tag == "KoopaInShell")
+            {
+                koopaVelocity = 6;
+                rb2D.AddForce(new Vector2(koopaVelocity * Time.deltaTime, 0));
+                Debug.Log("Koopa a la derecha de mario");
+            }
+        }
+        else if (marioCenter > koopaCenter)
+        {
+            if (player != null && gameObject.tag == "KoopaInShell")
+            {
+                koopaVelocity = -6;
+                rb2D.AddForce(new Vector2(koopaVelocity * Time.deltaTime, 0));
+                Debug.Log("Koopa a la izquierda de mario");
+            }
         }
 
-        if (player != null && player.jumpForce < 0)
+        if (player != null && player.jumpForce < 0 && collision.gameObject.CompareTag("Player"))
         {
+            Debug.Log("Koopa caparazon");
+
             koopaInShell();
 
             player.jumpForce += 10;
@@ -61,7 +81,6 @@ public class Koopa : MonoBehaviour
 
             ThrowShell();
         }
-
     }
 
     public void koopaInShell()
