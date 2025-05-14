@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     bool isMoving;
     bool isJumping;
     bool isGrounded;
-    bool canMove = true;
+    public bool canMove = true;
     bool isCrouching;
     bool isInvincible;
     public int dir;
