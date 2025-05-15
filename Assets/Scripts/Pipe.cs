@@ -30,28 +30,25 @@ public class Pipe : MonoBehaviour
 
     IEnumerator PipeAnimation()
     {
-        yield return MoveToCenter(4f);
+        Vector3 inicio = player.transform.position;
+        Vector3 fin = new Vector3(col.bounds.center.x, inicio.y, inicio.z);
+        yield return MoveObject(inicio, fin, 0.5f, player.gameObject);
+        player.canMove=true;
+
+        inicio = player.transform.position;
+        fin = new Vector3(inicio.x, inicio.y - 2);
+        yield return MoveObject(inicio, fin, 1f, player.gameObject);
     }
 
-    IEnumerator MoveToCenter(float time)
+    IEnumerator MoveObject(Vector3 inicio, Vector3 fin, float tiempo, GameObject gameObj)
     {
-        // ESTO ES UNA PUTISIMA MIERDA :)
-        float pipeCenter = col.bounds.center.x;
         float elapsed = 0;
-
-        while (elapsed < time)
+        while (elapsed < tiempo)
         {
-            player.transform.position = Vector2.Lerp(player.transform.position, new Vector2(pipeCenter, player.transform.position.y), elapsed / time);
+            gameObj.transform.position = Vector3.Lerp(inicio, fin, elapsed / tiempo);
             elapsed += Time.deltaTime;
-
-            Debug.Log("Moviendo al centro");
             yield return null;
-            
         }
-        player.transform.position = new Vector3(pipeCenter, player.transform.position.y);
-
-        Debug.Log("Terminado");
-        player.canMove = true;
-        yield return null;
+        gameObj.transform.position = fin;
     }
 }
