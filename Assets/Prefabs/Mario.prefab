@@ -48,22 +48,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d490e3b34a87d84eb6b97d9919e886b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravity: -15
+  gravity: -40
   speed: 0
-  acceleration: 6
-  maxSpeed: 3
+  acceleration: 10
+  maxSpeed: 5
   minSpeed: 0.5
-  deceleration: 6
+  deceleration: 10
+  canMove: 1
   dir: 0
-  jumpForce: 10
+  jumpForce: 0
   holdJumpForce: 0.1
   maxJumpForce: 12
-  initialJumpForce: 10
+  initialJumpForce: 22
   rb: {fileID: 6192399079419374979}
   anim: {fileID: 223185652711302967}
   col: {fileID: 2896548611471239731}
   sprite: {fileID: 6009284312523568197}
   fireBall: {fileID: 1005791740582593381, guid: 287f3f20f786b264fb57e9c8576bdac5, type: 3}
+  bounceOnEnenemy: 0
   currentStatus: 
 --- !u!212 &6009284312523568197
 SpriteRenderer:
