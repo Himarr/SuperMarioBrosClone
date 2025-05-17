@@ -177,7 +177,7 @@ public class Player : MonoBehaviour
             }
         }
 
-        if (speed > 0 && !isMoving || isCrouching)
+        if (speed > 0 && !isMoving || (isCrouching && !isJumping))
         {
             speed -= deceleration * Time.deltaTime;
         }
@@ -201,7 +201,7 @@ public class Player : MonoBehaviour
         {
             jumpForce /= 2;
         }
-        if (jumpForce < -8) { jumpForce = -8; }
+        if (jumpForce < -20) { jumpForce = -20; }
 
         if (isJumping || !isGrounded)
         {

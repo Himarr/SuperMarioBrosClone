@@ -6,7 +6,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: NES_-_Super_Mario_Bros_-_Tileset_recortado_134
+  m_Name: CoinSM
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
