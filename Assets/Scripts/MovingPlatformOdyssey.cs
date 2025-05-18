@@ -4,14 +4,10 @@ using UnityEngine;
 
 public class MovingPlatformOdyssey : MonoBehaviour
 {
-    public float platformVelocity; 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float platformVelocity;
 
-    // Update is called once per frame
+    public bool goesRight;
+
     void Update()
     {
        if (gameObject.transform.position.y >= 9)
@@ -24,15 +20,25 @@ public class MovingPlatformOdyssey : MonoBehaviour
     {
 
         Player player = collision.gameObject.GetComponent<Player>();
-        if (player != null)
+        if (player != null && goesRight == false)
         {
             PlatformMovement();
+        }
+
+        if (player != null && goesRight)
+        {
+            platformMovementRight();
         }
     }
 
     public void PlatformMovement()
     {
         gameObject.transform.Translate(0, platformVelocity * Time.deltaTime, 0);
+    }
+
+    public void platformMovementRight()
+    {
+        gameObject.transform.Translate(platformVelocity * Time.deltaTime, 0, 0);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
