@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Koopa : MonoBehaviour
@@ -10,6 +11,8 @@ public class Koopa : MonoBehaviour
     Rigidbody2D rb2D;
     BoxCollider2D boxCollider;
     Player player;
+
+    bool canMove = false;
 
     private void Start()
     {
@@ -22,12 +25,19 @@ public class Koopa : MonoBehaviour
     void Update()
     {
         //Movimiento del koopa
-        gameObject.transform.Translate(koopaVelocity * Time.deltaTime, 0, 0);
+        if (canMove)
+        {
+            gameObject.transform.Translate(koopaVelocity * Time.deltaTime, 0, 0);
+        }
 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.CompareTag("EnemyTrigger"))
+        {
+            canMove = true;
+        }
         //Rebote en la pared
         if (collision.gameObject.CompareTag("Block") || collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Breakable"))
         {
