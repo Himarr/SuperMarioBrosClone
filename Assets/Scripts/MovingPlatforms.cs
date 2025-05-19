@@ -12,6 +12,8 @@ public class MovingPlatforms : MonoBehaviour
     public float initialPositionY;
     public float initialPositionZ;
 
+    public bool odysseyCoordinates;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +27,15 @@ public class MovingPlatforms : MonoBehaviour
     {
         platformMovement();
 
-        platformPositionChange();
+        if (odysseyCoordinates == false)
+        {
+            platformPositionChange();
+        }
+   
+        if (odysseyCoordinates)
+        {
+            platformPositionChangeOdyssey();
+        }
 
     }
     
@@ -51,6 +61,19 @@ public class MovingPlatforms : MonoBehaviour
         if (gameObject.transform.position.y < -23f && goesUp == false)
         {
             gameObject.transform.position = new Vector2(initialPositionX, -6.2f);
+        }
+    }
+
+    void platformPositionChangeOdyssey()
+    {
+        if(gameObject.transform.position.y > 8.5f && goesUp == true)
+        {
+            gameObject.transform.position = new Vector2(initialPositionX, -7.6f);
+        }
+
+        if (gameObject.transform.position.y < -7.6f && goesUp == false)
+        {
+            gameObject.transform.position = new Vector2(initialPositionX, 8.5f);
         }
     }
 

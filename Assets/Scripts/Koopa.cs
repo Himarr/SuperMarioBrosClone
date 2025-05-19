@@ -135,6 +135,8 @@ public class Koopa : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().flipY = true;
 
         Destroy(gameObject, 1f);
+
+     
     }
 
 }
