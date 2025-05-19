@@ -11,7 +11,7 @@ TagManager:
   - FireBall
   - Spawn
   - KoopaInShell
-  - Ground
+  - EnemyTrigger
   layers:
   - Default
   - TransparentFX

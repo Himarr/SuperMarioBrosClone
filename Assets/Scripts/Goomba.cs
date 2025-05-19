@@ -7,7 +7,7 @@ public class Goomba : MonoBehaviour
     public float goombaVelocity;
     Rigidbody2D rb2D;
 
-    public bool canMove = true;
+    public bool canMove = false;
 
     private void Start()
     {
@@ -34,11 +34,18 @@ public class Goomba : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.CompareTag("EnemyTrigger"))
+        {
+            canMove = true;
+        }
+
         //Rebote en la pared
         if (collision.gameObject.CompareTag("Block") || collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Breakable"))
         {
             goombaVelocity = goombaVelocity * -1;
         }
+
+        
     }
 
     //Muerte del goomba
