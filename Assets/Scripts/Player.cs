@@ -43,6 +43,8 @@ public class Player : MonoBehaviour
     string[] status = {"small", "big", "fire", "star"};
     public string currentStatus;
 
+    public Collider2D[] colliders;
+
     private void Awake()
     {
         cam = GameObject.Find("Main Camera").GetComponent<Camera>();
@@ -63,11 +65,6 @@ public class Player : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.A)) { isMoving = false; }
         if (playerCanInput) { HandleMovement(); }
         MoveCamera(cam);
-    }
-
-    private void FixedUpdate()
-    {
-        StopMovement();
     }
 
     private void MoveCamera(Camera cam)
@@ -203,6 +200,8 @@ public class Player : MonoBehaviour
         }
         if (jumpForce < -20) { jumpForce = -20; }
 
+
+        // Gravedad
         if (isJumping || !isGrounded)
         {
             transform.position += new Vector3(0, jumpForce) * Time.deltaTime;
@@ -250,43 +249,36 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void StopMovement()
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        LayerMask mask = LayerMask.GetMask("Wall");
-
-        float minYPosition = col.bounds.min.y + 0.2f;
-        float maxYPosition = col.bounds.max.y;
-        Vector2 lowerRay = new Vector2(col.bounds.center.x, minYPosition);
-        Vector2 higherRay = new Vector2(col.bounds.center.x, maxYPosition);
-        Vector2 rayDir = new Vector2(dir, 0);
-        float distance = 0.5f;
-        float distanceBig = 0.6f;
-
-        if ((Physics2D.Raycast(lowerRay, rayDir, distance, mask) || Physics2D.Raycast(higherRay, rayDir, distance, mask)) && currentStatus == "small")
+        // Colision derecha
+        if (colliders[0].IsTouching(collision.gameObject.GetComponent<Collider2D>()))
         {
-            Debug.Log("Hit");
-            canMove = false;
-            speed = 0;
-            StartCoroutine(Wait(0.25f));
-        } 
-        else if (currentStatus != "small" && Physics2D.Raycast(lowerRay, rayDir, distanceBig, mask) || Physics2D.Raycast(higherRay, rayDir, distanceBig, mask) || Physics2D.Raycast(col.bounds.center, rayDir, distanceBig, mask))
+            if (collision.gameObject.CompareTag("Block"))
+            {
+                Debug.Log("Right");
+                speed = 0;
+            }
+        }
+        // Colision abajo
+        else if (colliders[2].IsTouching(collision.gameObject.GetComponent<Collider2D>()))
         {
-            Debug.Log("Hit");
-            canMove = false;
-            speed = 0;
-            StartCoroutine(Wait(0.25f));
+            if (collision.gameObject.CompareTag("Block"))
+            {
+                Debug.Log("Down");
+
+            }
+        }
+        // Colision izquierda
+        else if (colliders[1].IsTouching(collision.gameObject.GetComponent<Collider2D>()))
+        {
+            if (collision.gameObject.CompareTag("Block"))
+            {
+                Debug.Log("Left");
+                speed = 0;
+            }
         }
     }
-
-    private IEnumerator Wait(float time)
-    {
-        yield return new WaitForSeconds(time);
-        canMove = true;
-        speed = 0;
-    }
-
-
-
 
     //COSAS PUESTAS POR PABLO
     private void OnCollisionEnter2D(Collision2D collision)
