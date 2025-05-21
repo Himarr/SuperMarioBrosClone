@@ -10,6 +10,10 @@ public class Coin : MonoBehaviour
         {
             GameManager.Instance.AddCoins();
             Destroy(gameObject);
+
+            //añadir puntos 
+
+            Interface.instance.addScoreCoin(); 
         }
     }
 }
