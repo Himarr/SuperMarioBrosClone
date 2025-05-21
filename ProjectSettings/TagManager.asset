@@ -12,6 +12,7 @@ TagManager:
   - Spawn
   - KoopaInShell
   - EnemyTrigger
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - OnlyGround
   - NoColission
   - Enemy
-  - 
+  - NoEnemy
   - 
   - 
   - 
