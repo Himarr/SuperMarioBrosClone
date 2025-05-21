@@ -7,7 +7,6 @@ public class Vine : MonoBehaviour
 {
 
     public float vineVelocity;
-    public float initialPositionX;
     public float timer;
 
     public GameObject vinePiece;
@@ -17,29 +16,9 @@ public class Vine : MonoBehaviour
     public GameObject vinePiece4;
     public GameObject vinePiece5;
 
-    BoxCollider2D col;
-
-
-    void Start()
-    {
-        initialPositionX = transform.position.x;
-        BoxCollider2D col = new BoxCollider2D();
-    }
-
-    
-    void Update()
-    {
-
-        
-
-    }
-
     public IEnumerator VineMovement()
     {
-        
-        
 
-        
         while(timer < 3.5){
             gameObject.transform.Translate(0, vineVelocity * Time.deltaTime, 0);
 
@@ -88,5 +67,7 @@ public class Vine : MonoBehaviour
             StartCoroutine(VineMovement());
             
         }
+
+
     }
 }

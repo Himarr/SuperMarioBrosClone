@@ -12,7 +12,7 @@ public class Koopa : MonoBehaviour
     BoxCollider2D boxCollider;
     Player player;
 
-    bool canMove = false;
+    public bool canMove = false;
 
     private void Start()
     {
@@ -43,15 +43,19 @@ public class Koopa : MonoBehaviour
         {
             koopaVelocity = koopaVelocity * -1;
         }
-
+        
+        
         if (gameObject.GetComponent<SpriteRenderer>().flipX == false)
         {
-            gameObject.GetComponent<SpriteRenderer>().flipX = true;
+           gameObject.GetComponent<SpriteRenderer>().flipX = true;
         }
         else
         {
             gameObject.GetComponent<SpriteRenderer>().flipX = false;
         }
+        
+
+        
 
 
     }
@@ -86,7 +90,7 @@ public class Koopa : MonoBehaviour
 
             koopaInShell();
 
-            player.jumpForce += 10;
+            player.jumpForce += 20;
             player.bounceOnEnenemy = true;
 
             ThrowShell();
