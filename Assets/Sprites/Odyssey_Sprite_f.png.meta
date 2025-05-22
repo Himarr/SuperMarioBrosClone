@@ -1,0 +1,1522 @@
+fileFormatVersion: 2
+guid: eecb62d3a59044d46afe8c4861731db6
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 217
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 161d8430aa3797d4283485558517c3dd
+      internalID: -1600225123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_1
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 217
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fcb8cdc16f9cca42930f847364ae04d
+      internalID: -1444277063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_2
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 217
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97d6d5868760e9b448fa9ee6b6e4188b
+      internalID: 2053947378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_3
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 217
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7202d771d3b7da47a0462976874d6fe
+      internalID: -394902913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_4
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 217
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05e43005103e2e846990ad0b7e95c9e6
+      internalID: 452426024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_5
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 218
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7a2180327bbef44a87f512cd2340609
+      internalID: -1449620566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_6
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 219
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9383672ac3441a4e90da1fa86f8df3d
+      internalID: 1765327005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_7
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 219
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ee11b6de4c1078419ddc705a233b8c6
+      internalID: 1567529623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_8
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 219
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b64106e6983afe4ea8ee3578c3a7ba5
+      internalID: -1453305959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_9
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 219
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5940c2abab3f9c49af21a08da164f63
+      internalID: -1656606716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_10
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 219
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6578cacd47d2e1a46b2168aeabdfa9ff
+      internalID: -1502330818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_11
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 219
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 495a924bea726be458eda8a6bb90e4c8
+      internalID: -746243264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_12
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 219
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cb778a8ab393ac4ca26a48fa034490c
+      internalID: -122174494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_13
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 219
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8b9e39a062de2341a6ca97fd3f4094b
+      internalID: -450745069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_14
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 219
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bf5584561ed5b74bb6f8bac265954e6
+      internalID: 1575340533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_15
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 219
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c7ae7845cbe0a04c9ca053a2e5ae977
+      internalID: -291087397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_16
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 219
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ddc02f3a56306044a27ff5f91ba2a22
+      internalID: -969448046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_17
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 195
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baf444bb0d39d134e9ea8240db00edc7
+      internalID: 1205657396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_18
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 195
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 889595c988c5d364ab945269de3a6e40
+      internalID: 467226239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_19
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 195
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a342cb262cdf91478f07b99d548c142
+      internalID: 1735767602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_20
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 195
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ee4d38bc1357a942a8ed3656d029c2f
+      internalID: -1545012465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_21
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 195
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16394ac0786ebd94fb6bedd3ad4667f2
+      internalID: -715827229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_22
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 196
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50e247942e9c8b84fbbe9f102cbbe36c
+      internalID: 1339991642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_23
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 197
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 304049270d1469246ba0560f5ef7db30
+      internalID: 2068657788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_24
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 173
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10002c58c4b90b74abe2d581a44a06f9
+      internalID: 2038698561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_25
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 173
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 832a6ea1e97a2dd409ea5f79bb459bec
+      internalID: -978671811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_26
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 174
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ec6b993c11846d47a989aab42deb522
+      internalID: 486118222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_27
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 174
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 662d67a3e52ca624a825abf6e660c28b
+      internalID: 1695200412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_28
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 174
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bab8791934d8220418939ad50ece029a
+      internalID: 1562311097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_29
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 174
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efaa72e6ede7f6246920c3718b3fc21e
+      internalID: -435148210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_30
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 3
+        width: 151
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77f34740cc7e92f41842a6a09615158e
+      internalID: -620915269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_31
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 153
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c920c5b698e31842a96a0aff90dc9b6
+      internalID: 1380268038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_32
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 153
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3feed42d638780743981011d4f987774
+      internalID: -1636232046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_33
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 153
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4603c770764f51d47b68ee80c5a4d9cb
+      internalID: 1488676924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_34
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 153
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9a77680949afb349bc28955ebf46782
+      internalID: -834654319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_35
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 153
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ce323e802713a44aaeb64de03af6101
+      internalID: 719370218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_36
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 154
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c82e860a60124b42a4a05723818a7a7
+      internalID: 280547715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_37
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 155
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f66f297cb00242b4ba28f566a9bc7fa5
+      internalID: 989633885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_38
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 131
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5364ade4d38049e4dafc58ddf303f9a4
+      internalID: -1109136190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_39
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 131
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a987e5b92fa8e7744a7b25a7ce3f5221
+      internalID: 841763800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_40
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 131
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 314ebb15dfd541c40afb1aa3bc62daba
+      internalID: 1126966001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_41
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 131
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27780abf0186f664b8e34ff86ac173d7
+      internalID: 1888826595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_42
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 131
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b60ba0580634004d9f204f66656931f
+      internalID: 1210137812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_43
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 132
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9544f8b435abe54f84c8c80122b0685
+      internalID: -289530100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_44
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 133
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 978a11f6e48f09f409869d0a5786e4a7
+      internalID: -765175290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_45
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 109
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6fba9270dfc1b641b3623dae1162ce2
+      internalID: 1637887024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_46
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 109
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6c990d57326ec84eab3f0423c9c52da
+      internalID: -411161813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_47
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 110
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11c7c86f5d3e4a640a2e81f57b188c15
+      internalID: 1696705823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_48
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 110
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63b45ab7637ded84daa592f0395924f9
+      internalID: 1021420946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_49
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 110
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bb6109a912b949479ad4e01555f3a83
+      internalID: -380023560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_50
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 110
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13f2b727571916840b397e5f03561b0b
+      internalID: 1478443848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_51
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 101
+        width: 13
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9e659186d03f354a83a038f36ec62c3
+      internalID: 110351852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_52
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 101
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2930f09f4f6ab247aa86dce721b5faa
+      internalID: 2134967794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_53
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 101
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7449a4863e176f4c9e3dcc74ed97970
+      internalID: 2104304120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_54
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 101
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9dc9b203fac7b9419daf75697aa3db2
+      internalID: 1916179609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_55
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 101
+        width: 13
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dabd7e19d676f645bb491a80530b698
+      internalID: 2035239061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_56
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 101
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23ed83e9eefbf3f40815d530a418dace
+      internalID: 827273934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_57
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 72
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 624d8fa6f9db3a947a3cc80d964a5f4f
+      internalID: -1273095237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_58
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 72
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfc3729b138bfe54aa80125a2d87a86d
+      internalID: -878458363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_59
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 72
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5af6e7e9a28ade94987411f57c697829
+      internalID: -1275282103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_60
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 55
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c853ff67deb4a84e877e24d25fada2c
+      internalID: 323513099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_61
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 37
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60eaf9c2f62224f45acdd8745c8cbc51
+      internalID: 1492396589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_62
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 37
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a72eb6bbe5024194f95250bbdf232731
+      internalID: 874699258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Odyssey_Sprite_f_63
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 37
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29050a61e791924468bc6e490f8bee08
+      internalID: -1790676374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Odyssey_Sprite_f_0: -1600225123
+      Odyssey_Sprite_f_1: -1444277063
+      Odyssey_Sprite_f_10: -1502330818
+      Odyssey_Sprite_f_11: -746243264
+      Odyssey_Sprite_f_12: -122174494
+      Odyssey_Sprite_f_13: -450745069
+      Odyssey_Sprite_f_14: 1575340533
+      Odyssey_Sprite_f_15: -291087397
+      Odyssey_Sprite_f_16: -969448046
+      Odyssey_Sprite_f_17: 1205657396
+      Odyssey_Sprite_f_18: 467226239
+      Odyssey_Sprite_f_19: 1735767602
+      Odyssey_Sprite_f_2: 2053947378
+      Odyssey_Sprite_f_20: -1545012465
+      Odyssey_Sprite_f_21: -715827229
+      Odyssey_Sprite_f_22: 1339991642
+      Odyssey_Sprite_f_23: 2068657788
+      Odyssey_Sprite_f_24: 2038698561
+      Odyssey_Sprite_f_25: -978671811
+      Odyssey_Sprite_f_26: 486118222
+      Odyssey_Sprite_f_27: 1695200412
+      Odyssey_Sprite_f_28: 1562311097
+      Odyssey_Sprite_f_29: -435148210
+      Odyssey_Sprite_f_3: -394902913
+      Odyssey_Sprite_f_30: -620915269
+      Odyssey_Sprite_f_31: 1380268038
+      Odyssey_Sprite_f_32: -1636232046
+      Odyssey_Sprite_f_33: 1488676924
+      Odyssey_Sprite_f_34: -834654319
+      Odyssey_Sprite_f_35: 719370218
+      Odyssey_Sprite_f_36: 280547715
+      Odyssey_Sprite_f_37: 989633885
+      Odyssey_Sprite_f_38: -1109136190
+      Odyssey_Sprite_f_39: 841763800
+      Odyssey_Sprite_f_4: 452426024
+      Odyssey_Sprite_f_40: 1126966001
+      Odyssey_Sprite_f_41: 1888826595
+      Odyssey_Sprite_f_42: 1210137812
+      Odyssey_Sprite_f_43: -289530100
+      Odyssey_Sprite_f_44: -765175290
+      Odyssey_Sprite_f_45: 1637887024
+      Odyssey_Sprite_f_46: -411161813
+      Odyssey_Sprite_f_47: 1696705823
+      Odyssey_Sprite_f_48: 1021420946
+      Odyssey_Sprite_f_49: -380023560
+      Odyssey_Sprite_f_5: -1449620566
+      Odyssey_Sprite_f_50: 1478443848
+      Odyssey_Sprite_f_51: 110351852
+      Odyssey_Sprite_f_52: 2134967794
+      Odyssey_Sprite_f_53: 2104304120
+      Odyssey_Sprite_f_54: 1916179609
+      Odyssey_Sprite_f_55: 2035239061
+      Odyssey_Sprite_f_56: 827273934
+      Odyssey_Sprite_f_57: -1273095237
+      Odyssey_Sprite_f_58: -878458363
+      Odyssey_Sprite_f_59: -1275282103
+      Odyssey_Sprite_f_6: 1765327005
+      Odyssey_Sprite_f_60: 323513099
+      Odyssey_Sprite_f_61: 1492396589
+      Odyssey_Sprite_f_62: 874699258
+      Odyssey_Sprite_f_63: -1790676374
+      Odyssey_Sprite_f_7: 1567529623
+      Odyssey_Sprite_f_8: -1453305959
+      Odyssey_Sprite_f_9: -1656606716
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
