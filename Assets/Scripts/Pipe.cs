@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class Pipe : MonoBehaviour
 {
+
     Player player;
     BoxCollider2D col;
     public float speed;
+    public AudioClip pipeDown;
+    public AudioSource audioSource;
 
     void Start()
     {
@@ -17,7 +20,7 @@ public class Pipe : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (Input.GetKey(KeyCode.S))
-        {
+        { 
             // Bloquear movimiento
             player.canMove = false;
 
@@ -35,6 +38,7 @@ public class Pipe : MonoBehaviour
         yield return MoveObject(inicio, fin, 0.5f, player.gameObject);
         player.canMove=true;
 
+        AudioSource.PlayClipAtPoint(pipeDown, gameObject.transform.position);
         inicio = player.transform.position;
         fin = new Vector3(inicio.x, inicio.y - 2);
         yield return MoveObject(inicio, fin, 1f, player.gameObject);
@@ -45,6 +49,7 @@ public class Pipe : MonoBehaviour
         float elapsed = 0;
         while (elapsed < tiempo)
         {
+           
             gameObj.transform.position = Vector3.Lerp(inicio, fin, elapsed / tiempo);
             elapsed += Time.deltaTime;
             yield return null;

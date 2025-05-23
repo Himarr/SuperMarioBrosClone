@@ -105,7 +105,7 @@ public class Player : MonoBehaviour
     private void HandleMovement()
     {
         /* 
-            Se encarga del Input y los cálculos de velocidad y aceleración de Mario.
+            Se encarga del Input y los cï¿½lculos de velocidad y aceleraciï¿½n de Mario.
         */
 
         // Idle
@@ -122,7 +122,7 @@ public class Player : MonoBehaviour
             dir = 1;
         }
         if (Input.GetKey(KeyCode.D))
-        // Añadir aceleración
+        // Aï¿½adir aceleraciï¿½n
         {
             if (speed <= 0 && dir == -1) { dir = 1; speed = minSpeed; }
 
@@ -153,7 +153,7 @@ public class Player : MonoBehaviour
             dir = -1;
         }
         if (Input.GetKey(KeyCode.A))
-        // Añadir aceleración
+        // Aï¿½adir aceleraciï¿½n
         {
             if (speed <= 0 && dir == 1) { dir = -1; speed = minSpeed; }
 
@@ -310,7 +310,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy") && jumpForce >= 0f && bounceOnEnenemy == false && !isInvincible)
         {
             onHit();
-            //También haz que caiga hacia abajo, con el cambio de capa ya puede atravesar el suelo al morir, que yo no se hacerlo ahora
+            //Tambiï¿½n haz que caiga hacia abajo, con el cambio de capa ya puede atravesar el suelo al morir, que yo no se hacerlo ahora
         }
     }
 
@@ -321,7 +321,7 @@ public class Player : MonoBehaviour
 
     private IEnumerator GrowCoroutine(string trigger)
     {
-        // Corrutina que maneja los cambios en el collider durante la animación de PowerUp.
+        // Corrutina que maneja los cambios en el collider durante la animaciï¿½n de PowerUp.
 
         anim.SetTrigger(trigger);
         
@@ -372,7 +372,7 @@ public class Player : MonoBehaviour
     }
     public void ExtendCollider()
     {
-        // Extiende el collider de Mario a su versión grande.
+        // Extiende el collider de Mario a su versiï¿½n grande.
 
         transform.position += new Vector3(0, 0.5f);
         col.size = new Vector2(1, col.size.y * 2);
@@ -382,7 +382,7 @@ public class Player : MonoBehaviour
 
     public void ResetCollider()
     {
-        // Devuelve el collider a su tamaño original.
+        // Devuelve el collider a su tamaï¿½o original.
 
         transform.position -= new Vector3(0, 0.5f);
         col.size = new Vector2(0.75f, 0.95f);

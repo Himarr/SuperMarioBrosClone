@@ -8,6 +8,8 @@ public class Goomba : MonoBehaviour
     Rigidbody2D rb2D;
 
     public bool canMove = false;
+     public AudioClip death;
+    public AudioSource audioSource;
 
     private void Start()
     {
@@ -51,7 +53,7 @@ public class Goomba : MonoBehaviour
     //Muerte del goomba
     public void goombaDead()
     {
-
+         AudioSource.PlayClipAtPoint(death, gameObject.transform.position);
         gameObject.layer = LayerMask.NameToLayer("OnlyGround");
         gameObject.GetComponent<Animator>().SetBool("IsDead", true);
         goombaVelocity = 0f;

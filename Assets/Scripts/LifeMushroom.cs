@@ -6,6 +6,7 @@ using UnityEngine;
 public class LifeMushroom : PowerUp
 {
     public AudioClip vidaMas;
+    public AudioSource audioSource;
     float speed = 3;
     BoxCollider2D col;
     void Start()
@@ -33,7 +34,7 @@ public class LifeMushroom : PowerUp
         {
 
             // Play sonido
-            SonidoIndestructible.Instance.EjecutarSonido(vidaMas);
+            AudioSource.PlayClipAtPoint(vidaMas, gameObject.transform.position);
 
            // Agregar vida
             GameManager.Instance.AddLives();

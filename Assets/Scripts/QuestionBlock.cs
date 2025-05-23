@@ -14,6 +14,8 @@ public class QuestionBlock : MonoBehaviour
 
     public PowerUp powerUp;
     SpriteRenderer spriteRenderer;
+     public AudioClip bump;
+    public AudioSource audioSource;
 
     void Start()
     {
@@ -28,7 +30,7 @@ public class QuestionBlock : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Compara la posición más baja del bloque y la más alta de Mario.
+        // Compara la posiciï¿½n mï¿½s baja del bloque y la mï¿½s alta de Mario.
 
         float contactY = collision.GetContact(0).point.y;
         float maxPosition = player.col.bounds.max.y;
@@ -42,6 +44,7 @@ public class QuestionBlock : MonoBehaviour
 
             if (!isEmpty)
             {
+                AudioSource.PlayClipAtPoint(bump, gameObject.transform.position);
                 StartCoroutine(MoveCoroutine(startPosition, endPosition, time, this.gameObject));
                 isEmpty = true;
                 spriteRenderer.enabled = true;
@@ -50,6 +53,7 @@ public class QuestionBlock : MonoBehaviour
     }
     IEnumerator MoveCoroutine(Vector3 startPosition, Vector3 endPosition, float time, GameObject gameObject)
     {
+        
         // Subir
         yield return StartCoroutine(MoveObject(startPosition, endPosition, time, gameObject));
         // Bajar
@@ -72,7 +76,7 @@ public class QuestionBlock : MonoBehaviour
         gameObject.transform.position = endPosition;
     }
 
-    //El bloque solo suelta champiñón (mario pequeño) y flor de fuego (mario grande)
+    //El bloque solo suelta champiï¿½ï¿½n (mario pequeï¿½o) y flor de fuego (mario grande)
     IEnumerator SpawnPowerUp(Vector3 startPosition, Vector3 endPosition, float time)
     {
         if (powerUp != null)

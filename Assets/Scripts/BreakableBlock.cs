@@ -23,6 +23,10 @@ public class BreakableBlock : MonoBehaviour
     public GameObject coin;
 
     public bool isOverworld;
+     public AudioClip broken;
+    public AudioClip moneda;
+    public AudioSource audioSource;
+    public AudioClip bump;
 
     void Start()
     {
@@ -68,6 +72,7 @@ public class BreakableBlock : MonoBehaviour
                 canMove = false;
 
                 anim.SetBool("isLocked", true);
+                AudioSource.PlayClipAtPoint(bump, gameObject.transform.position);
             }
         }
 
@@ -94,7 +99,8 @@ public class BreakableBlock : MonoBehaviour
         yield return StartCoroutine(MoveObject(endPosition, startPosition, time, gameObject));
         canMove = true;
 
-        if (coinAmount == 0) { canMove = false;}
+        if (coinAmount == 0) { canMove = false; }
+        
     }
 
     IEnumerator MoveObject(Vector3 inicio, Vector3 fin, float tiempo, GameObject gameObj)
@@ -111,6 +117,7 @@ public class BreakableBlock : MonoBehaviour
 
     public void BlockBreak()
     {
+        AudioSource.PlayClipAtPoint(broken, gameObject.transform.position);
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
         gameObject.GetComponent<BoxCollider2D>().enabled = false;
 
@@ -145,7 +152,7 @@ public class BreakableBlock : MonoBehaviour
             yield return MoveObject(startPosition, endPosition, time, coinObject);
             GameManager.Instance.AddCoins();
             coinAmount--;
-
+             AudioSource.PlayClipAtPoint(moneda, gameObject.transform.position);
             
             Destroy(coinObject);
         }
