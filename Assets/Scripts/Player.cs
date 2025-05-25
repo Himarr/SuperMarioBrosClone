@@ -38,6 +38,7 @@ public class Player : MonoBehaviour
     public bool isJumping;
     bool isGrounded;
     public bool canMove = true;
+    bool isRunning;
     bool isCrouching;
     bool isInvincible;
     public int dir;
@@ -58,8 +59,6 @@ public class Player : MonoBehaviour
     // Estado de mario
     string[] status = {"small", "big", "fire", "star"};
     public string currentStatus;
-
-    public Collider2D[] colliders;
 
     private void Awake()
     {
@@ -153,6 +152,10 @@ public class Player : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.A)) moveLeft = true;
             if (Input.GetKeyUp(KeyCode.A)) moveLeft = false;
 
+            // Correr
+            if (Input.GetKeyDown(KeyCode.K)) { isRunning = true; speed *= 2f; }
+            if (Input.GetKeyUp(KeyCode.K)) { isRunning = false; speed /= 2f; }
+
             // Salto
             if (Input.GetKeyDown(KeyCode.L) && !isJumping) { moveUp = true; currentVelocityY = jumpForce; }
             if (Input.GetKeyUp(KeyCode.L)) { moveUp = false; currentVelocityY /= 2; }
@@ -207,7 +210,15 @@ public class Player : MonoBehaviour
             float direction = Mathf.Sign(moveAmount.x);
 
             Vector2 origin = (Vector2)col.bounds.center + Vector2.right * direction * (col.bounds.extents.x - skinWidth);
-            Vector2 boxSize = new Vector2(skinWidth, col.bounds.size.y - skinWidth * 2);
+            Vector2 boxSize;
+
+            if (isJumping)
+            {
+                boxSize = new Vector2(skinWidth, col.bounds.size.y - skinWidth * 10);
+            } else
+            {
+                boxSize = new Vector2(skinWidth, col.bounds.size.y - skinWidth * 2);
+            }
 
             float castDistance = Mathf.Abs(moveAmount.x) + skinWidth;
 
@@ -220,6 +231,7 @@ public class Player : MonoBehaviour
                 currentVelocityX = 0f;
             }
         }
+        bool grounded = false;
 
         // BoxCast Vertical
         if (moveAmount.y <= 0)
@@ -228,7 +240,7 @@ public class Player : MonoBehaviour
 
             Vector2 boxSize = new Vector2(col.bounds.size.x - skinWidth * 2, skinWidth);
 
-            float verticalCastDistance = Mathf.Abs(moveAmount.y) + skinWidth;
+            float verticalCastDistance = skinWidth * 2f;
             RaycastHit2D hit = Physics2D.BoxCast(origin, boxSize, 0f, Vector2.down, verticalCastDistance, collisionMask);
 
             if (hit.collider != null)
@@ -240,12 +252,12 @@ public class Player : MonoBehaviour
                 {
                     moveAmount.y = 0;
                     currentVelocityY = 0;
-                    isJumping = false;
+                    grounded = true;
                 }
 
-            } else { isJumping = true; currentVelocityY -= 0.1f; }
+            }
         }
-        if (moveAmount.y == 0) { isJumping = false; }
+        isJumping = !grounded;
 
         rb.MovePosition(rb.position + moveAmount);
     }
@@ -256,7 +268,7 @@ public class Player : MonoBehaviour
         {
             isJumping = true;
             currentVelocityY = jumpForce;
-        } else
+        } else if (currentVelocityY > 0)
         {
             currentVelocityY += holdJumpForce * Time.fixedDeltaTime;
         }
@@ -411,38 +423,6 @@ public class Player : MonoBehaviour
             Shoot();
         }
     }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        // Colision derecha
-        if (colliders[0].IsTouching(collision.gameObject.GetComponent<Collider2D>()))
-        {
-            if (collision.gameObject.CompareTag("Block"))
-            {
-                Debug.Log("Right");
-                speed = 0;
-            }
-        }
-        // Colision abajo
-        else if (colliders[2].IsTouching(collision.gameObject.GetComponent<Collider2D>()))
-        {
-            if (collision.gameObject.CompareTag("Block"))
-            {
-                Debug.Log("Down");
-
-            }
-        }
-        // Colision izquierda
-        else if (colliders[1].IsTouching(collision.gameObject.GetComponent<Collider2D>()))
-        {
-            if (collision.gameObject.CompareTag("Block"))
-            {
-                Debug.Log("Left");
-                speed = 0;
-            }
-        }
-    }
-
 
 
     public void Grow(string trigger)
