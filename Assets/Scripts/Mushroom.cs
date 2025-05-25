@@ -8,10 +8,13 @@ using UnityEngine.UI;
 
 public class Mushroom : PowerUp
 {
+   
+ 
     float speed = 3;
     BoxCollider2D col;
     void Start()
     {
+      
         Player = GameObject.Find("Mario").GetComponent<Player>();
         col = gameObject.GetComponent<BoxCollider2D>();
     }
@@ -33,6 +36,8 @@ public class Mushroom : PowerUp
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+           
+
             // Cambiar estado de Mario
             if (Player.currentStatus == "small")
             {

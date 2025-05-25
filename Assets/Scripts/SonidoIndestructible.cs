@@ -7,7 +7,7 @@ public class SonidoIndestructible : MonoBehaviour
     public static SonidoIndestructible Instance;
     private AudioSource audioSource;
 
-    private void Awake()
+   /* private void Awake()
     {
         if (Instance == null) 
         {
@@ -26,6 +26,6 @@ public class SonidoIndestructible : MonoBehaviour
     public void EjecutarSonido(AudioClip sonido)
     {
         audioSource.PlayOneShot(sonido);
-    }
+    }*/
 
 }

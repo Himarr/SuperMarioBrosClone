@@ -5,11 +5,13 @@ using UnityEngine;
 
 public class LifeMushroom : PowerUp
 {
-    public AudioClip vidaMas;
+    private AudioSource audioSource;
+
     float speed = 3;
     BoxCollider2D col;
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         col = gameObject.GetComponent<BoxCollider2D>();
       
     }
@@ -31,13 +33,13 @@ public class LifeMushroom : PowerUp
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            
+            audioSource.Play();
+      
 
-            // Play sonido
-            SonidoIndestructible.Instance.EjecutarSonido(vidaMas);
-
-           // Agregar vida
+           /*// Agregar vida
             GameManager.Instance.AddLives();
-            Destroy(gameObject);
+            Destroy(gameObject);*/
         }
     }
 

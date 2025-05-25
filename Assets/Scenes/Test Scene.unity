@@ -2009,10 +2009,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c035ed0e9742a9a4189e6fd879d5710e, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 0.15
+  m_PlayOnAwake: 1
+  m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2497,7 +2497,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 927640994104140801, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
       propertyPath: orthographic size
-      value: 8.03125
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 3218530543753096223, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
       propertyPath: m_Name
@@ -2950,6 +2950,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3240785383721403157, guid: b0250ee757ce0434da4145c9cf4793ec, type: 3}
+      propertyPath: vidaMas
+      value: 
+      objectReference: {fileID: 8300000, guid: c035ed0e9742a9a4189e6fd879d5710e, type: 3}
     - target: {fileID: 7610256779891794276, guid: b0250ee757ce0434da4145c9cf4793ec, type: 3}
       propertyPath: m_IsTrigger
       value: 0
