@@ -7,25 +7,41 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [Header("Movement")]
+    public float speed = 5f;
+    public float acceleration = 30f;
+    public float friction = 20f;
+    public float gravity = -40f;
+    public float jumpForce = 40f;
+    public float holdJumpForce = 10f;
+
+
+    [SerializeField]
+    private float currentVelocityX = 0f;
+    [SerializeField]
+    private float currentVelocityY = 0f;
+
+    bool moveLeft;
+    bool moveRight;
+    bool moveUp;
+
+    [Header("Collision")]
+    public LayerMask collisionMask;
+    public float skinWidth = 0.02f;
+    
     // Variables iniciales
-    public float gravity;
-    public float speed;
-    public float acceleration;
     public float maxSpeed;
     public float minSpeed;
     public float deceleration;
 
     bool isMoving;
-    bool isJumping;
+    public bool isJumping;
     bool isGrounded;
     public bool canMove = true;
     bool isCrouching;
     bool isInvincible;
     public int dir;
 
-    public float jumpForce;
-    public float holdJumpForce;
-    public float maxJumpForce;
     public float initialJumpForce;
 
     public Rigidbody2D rb;
@@ -54,17 +70,19 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        speed = 0;
         isJumping = true;
-        jumpForce = 0;
-
     }
 
     void Update()
     {
         if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.A)) { isMoving = false; }
-        if (playerCanInput) { HandleMovement(); }
+        if (playerCanInput) { HandleInput(); }
         MoveCamera(cam);
+    }
+
+    private void FixedUpdate()
+    {
+        HandlePhysics();
     }
 
     private void MoveCamera(Camera cam)
@@ -75,28 +93,173 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        float minPosition = col.bounds.min.y;
+    //private void OnCollisionStay2D(Collision2D collision)
+    //{
+    //    float minPosition = col.bounds.min.y;
 
-        if (collision.GetContact(0).point.y < minPosition)
+    //    if (collision.GetContact(0).point.y < minPosition)
+    //    {
+    //        isGrounded = true;
+    //        jumpForce = 0;
+    //    }
+    //    else
+    //    {
+    //        isGrounded = false;
+    //        jumpForce = 0;
+    //    }
+
+    //    isJumping = !isGrounded;
+    //    anim.SetBool("isJumping", isJumping);
+    //}
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+ 
+        Goomba goomba = collision.gameObject.GetComponent<Goomba>();
+        if (goomba != null && jumpForce < 0)
         {
-            isGrounded = true;
-            jumpForce = 0;
+            goomba.goombaDead();
+
+
+            jumpForce += 10;
+            bounceOnEnenemy = true;
+        }
+
+        if (collision.gameObject.CompareTag("Block") || collision.gameObject.CompareTag("Breakable"))
+        {
+            bounceOnEnenemy = false;
+        }
+
+        // Muerte de Mario por tocar un enemigo
+        if (collision.gameObject.CompareTag("Enemy") && jumpForce >= 0f && bounceOnEnenemy == false && !isInvincible)
+        {
+            onHit();
+            // TODO haz que caiga hacia abajo
+        }
+    }
+
+    //private void OnCollisionExit2D(Collision2D collision)
+    //{
+    //    isJumping = true;
+    //}
+
+    private void HandleInput()
+    {
+        {
+            // Movimiento derecha
+            if (Input.GetKeyDown(KeyCode.D)) moveRight = true;
+            if (Input.GetKeyUp(KeyCode.D)) moveRight = false;
+
+            // Movimiento izquierda
+            if (Input.GetKeyDown(KeyCode.A)) moveLeft = true;
+            if (Input.GetKeyUp(KeyCode.A)) moveLeft = false;
+
+            // Salto
+            if (Input.GetKeyDown(KeyCode.L) && !isJumping) { moveUp = true; currentVelocityY = jumpForce; }
+            if (Input.GetKeyUp(KeyCode.L)) { moveUp = false; currentVelocityY /= 2; }
+        }
+    }
+
+    private void HandlePhysics()
+    {
+        float target = 0f;
+
+        if (moveRight) target += 1f;
+        if (moveLeft) target -= 1f;
+
+        // Aceleración o fricción
+        if (target != 0)
+        {
+            float desiredVelocityX = target * speed;
+            float accel = acceleration;
+
+            // Aumenta la fuerza si va en dirección opuesta
+            if (Mathf.Sign(desiredVelocityX) != Mathf.Sign(currentVelocityX) && currentVelocityX != 0)
+            {
+                accel *= 2f;
+            }
+
+            currentVelocityX = Mathf.MoveTowards(currentVelocityX, desiredVelocityX, accel * Time.fixedDeltaTime);
         }
         else
         {
-            isGrounded = false;
-            jumpForce = 0;
+            currentVelocityX = Mathf.MoveTowards(currentVelocityX, 0f, friction * Time.fixedDeltaTime);
         }
 
-        isJumping = !isGrounded;
-        anim.SetBool("isJumping", isJumping);
+        // Gravedad
+        if (isJumping)
+        {
+            currentVelocityY += gravity * Time.fixedDeltaTime;
+        }
+
+        // Saltar
+        if (moveUp)
+        {
+            Jump();
+        }
+
+
+
+        Vector2 moveAmount = new Vector2(currentVelocityX, currentVelocityY) * Time.fixedDeltaTime;
+
+        // BoxCast horizontal
+        if (moveAmount.x != 0)
+        {
+            float direction = Mathf.Sign(moveAmount.x);
+
+            Vector2 origin = (Vector2)col.bounds.center + Vector2.right * direction * (col.bounds.extents.x - skinWidth);
+            Vector2 boxSize = new Vector2(skinWidth, col.bounds.size.y - skinWidth * 2);
+
+            float castDistance = Mathf.Abs(moveAmount.x) + skinWidth;
+
+            RaycastHit2D hit = Physics2D.BoxCast(origin, boxSize, 0f, Vector2.right * direction, castDistance, collisionMask);
+
+            if (hit.collider != null)
+            {
+                float distanceToCollider = hit.distance - skinWidth;
+                moveAmount.x = direction * Mathf.Min(Mathf.Abs(moveAmount.x), distanceToCollider);
+                currentVelocityX = 0f;
+            }
+        }
+
+        // BoxCast Vertical
+        if (moveAmount.y <= 0)
+        {
+            Vector2 origin = (Vector2)col.bounds.center - new Vector2(0, col.bounds.extents.y - skinWidth);
+
+            Vector2 boxSize = new Vector2(col.bounds.size.x - skinWidth * 2, skinWidth);
+
+            float verticalCastDistance = Mathf.Abs(moveAmount.y) + skinWidth;
+            RaycastHit2D hit = Physics2D.BoxCast(origin, boxSize, 0f, Vector2.down, verticalCastDistance, collisionMask);
+
+            if (hit.collider != null)
+            {
+                moveAmount.y /= 2f;
+                currentVelocityY /= 2f;
+
+                if (moveAmount.y > -0.1f)
+                {
+                    moveAmount.y = 0;
+                    currentVelocityY = 0;
+                    isJumping = false;
+                }
+
+            } else { isJumping = true; currentVelocityY -= 0.1f; }
+        }
+        if (moveAmount.y == 0) { isJumping = false; }
+
+        rb.MovePosition(rb.position + moveAmount);
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    private void Jump()
     {
-        isGrounded = false;
+        if (!isJumping)
+        {
+            isJumping = true;
+            currentVelocityY = jumpForce;
+        } else
+        {
+            currentVelocityY += holdJumpForce * Time.fixedDeltaTime;
+        }
     }
 
     private void HandleMovement()
@@ -280,31 +443,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    //COSAS PUESTAS POR PABLO
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Goomba goomba = collision.gameObject.GetComponent<Goomba>();
-        if (goomba != null && jumpForce < 0)
-        {
-            goomba.goombaDead();
 
-
-            jumpForce += 10;
-            bounceOnEnenemy = true;
-        }
-
-        if (collision.gameObject.CompareTag("Block") || collision.gameObject.CompareTag("Breakable"))
-        {
-            bounceOnEnenemy = false;
-        }
-
-        //Muerte de Mario por tocar un enemigo
-        if (collision.gameObject.CompareTag("Enemy") && jumpForce >= 0f && bounceOnEnenemy == false && !isInvincible)
-        {
-            onHit();
-            //También haz que caiga hacia abajo, con el cambio de capa ya puede atravesar el suelo al morir, que yo no se hacerlo ahora
-        }
-    }
 
     public void Grow(string trigger)
     {
