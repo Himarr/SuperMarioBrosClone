@@ -39,6 +39,8 @@ public class Mushroom : PowerUp
                 Player.Grow("Big");
             }
             Destroy(gameObject);
+            // Add puntos
+            Interface.instance.addScoreMushroom();
         }
     }
 

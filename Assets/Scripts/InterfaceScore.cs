@@ -17,7 +17,7 @@ public class Interface : MonoBehaviour
     }
     void Start()
     {
-        //scoreText.text = score.ToString() + "00000"; 
+        //scoreText.text = score.ToString() + "00000"; NO HACE FALTA 
     }
 
     public void addScoreCoin()
@@ -29,13 +29,41 @@ public class Interface : MonoBehaviour
 
     }
 
-    /*public void addScoreGoomba()
+    public void addScoreGoomba()
     { 
-        score += 200;
+        score += 100;
         
         string puntosGoomba = score.ToString().PadLeft(6, '0');
         scoreText.text = puntosGoomba;
 
-    }*/
+    }
+
+    public void addScoreKoopa()
+    {
+        score += 200;
+
+        string puntosKoopa = score.ToString().PadLeft(6, '0');
+        scoreText.text = puntosKoopa;
+
+        Interface.instance.addScoreKoopa();
+
+    }
+
+    public void addScoreMushroom()
+    {
+        score += 1000;
+
+        string puntosMushroom = score.ToString().PadLeft(6, '0');
+        scoreText.text = puntosMushroom;
+
+    }
+    public void addScoreFlower()
+    {
+        score += 1000;
+
+        string puntosFlower = score.ToString().PadLeft(6, '0');
+        scoreText.text = puntosFlower;
+
+    }
 
 }
