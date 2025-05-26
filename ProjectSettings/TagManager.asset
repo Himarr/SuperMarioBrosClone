@@ -12,6 +12,8 @@ TagManager:
   - Spawn
   - KoopaInShell
   - EnemyTrigger
+  - Flag
+  - PipeTriggerH
   layers:
   - Default
   - TransparentFX

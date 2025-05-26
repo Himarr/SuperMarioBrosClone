@@ -12,6 +12,9 @@ public class Koopa : MonoBehaviour
     BoxCollider2D boxCollider;
     Player player;
 
+    public AudioClip kick;
+    public AudioSource audioSource;
+
     bool canMove = false;
 
     private void Start()
@@ -65,6 +68,7 @@ public class Koopa : MonoBehaviour
         {
             if (player != null && gameObject.tag == "KoopaInShell")
             {
+                AudioSource.PlayClipAtPoint(kick, gameObject.transform.position);
                 koopaVelocity = 6;
                 rb2D.AddForce(new Vector2(koopaVelocity * Time.deltaTime, 0));
                 Debug.Log("Koopa a la derecha de mario");
@@ -74,6 +78,7 @@ public class Koopa : MonoBehaviour
         {
             if (player != null && gameObject.tag == "KoopaInShell")
             {
+                AudioSource.PlayClipAtPoint(kick, gameObject.transform.position);
                 koopaVelocity = -6;
                 rb2D.AddForce(new Vector2(koopaVelocity * Time.deltaTime, 0));
                 Debug.Log("Koopa a la izquierda de mario");

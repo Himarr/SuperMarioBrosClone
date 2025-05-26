@@ -23,6 +23,10 @@ public class BreakableBlock : MonoBehaviour
     public GameObject coin;
 
     public bool isOverworld;
+     public AudioClip broken;
+    public AudioClip moneda;
+    public AudioSource audioSource;
+    public AudioClip bump;
 
     void Start()
     {
@@ -51,7 +55,7 @@ public class BreakableBlock : MonoBehaviour
         Vector3 startPosition = transform.position;
         Vector3 endPosition = new Vector3(transform.position.x, transform.position.y + 0.5f);
 
-        if (collision.gameObject.CompareTag("Player") && contactY > maxPosition && player.currentStatus == "small")
+        if (collision.gameObject.CompareTag("Player")  && contactY > maxPosition && player.currentStatus == "small" || contactY > maxPosition && player.currentStatus =="big" && hasCoins ==true || contactY > maxPosition && player.currentStatus == "fire" && hasCoins == true)
         {
             if (canMove)
             {
@@ -68,18 +72,19 @@ public class BreakableBlock : MonoBehaviour
                 canMove = false;
 
                 anim.SetBool("isLocked", true);
+                AudioSource.PlayClipAtPoint(bump, gameObject.transform.position);
             }
         }
 
         //El siguiente if lo puso Pablo para que Mario grande rompa bloques
-        if (collision.gameObject.CompareTag("Player") && contactY > maxPosition && (player.currentStatus == "big" || player.currentStatus == "fire"))
+        if (collision.gameObject.CompareTag("Player") && contactY > maxPosition && (player.currentStatus == "big" && hasCoins == false|| contactY > maxPosition && player.currentStatus == "fire" && hasCoins == false))
         {
             BlockBreak();
         }
 
         //El siguiente if lo puso Pablo para que el koopa en caparazon rompa bloques
         Koopa koopa = collision.gameObject.GetComponent<Koopa>();
-        if (koopa != null && koopa.tag == "KoopaInShell")
+        if (koopa != null && koopa.tag == "KoopaInShell" && hasCoins == false)
         {
             BlockBreak();
         }
@@ -94,7 +99,8 @@ public class BreakableBlock : MonoBehaviour
         yield return StartCoroutine(MoveObject(endPosition, startPosition, time, gameObject));
         canMove = true;
 
-        if (coinAmount == 0) { canMove = false;}
+        if (coinAmount == 0) { canMove = false; }
+        
     }
 
     IEnumerator MoveObject(Vector3 inicio, Vector3 fin, float tiempo, GameObject gameObj)
@@ -111,6 +117,7 @@ public class BreakableBlock : MonoBehaviour
 
     public void BlockBreak()
     {
+        AudioSource.PlayClipAtPoint(broken, gameObject.transform.position);
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
         gameObject.GetComponent<BoxCollider2D>().enabled = false;
 
@@ -145,7 +152,7 @@ public class BreakableBlock : MonoBehaviour
             yield return MoveObject(startPosition, endPosition, time, coinObject);
             GameManager.Instance.AddCoins();
             coinAmount--;
-
+            AudioSource.PlayClipAtPoint(moneda, gameObject.transform.position);
             
             Destroy(coinObject);
         }
