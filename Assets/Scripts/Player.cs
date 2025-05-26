@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
 
     bool isMoving;
     public bool isJumping;
-    bool isGrounded;
+    bool isGrounded = false;
     public bool canMove = true;
     bool isRunning;
     bool isCrouching;
@@ -222,20 +222,20 @@ public class Player : MonoBehaviour
         {
             direction = Mathf.Sign(moveAmount.x);
 
-            Vector2 origin = (Vector2)col.bounds.center + Vector2.right * direction * (col.bounds.extents.x - skinWidth);
-            Vector2 boxSize;
+            Vector2 originH = (Vector2)col.bounds.center + Vector2.right * direction * (col.bounds.extents.x - skinWidth);
+            Vector2 boxSizeH;
 
             if (isJumping)
             {
-                boxSize = new Vector2(skinWidth, col.bounds.size.y - skinWidth * 10);
+                boxSizeH = new Vector2(skinWidth, col.bounds.size.y - skinWidth * 10);
             } else
             {
-                boxSize = new Vector2(skinWidth, col.bounds.size.y - skinWidth * 2);
+                boxSizeH = new Vector2(skinWidth, col.bounds.size.y - skinWidth * 2);
             }
 
-            float castDistance = Mathf.Abs(moveAmount.x) + skinWidth;
+            float castDistanceH = Mathf.Abs(moveAmount.x) + skinWidth;
 
-            RaycastHit2D hit = Physics2D.BoxCast(origin, boxSize, 0f, Vector2.right * direction, castDistance, collisionMask);
+            RaycastHit2D hit = Physics2D.BoxCast(originH, boxSizeH, 0f, Vector2.right * direction, castDistanceH, collisionMask);
 
             if (hit.collider != null)
             {
@@ -244,32 +244,37 @@ public class Player : MonoBehaviour
                 currentVelocityX = 0f;
             }
         }
-        bool grounded = false;
-
         // BoxCast Vertical
-        if (moveAmount.y <= 0)
+        if (moveAmount.y != 0)
         {
-            Vector2 origin = (Vector2)col.bounds.center - new Vector2(0, col.bounds.extents.y - skinWidth);
+            float directionY = Mathf.Sign(moveAmount.y);
 
-            Vector2 boxSize = new Vector2(col.bounds.size.x - skinWidth * 2, skinWidth);
+            Vector2 originV = (Vector2)col.bounds.center + Vector2.up * directionY * (col.bounds.extents.y - skinWidth);
 
-            float verticalCastDistance = skinWidth * 2f;
-            RaycastHit2D hit = Physics2D.BoxCast(origin, boxSize, 0f, Vector2.down, verticalCastDistance, collisionMask);
+            Vector2 boxSizeV = new Vector2(col.bounds.size.x - skinWidth * 2, skinWidth);
+
+            float verticalCastDistance = Mathf.Abs(moveAmount.x) + skinWidth * 2f;
+
+
+            RaycastHit2D hit = Physics2D.BoxCast(originV, boxSizeV, 0f, Vector2.up * directionY, verticalCastDistance, collisionMask);
 
             if (hit.collider != null)
             {
-                moveAmount.y /= 2f;
-                currentVelocityY /= 2f;
+                float distanceToCollider = hit.distance - skinWidth;
+                moveAmount.y = direction * Mathf.Min(Mathf.Abs(moveAmount.y), distanceToCollider);
+                currentVelocityY = 0f;
 
-                if (moveAmount.y > -0.1f)
-                {
-                    moveAmount.y = 0;
-                    currentVelocityY = 0;
-                    grounded = true;
-                }
-
+                if (directionY < 0) { isGrounded = true; }
             }
         }
+
+        Vector2 origin = (Vector2)col.bounds.center - new Vector2(0, col.bounds.extents.y - skinWidth);
+        Vector2 boxSize = new Vector2(col.bounds.size.x - skinWidth * 2f, skinWidth);
+        float castDistance = skinWidth * 2f;
+
+        RaycastHit2D groundHit = Physics2D.BoxCast(origin, boxSize, 0f, Vector2.down, castDistance, collisionMask);
+
+        bool grounded = groundHit.collider != null;
         isJumping = !grounded;
 
         rb.MovePosition(rb.position + moveAmount);
@@ -309,157 +314,6 @@ public class Player : MonoBehaviour
 
         if (isShooting) { anim.SetTrigger("isShooting"); }
     }
-
-    private void HandleMovement()
-    {
-        /* 
-            Se encarga del Input y los cálculos de velocidad y aceleración de Mario.
-        */
-
-        // Idle
-        if (speed == 0) 
-        {
-            anim.SetBool("isMoving", false);
-            anim.SetBool("isBraking", false);
-        }
-
-        if (Input.GetKeyDown(KeyCode.D) && speed <= 0)
-            // Velocidad inicial
-        {
-            speed = minSpeed;
-            dir = 1;
-        }
-        if (Input.GetKey(KeyCode.D))
-        // Añadir aceleración
-        {
-            if (speed <= 0 && dir == -1) { dir = 1; speed = minSpeed; }
-
-            if (dir == 1)
-            {
-                isMoving = true;
-                anim.SetBool("isMoving", true);
-                sprite.flipX = false;
-            }
-
-            if (speed <= maxSpeed && dir == 1 && !isCrouching)
-            {
-                speed += acceleration * Time.deltaTime;
-            }
-
-            // Frenar
-            if (speed <= maxSpeed && dir != 1)
-            {
-                speed -= deceleration * Time.deltaTime;
-                anim.SetBool("isBraking", true);
-            }
-        }
-
-        if (Input.GetKeyDown(KeyCode.A) && speed <= 0)
-        // Velocidad inicial
-        {
-            speed = minSpeed;
-            dir = -1;
-        }
-        if (Input.GetKey(KeyCode.A))
-        // Añadir aceleración
-        {
-            if (speed <= 0 && dir == 1) { dir = -1; speed = minSpeed; }
-
-            if (dir == -1)
-            { 
-                isMoving = true; 
-                anim.SetBool("isMoving", true);
-                sprite.flipX = true;
-            }
-
-            if (speed <= maxSpeed && dir == -1 && !isCrouching)
-            {
-                speed += acceleration * Time.deltaTime;
-            }
-
-            // Frenar
-            if (speed <= maxSpeed && dir != -1)
-            {
-                speed -= deceleration * Time.deltaTime;
-                anim.SetBool("isBraking", true);
-            }
-        }
-
-        if (speed > 0 && !isMoving || (isCrouching && !isJumping))
-        {
-            speed -= deceleration * Time.deltaTime;
-        }
-
-        if (speed < 0) { speed = 0; }
-
-        // Mover
-        if (canMove)
-        {
-            this.transform.position += new Vector3(speed, 0) * Time.deltaTime * dir;
-        }
-        
-        // Saltar
-        if (Input.GetKey(KeyCode.L) && isGrounded)
-        {
-            isJumping = true;
-            anim.SetBool("isJumping", true);
-            jumpForce = initialJumpForce;
-        }
-        if(Input.GetKeyUp(KeyCode.L))
-        {
-            jumpForce /= 2;
-        }
-        if (jumpForce < -20) { jumpForce = -20; }
-
-
-        // Gravedad
-        if (isJumping || !isGrounded)
-        {
-            transform.position += new Vector3(0, jumpForce) * Time.deltaTime;
-            jumpForce += gravity * Time.deltaTime;
-        }
-
-        // Correr
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            maxSpeed *= 2;
-            anim.SetBool("isRunning", true);
-        }
-        else if (Input.GetKeyUp(KeyCode.K))
-        {
-            maxSpeed /= 2;
-            anim.SetBool("isRunning", false);
-        }
-
-        if (speed > maxSpeed)
-        {
-            speed -= deceleration * Time.deltaTime;
-        }
-
-        // Agacharse
-        if (currentStatus != "small")
-        {
-            if (Input.GetKeyDown(KeyCode.S))
-            {
-                isCrouching = true;
-                anim.SetBool("isCrouching", isCrouching);
-                ResetCollider();
-            }
-            else if (Input.GetKeyUp(KeyCode.S))
-            {
-                isCrouching = false;
-                anim.SetBool("isCrouching", isCrouching);
-                ExtendCollider();
-            }
-        }
-
-        // Disparar
-        if (currentStatus == "fire" && Input.GetKeyDown(KeyCode.K))
-        {
-            Shoot();
-        }
-    }
-
 
     public void Grow(string trigger)
     {
