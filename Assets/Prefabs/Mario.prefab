@@ -48,18 +48,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d490e3b34a87d84eb6b97d9919e886b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravity: -40
-  speed: 0
+  speed: 5
   acceleration: 10
+  friction: 20
+  gravity: -40
+  jumpForce: 15
+  holdJumpForce: 17
+  direction: 0
+  currentVelocityX: 0
+  currentVelocityY: 0
+  collisionMask:
+    serializedVersion: 2
+    m_Bits: 64
+  skinWidth: 0.05
   maxSpeed: 5
   minSpeed: 0.5
   deceleration: 10
+  isJumping: 0
   canMove: 1
   dir: 0
-  jumpForce: 0
-  holdJumpForce: 0.1
-  maxJumpForce: 12
-  initialJumpForce: 19.5
+  initialJumpForce: 20
   rb: {fileID: 6192399079419374979}
   anim: {fileID: 223185652711302967}
   col: {fileID: 2896548611471239731}
