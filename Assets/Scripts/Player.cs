@@ -25,6 +25,9 @@ public class Player : MonoBehaviour
     bool moveRight;
     bool moveUp;
 
+    int framesSinceGrounded;
+
+
     [Header("Collision")]
     public LayerMask collisionMask;
     public float skinWidth = 0.02f;
@@ -261,20 +264,21 @@ public class Player : MonoBehaviour
             if (hit.collider != null)
             {
                 float distanceToCollider = hit.distance - skinWidth;
-                moveAmount.y = direction * Mathf.Min(Mathf.Abs(moveAmount.y), distanceToCollider);
-                currentVelocityY = 0f;
+                moveAmount.y = directionY * Mathf.Min(Mathf.Abs(moveAmount.y), distanceToCollider);
+                currentVelocityY /= 2f;
 
-                if (directionY < 0) { isGrounded = true; }
+                if (currentVelocityY > -1f && moveAmount.y < 0) { currentVelocityY = 0f; }
             }
         }
 
         Vector2 origin = (Vector2)col.bounds.center - new Vector2(0, col.bounds.extents.y - skinWidth);
         Vector2 boxSize = new Vector2(col.bounds.size.x - skinWidth * 2f, skinWidth);
-        float castDistance = skinWidth * 2f;
+        float castDistance = skinWidth * 5f;
 
         RaycastHit2D groundHit = Physics2D.BoxCast(origin, boxSize, 0f, Vector2.down, castDistance, collisionMask);
 
         bool grounded = groundHit.collider != null;
+       
         isJumping = !grounded;
 
         rb.MovePosition(rb.position + moveAmount);
