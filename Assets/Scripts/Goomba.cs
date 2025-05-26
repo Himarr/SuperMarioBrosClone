@@ -53,7 +53,7 @@ public class Goomba : MonoBehaviour
     //Muerte del goomba
     public void goombaDead()
     {
-         AudioSource.PlayClipAtPoint(death, gameObject.transform.position);
+        AudioSource.PlayClipAtPoint(death, gameObject.transform.position);
         gameObject.layer = LayerMask.NameToLayer("OnlyGround");
         gameObject.GetComponent<Animator>().SetBool("IsDead", true);
         goombaVelocity = 0f;

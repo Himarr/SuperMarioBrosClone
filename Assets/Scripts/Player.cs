@@ -120,22 +120,20 @@ public class Player : MonoBehaviour
     {
  
         Goomba goomba = collision.gameObject.GetComponent<Goomba>();
-        if (goomba != null && jumpForce < 0)
+        if (goomba != null && currentVelocityY < 0)
         {
             goomba.goombaDead();
 
 
-            jumpForce += 10;
+            currentVelocityY += 15;
             bounceOnEnenemy = true;
-        }
-
-        if (collision.gameObject.CompareTag("Block") || collision.gameObject.CompareTag("Breakable"))
+        } else
         {
-            bounceOnEnenemy = false;
+            bounceOnEnenemy=false;
         }
 
         // Muerte de Mario por tocar un enemigo
-        if (collision.gameObject.CompareTag("Enemy") && jumpForce >= 0f && bounceOnEnenemy == false && !isInvincible)
+        if (collision.gameObject.CompareTag("Enemy") && currentVelocityY >= 0f && bounceOnEnenemy == false && !isInvincible)
         {
             onHit();
             // TODO haz que caiga hacia abajo
