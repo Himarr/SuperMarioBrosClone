@@ -55,7 +55,7 @@ public class BreakableBlock : MonoBehaviour
         Vector3 startPosition = transform.position;
         Vector3 endPosition = new Vector3(transform.position.x, transform.position.y + 0.5f);
 
-        if (collision.gameObject.CompareTag("Player")  && contactY > maxPosition && player.currentStatus == "small" || player.currentStatus =="big" && hasCoins ==true || player.currentStatus == "fire" && hasCoins == true)
+        if (collision.gameObject.CompareTag("Player")  && contactY > maxPosition && player.currentStatus == "small" || contactY > maxPosition && player.currentStatus =="big" && hasCoins ==true || contactY > maxPosition && player.currentStatus == "fire" && hasCoins == true)
         {
             if (canMove)
             {
@@ -77,7 +77,7 @@ public class BreakableBlock : MonoBehaviour
         }
 
         //El siguiente if lo puso Pablo para que Mario grande rompa bloques
-        if (collision.gameObject.CompareTag("Player") && contactY > maxPosition && (player.currentStatus == "big" && hasCoins == false|| player.currentStatus == "fire" && hasCoins == false))
+        if (collision.gameObject.CompareTag("Player") && contactY > maxPosition && (player.currentStatus == "big" && hasCoins == false|| contactY > maxPosition && player.currentStatus == "fire" && hasCoins == false))
         {
             BlockBreak();
         }

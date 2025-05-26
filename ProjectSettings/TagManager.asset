@@ -13,6 +13,7 @@ TagManager:
   - KoopaInShell
   - EnemyTrigger
   - Flag
+  - PipeTriggerH
   layers:
   - Default
   - TransparentFX

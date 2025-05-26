@@ -69,9 +69,9 @@ public class Flag : MonoBehaviour
         Vector3 inicio = player.transform.position;
         Vector3 fin = new Vector3(inicio.x += 0.9f, coords, inicio.z);
         float elapsed = 0;
-        while (elapsed < tiempo)
+        while (elapsed < tiempo / 2)
         {
-            player.transform.position = Vector3.Lerp(inicio, fin, elapsed * tiempo * 99);
+            player.transform.position = Vector3.Lerp(inicio, fin, elapsed * (tiempo / 2));
             elapsed += Time.deltaTime;
             yield return player.transform.localRotation = Quaternion.Euler(0, 180, 0);
         }
@@ -82,55 +82,50 @@ public class Flag : MonoBehaviour
 
     IEnumerator MarioSuelta()
     {
-
         player.transform.localRotation = Quaternion.Euler(0, 0, 0);
         Vector3 inicio = player.transform.position;
-        Vector3 fin = new Vector3(inicio.x += 0.25f, inicio.y, inicio.z);
+        Vector3 fin = new Vector3(inicio.x + 0.25f, inicio.y, inicio.z);
         float elapsed = 0;
-        while (elapsed < tiempo)
+        while (elapsed < tiempo / 7)
         {
-            player.transform.position = Vector3.Lerp(inicio, fin, elapsed / tiempo * 5);
+            player.transform.position = Vector3.Lerp(inicio, fin, elapsed / (tiempo / 7));
             elapsed += Time.deltaTime;
             yield return null;
         }
         anim.SetBool("isMoving", true);
         yield return StartCoroutine(MarioMarcha());
     }
-   IEnumerator MarioMarcha()
+
+    IEnumerator MarioMarcha()
     {
         Vector3 inicio = player.transform.position;
-        Vector3 fin = new Vector3(inicio.x, inicio.y -= 0.8f, inicio.z);
+        Vector3 fin = new Vector3(inicio.x, inicio.y - 0.8f, inicio.z);
         float elapsed = 0;
-        while (elapsed < tiempo)
+        while (elapsed < tiempo / 10)
         {
-            
-            player.transform.position = Vector3.LerpUnclamped(inicio, fin, elapsed * 1);
+
+            player.transform.position = Vector3.Lerp(inicio, fin, elapsed / (tiempo / 10));
             elapsed += Time.deltaTime;
             yield return null;
         }
-        yield return StartCoroutine(EntraCastle());
+        yield return StartCoroutine(CaminarCastle());
     }
 
-    IEnumerator EntraCastle()
+    IEnumerator CaminarCastle()
     {
-        Vector3 inicio = player.transform.position;
-        Vector2 fin = new Vector3(inicio.x +=7f, inicio.y, inicio.z);
+        float duration = 2f; 
         float elapsed = 0;
-        while (elapsed < tiempo)
+        Vector3 inicio = player.transform.position;
+        Vector3 fin = inicio + new Vector3(7f, 0, 0);
+
+        player.canMove = false;
+        anim.SetBool("isMoving", true);
+
+        while (elapsed < duration)
         {
-            player.transform.position = Vector3.LerpUnclamped(inicio, fin, elapsed * vel);
-
+            player.transform.position = Vector3.Lerp(inicio, fin, elapsed / duration);
+            elapsed += Time.deltaTime;
+            yield return null;
         }
-        yield return null;  
-    }
-
-
-
-
-
-
-    void Update()
-    {
-
     }
 }
