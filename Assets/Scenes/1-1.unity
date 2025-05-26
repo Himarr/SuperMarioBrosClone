@@ -1074,6 +1074,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goombaVelocity: -2
   canMove: 0
+  death: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!61 &125984298
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2346,6 +2348,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goombaVelocity: -2
   canMove: 0
+  death: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!61 &172025415
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2941,6 +2945,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goombaVelocity: -2
   canMove: 0
+  death: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!61 &259087100
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4288,6 +4294,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goombaVelocity: -2
   canMove: 0
+  death: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!61 &413239763
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5792,6 +5800,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goombaVelocity: 2
   canMove: 0
+  death: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!61 &628622879
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7059,6 +7069,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goombaVelocity: -2
   canMove: 0
+  death: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!61 &704684137
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7255,6 +7267,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goombaVelocity: -2
   canMove: 0
+  death: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!61 &705114726
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9857,6 +9871,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goombaVelocity: -2
   canMove: 0
+  death: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!61 &910373988
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10005,8 +10021,8 @@ SpriteRenderer:
 --- !u!1 &911068494
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1166880310576836497, guid: a0d1a5cdb25f7b44a97b531e89d21c8b, type: 3}
+  m_PrefabInstance: {fileID: 6900124446816433049}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
@@ -10022,8 +10038,8 @@ GameObject:
 --- !u!4 &911068495
 Transform:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 5221286966780815995, guid: a0d1a5cdb25f7b44a97b531e89d21c8b, type: 3}
+  m_PrefabInstance: {fileID: 6900124446816433049}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 911068494}
   serializedVersion: 2
@@ -10037,8 +10053,8 @@ Transform:
 --- !u!61 &911068496
 BoxCollider2D:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 3588905571966948309, guid: a0d1a5cdb25f7b44a97b531e89d21c8b, type: 3}
+  m_PrefabInstance: {fileID: 6900124446816433049}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 911068494}
   m_Enabled: 1
@@ -11173,6 +11189,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goombaVelocity: -2
   canMove: 0
+  death: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!61 &1020521154
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15061,6 +15079,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goombaVelocity: -2
   canMove: 0
+  death: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!61 &1510774821
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15667,6 +15687,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goombaVelocity: -2
   canMove: 0
+  death: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!61 &1578456100
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16113,8 +16135,8 @@ SpriteRenderer:
 --- !u!1 &1603698381
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 4265139651559625878, guid: a0d1a5cdb25f7b44a97b531e89d21c8b, type: 3}
+  m_PrefabInstance: {fileID: 6900124446816433049}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
@@ -16124,6 +16146,7 @@ GameObject:
   - component: {fileID: 1603698384}
   - component: {fileID: 1603698383}
   - component: {fileID: 1603698382}
+  - component: {fileID: 1603698388}
   m_Layer: 0
   m_Name: Goomba
   m_TagString: Enemy
@@ -16134,8 +16157,8 @@ GameObject:
 --- !u!114 &1603698382
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 6653106968656545850, guid: a0d1a5cdb25f7b44a97b531e89d21c8b, type: 3}
+  m_PrefabInstance: {fileID: 6900124446816433049}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1603698381}
   m_Enabled: 1
@@ -16145,11 +16168,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goombaVelocity: -2
   canMove: 0
+  death: {fileID: 8300000, guid: 143ef4375121c86419d61f26005dc9ee, type: 3}
+  audioSource: {fileID: 1603698388}
 --- !u!61 &1603698383
 BoxCollider2D:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 7701707737980440708, guid: a0d1a5cdb25f7b44a97b531e89d21c8b, type: 3}
+  m_PrefabInstance: {fileID: 6900124446816433049}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1603698381}
   m_Enabled: 1
@@ -16194,8 +16219,8 @@ BoxCollider2D:
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 7006610569396812315, guid: a0d1a5cdb25f7b44a97b531e89d21c8b, type: 3}
+  m_PrefabInstance: {fileID: 6900124446816433049}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1603698381}
   m_BodyType: 0
@@ -16221,8 +16246,8 @@ Rigidbody2D:
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 5553634568857173284, guid: a0d1a5cdb25f7b44a97b531e89d21c8b, type: 3}
+  m_PrefabInstance: {fileID: 6900124446816433049}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1603698381}
   m_Enabled: 1
@@ -16241,8 +16266,8 @@ Animator:
 --- !u!212 &1603698386
 SpriteRenderer:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 5691666891212152844, guid: a0d1a5cdb25f7b44a97b531e89d21c8b, type: 3}
+  m_PrefabInstance: {fileID: 6900124446816433049}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1603698381}
   m_Enabled: 1
@@ -16293,8 +16318,8 @@ SpriteRenderer:
 --- !u!4 &1603698387
 Transform:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1656376920155024629, guid: a0d1a5cdb25f7b44a97b531e89d21c8b, type: 3}
+  m_PrefabInstance: {fileID: 6900124446816433049}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1603698381}
   serializedVersion: 2
@@ -16306,6 +16331,102 @@ Transform:
   - {fileID: 911068495}
   m_Father: {fileID: 1317528651}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1603698388
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 3081796176596549415, guid: a0d1a5cdb25f7b44a97b531e89d21c8b, type: 3}
+  m_PrefabInstance: {fileID: 6900124446816433049}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603698381}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 143ef4375121c86419d61f26005dc9ee, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1604199756
 GameObject:
   m_ObjectHideFlags: 0
@@ -17641,6 +17762,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goombaVelocity: -2
   canMove: 0
+  death: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!61 &1680086212
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20608,6 +20731,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goombaVelocity: -2
   canMove: 0
+  death: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!61 &1954199039
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22084,6 +22209,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goombaVelocity: -2
   canMove: 0
+  death: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!61 &2091921398
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22280,6 +22407,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goombaVelocity: -2
   canMove: 0
+  death: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!61 &2098925774
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22911,6 +23040,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 383cfb3e42cf38d439d135a1edbf83b9, type: 3}
+--- !u!1001 &6900124446816433049
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1317528651}
+    m_Modifications:
+    - target: {fileID: 1656376920155024629, guid: a0d1a5cdb25f7b44a97b531e89d21c8b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -16.032076
+      objectReference: {fileID: 0}
+    - target: {fileID: 1656376920155024629, guid: a0d1a5cdb25f7b44a97b531e89d21c8b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.616025
+      objectReference: {fileID: 0}
+    - target: {fileID: 1656376920155024629, guid: a0d1a5cdb25f7b44a97b531e89d21c8b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.11988253
+      objectReference: {fileID: 0}
+    - target: {fileID: 1656376920155024629, guid: a0d1a5cdb25f7b44a97b531e89d21c8b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1656376920155024629, guid: a0d1a5cdb25f7b44a97b531e89d21c8b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1656376920155024629, guid: a0d1a5cdb25f7b44a97b531e89d21c8b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1656376920155024629, guid: a0d1a5cdb25f7b44a97b531e89d21c8b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1656376920155024629, guid: a0d1a5cdb25f7b44a97b531e89d21c8b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1656376920155024629, guid: a0d1a5cdb25f7b44a97b531e89d21c8b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1656376920155024629, guid: a0d1a5cdb25f7b44a97b531e89d21c8b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4265139651559625878, guid: a0d1a5cdb25f7b44a97b531e89d21c8b, type: 3}
+      propertyPath: m_Name
+      value: Goomba
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a0d1a5cdb25f7b44a97b531e89d21c8b, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
