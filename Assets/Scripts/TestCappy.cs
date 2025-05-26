@@ -12,7 +12,7 @@ public class ThrowCappy : MonoBehaviour
     [SerializeField]
     Transform Left;
 
-    float nextShot;
+    public float nextShot;
    
     void Start()
     {
@@ -45,4 +45,8 @@ public class ThrowCappy : MonoBehaviour
 
     }
 
+
+    
+
+    
 }
