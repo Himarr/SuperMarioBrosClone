@@ -25,18 +25,11 @@ public class Player : MonoBehaviour
     bool moveRight;
     bool moveUp;
 
-    int framesSinceGrounded;
-
-
     [Header("Collision")]
     public LayerMask collisionMask;
     public float skinWidth = 0.02f;
     
     // Variables iniciales
-    public float maxSpeed;
-    public float minSpeed;
-    public float deceleration;
-
     bool isMoving;
     public bool isJumping;
     bool isGrounded = false;
@@ -47,8 +40,6 @@ public class Player : MonoBehaviour
     bool isBraking;
     bool isInvincible;
     public int dir;
-
-    public float initialJumpForce;
 
     public Rigidbody2D rb;
     Camera cam;
@@ -124,8 +115,7 @@ public class Player : MonoBehaviour
         {
             goomba.goombaDead();
 
-
-            currentVelocityY += 15;
+            AddVelocityY(15f);
             bounceOnEnenemy = true;
         } else
         {
@@ -426,5 +416,15 @@ public class Player : MonoBehaviour
     public float GetVelocityX()
     {
         return currentVelocityX;
+    }
+
+    public float GetVelocityY()
+    {
+        return currentVelocityY;
+    }
+
+    public void AddVelocityY(float amount)
+    {
+        currentVelocityY += amount;
     }
 }

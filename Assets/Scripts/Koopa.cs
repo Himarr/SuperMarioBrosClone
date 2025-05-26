@@ -29,7 +29,6 @@ public class Koopa : MonoBehaviour
         {
             gameObject.transform.Translate(koopaVelocity * Time.deltaTime, 0, 0);
         }
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -44,7 +43,6 @@ public class Koopa : MonoBehaviour
             koopaVelocity = koopaVelocity * -1;
         }
         
-        
         if (gameObject.GetComponent<SpriteRenderer>().flipX == false)
         {
            gameObject.GetComponent<SpriteRenderer>().flipX = true;
@@ -53,11 +51,6 @@ public class Koopa : MonoBehaviour
         {
             gameObject.GetComponent<SpriteRenderer>().flipX = false;
         }
-        
-
-        
-
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -84,13 +77,13 @@ public class Koopa : MonoBehaviour
             }
         }
 
-        if (player != null && player.jumpForce < 0 && collision.gameObject.CompareTag("Player"))
+        if (player != null && player.GetVelocityY() < 0 && collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("Koopa caparazon");
 
             koopaInShell();
 
-            player.jumpForce += 20;
+            player.AddVelocityY(15f);
             player.bounceOnEnenemy = true;
 
             ThrowShell();
@@ -101,8 +94,6 @@ public class Koopa : MonoBehaviour
     {
         gameObject.GetComponent<Animator>().SetBool("IsInShell", true);
         koopaVelocity = 0f;
-        
-
     }
 
     public void ThrowShell()
@@ -110,9 +101,6 @@ public class Koopa : MonoBehaviour
         if(anim.GetBool("IsInShell") == true)
         {
             gameObject.tag = "KoopaInShell";
-
         }
     }
-
-    
 }

@@ -50,8 +50,6 @@ public class Goomba : MonoBehaviour
         {
             goombaVelocity = goombaVelocity * -1;
         }
-
-        
     }
 
     //Muerte del goomba
