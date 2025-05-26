@@ -32,6 +32,10 @@ public class Goomba : MonoBehaviour
         {
             goombaDeadByShellOrFire();
         }
+        if (collision.gameObject.CompareTag("FireBall"))
+        {
+            goombaDeadByShellOrFire();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
