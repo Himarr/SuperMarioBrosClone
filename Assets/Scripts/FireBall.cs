@@ -7,7 +7,7 @@ public class FireBall : MonoBehaviour
 
     public float speed;
     public float jumpForce;
-    int dir;
+    float dir;
 
     Player player;
     public BoxCollider2D boxCollider;
@@ -16,7 +16,8 @@ public class FireBall : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Mario").GetComponent<Player>();
-        dir = player.dir;
+        dir = player.direction;
+        if (player.GetVelocityX() > speed) { speed = player.GetVelocityX() + 1; }
     }
 
     // Update is called once per frame
@@ -44,7 +45,6 @@ public class FireBall : MonoBehaviour
                 Debug.Log("Rebote");
                 rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             }
-            
         }
         else
         {

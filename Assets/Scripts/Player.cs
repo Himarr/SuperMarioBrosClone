@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     public float gravity = -40f;
     public float jumpForce = 40f;
     public float holdJumpForce = 10f;
-
+    public float direction;
 
     [SerializeField]
     private float currentVelocityX = 0f;
@@ -40,6 +40,8 @@ public class Player : MonoBehaviour
     public bool canMove = true;
     bool isRunning;
     bool isCrouching;
+    bool isShooting;
+    bool isBraking;
     bool isInvincible;
     public int dir;
 
@@ -82,6 +84,7 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         HandlePhysics();
+        HandleAnimations();
     }
 
     private void MoveCamera(Camera cam)
@@ -159,6 +162,14 @@ public class Player : MonoBehaviour
             // Salto
             if (Input.GetKeyDown(KeyCode.L) && !isJumping) { moveUp = true; currentVelocityY = jumpForce; }
             if (Input.GetKeyUp(KeyCode.L)) { moveUp = false; currentVelocityY /= 2; }
+
+            // Agacharse
+            if (Input.GetKeyDown(KeyCode.S) && currentStatus != "small") { isCrouching = true; ResetCollider(); }
+            if (Input.GetKeyUp(KeyCode.S) && currentStatus != "small") { isCrouching = false; ExtendCollider(); }
+
+            // Disparar
+            if (Input.GetKeyDown(KeyCode.K) && currentStatus == "fire") { isShooting = true; }
+            if (Input.GetKeyUp(KeyCode.K) && currentStatus == "fire") { isShooting = false; }
         }
     }
 
@@ -179,7 +190,8 @@ public class Player : MonoBehaviour
             if (Mathf.Sign(desiredVelocityX) != Mathf.Sign(currentVelocityX) && currentVelocityX != 0)
             {
                 accel *= 2f;
-            }
+                isBraking = true;
+            } else { isBraking = false; }
 
             currentVelocityX = Mathf.MoveTowards(currentVelocityX, desiredVelocityX, accel * Time.fixedDeltaTime);
         }
@@ -200,14 +212,15 @@ public class Player : MonoBehaviour
             Jump();
         }
 
-
+        // Disparar
+        if (isShooting) { Shoot(); }
 
         Vector2 moveAmount = new Vector2(currentVelocityX, currentVelocityY) * Time.fixedDeltaTime;
 
         // BoxCast horizontal
         if (moveAmount.x != 0)
         {
-            float direction = Mathf.Sign(moveAmount.x);
+            direction = Mathf.Sign(moveAmount.x);
 
             Vector2 origin = (Vector2)col.bounds.center + Vector2.right * direction * (col.bounds.extents.x - skinWidth);
             Vector2 boxSize;
@@ -272,6 +285,29 @@ public class Player : MonoBehaviour
         {
             currentVelocityY += holdJumpForce * Time.fixedDeltaTime;
         }
+    }
+
+    private void HandleAnimations()
+    {
+        if (moveRight) { sprite.flipX = false; }
+        if (moveLeft) { sprite.flipX = true; }
+
+        if (moveRight || moveLeft) { anim.SetBool("isMoving", true); }
+        else { anim.SetBool("isMoving", false); }
+
+        if (isRunning) { anim.SetBool("isRunning", isRunning); }
+        else { anim.SetBool("isRunning", isRunning); }
+
+        if (isBraking) { anim.SetBool("isBraking", isBraking); }
+        else { anim.SetBool("isBraking", isBraking); }
+
+        if (isJumping) { anim.SetBool("isJumping", isJumping); }
+        else { anim.SetBool("isJumping", isJumping); }
+
+        if (isCrouching) { anim.SetBool("isCrouching", isCrouching); }
+        else { anim.SetBool("isCrouching", isCrouching); }
+
+        if (isShooting) { anim.SetTrigger("isShooting"); }
     }
 
     private void HandleMovement()
@@ -526,7 +562,13 @@ public class Player : MonoBehaviour
 
     private void Shoot()
     {
-        Debug.Log("Pium Pium");
-        Instantiate(fireBall, new Vector3(transform.position.x + (0.2f * dir), transform.position.y + 0.25f), Quaternion.identity);
+        anim.SetTrigger("isShooting");
+        isShooting = false;
+        Instantiate(fireBall, new Vector3(transform.position.x + (0.2f * direction), transform.position.y + 0.25f), Quaternion.identity);
+    }
+
+    public float GetVelocityX()
+    {
+        return currentVelocityX;
     }
 }
