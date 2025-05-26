@@ -12,10 +12,7 @@ public class Koopa : MonoBehaviour
     BoxCollider2D boxCollider;
     Player player;
 
-    public AudioClip kick;
-    public AudioSource audioSource;
-
-    bool canMove = false;
+    public bool canMove = false;
 
     private void Start()
     {
@@ -46,15 +43,19 @@ public class Koopa : MonoBehaviour
         {
             koopaVelocity = koopaVelocity * -1;
         }
-
+        
+        
         if (gameObject.GetComponent<SpriteRenderer>().flipX == false)
         {
-            gameObject.GetComponent<SpriteRenderer>().flipX = true;
+           gameObject.GetComponent<SpriteRenderer>().flipX = true;
         }
         else
         {
             gameObject.GetComponent<SpriteRenderer>().flipX = false;
         }
+        
+
+        
 
 
     }
@@ -68,7 +69,6 @@ public class Koopa : MonoBehaviour
         {
             if (player != null && gameObject.tag == "KoopaInShell")
             {
-                AudioSource.PlayClipAtPoint(kick, gameObject.transform.position);
                 koopaVelocity = 6;
                 rb2D.AddForce(new Vector2(koopaVelocity * Time.deltaTime, 0));
                 Debug.Log("Koopa a la derecha de mario");
@@ -78,7 +78,6 @@ public class Koopa : MonoBehaviour
         {
             if (player != null && gameObject.tag == "KoopaInShell")
             {
-                AudioSource.PlayClipAtPoint(kick, gameObject.transform.position);
                 koopaVelocity = -6;
                 rb2D.AddForce(new Vector2(koopaVelocity * Time.deltaTime, 0));
                 Debug.Log("Koopa a la izquierda de mario");
@@ -91,7 +90,7 @@ public class Koopa : MonoBehaviour
 
             koopaInShell();
 
-            player.jumpForce += 10;
+            player.jumpForce += 20;
             player.bounceOnEnenemy = true;
 
             ThrowShell();
