@@ -55,7 +55,7 @@ public class BreakableBlock : MonoBehaviour
         Vector3 startPosition = transform.position;
         Vector3 endPosition = new Vector3(transform.position.x, transform.position.y + 0.5f);
 
-        if (collision.gameObject.CompareTag("Player") && contactY > maxPosition && player.currentStatus == "small")
+        if (collision.gameObject.CompareTag("Player")  && contactY > maxPosition && player.currentStatus == "small" || player.currentStatus =="big" && hasCoins ==true || player.currentStatus == "fire" && hasCoins == true)
         {
             if (canMove)
             {
@@ -77,14 +77,14 @@ public class BreakableBlock : MonoBehaviour
         }
 
         //El siguiente if lo puso Pablo para que Mario grande rompa bloques
-        if (collision.gameObject.CompareTag("Player") && contactY > maxPosition && (player.currentStatus == "big" || player.currentStatus == "fire"))
+        if (collision.gameObject.CompareTag("Player") && contactY > maxPosition && (player.currentStatus == "big" && hasCoins == false|| player.currentStatus == "fire" && hasCoins == false))
         {
             BlockBreak();
         }
 
         //El siguiente if lo puso Pablo para que el koopa en caparazon rompa bloques
         Koopa koopa = collision.gameObject.GetComponent<Koopa>();
-        if (koopa != null && koopa.tag == "KoopaInShell")
+        if (koopa != null && koopa.tag == "KoopaInShell" && hasCoins == false)
         {
             BlockBreak();
         }
@@ -152,7 +152,7 @@ public class BreakableBlock : MonoBehaviour
             yield return MoveObject(startPosition, endPosition, time, coinObject);
             GameManager.Instance.AddCoins();
             coinAmount--;
-             AudioSource.PlayClipAtPoint(moneda, gameObject.transform.position);
+            AudioSource.PlayClipAtPoint(moneda, gameObject.transform.position);
             
             Destroy(coinObject);
         }

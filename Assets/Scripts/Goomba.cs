@@ -8,7 +8,7 @@ public class Goomba : MonoBehaviour
     Rigidbody2D rb2D;
 
     public bool canMove = false;
-     public AudioClip death;
+    public AudioClip death;
     public AudioSource audioSource;
 
     private void Start()
