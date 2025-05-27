@@ -246,6 +246,8 @@ public class Player : MonoBehaviour
 
             float verticalCastDistance = Mathf.Abs(moveAmount.x) + skinWidth * 2f;
 
+            if (moveAmount.y > 0) { verticalCastDistance = skinWidth * 2f; }
+
 
             RaycastHit2D hit = Physics2D.BoxCast(originV, boxSizeV, 0f, Vector2.up * directionY, verticalCastDistance, collisionMask);
 
