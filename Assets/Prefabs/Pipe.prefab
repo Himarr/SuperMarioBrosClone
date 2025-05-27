@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 8822405948630493920}
   - component: {fileID: 7223079211743485665}
   - component: {fileID: 671010344334142841}
-  m_Layer: 0
+  - component: {fileID: 5336858987974608957}
+  m_Layer: 6
   m_Name: Pipe
-  m_TagString: Untagged
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,6 +133,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 4}
   m_EdgeRadius: 0
+--- !u!114 &5336858987974608957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4785015173845330305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4fe117aaae739448b212429b05dbd12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  pipeDown: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!1 &6256029106316570878
 GameObject:
   m_ObjectHideFlags: 0
@@ -144,7 +160,7 @@ GameObject:
   - component: {fileID: 5393996849253272875}
   - component: {fileID: 7290814020808178888}
   - component: {fileID: 8823253182784075659}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PipeTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -333,6 +349,14 @@ PrefabInstance:
     - target: {fileID: 3558149699443030294, guid: de9fe79b38d33d1488489bf31f721893, type: 3}
       propertyPath: m_Name
       value: SceneLoader (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3558149699443030294, guid: de9fe79b38d33d1488489bf31f721893, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799924973969551637, guid: de9fe79b38d33d1488489bf31f721893, type: 3}
+      propertyPath: sceneName
+      value: 1-1 Underground2
       objectReference: {fileID: 0}
     - target: {fileID: 9215525373720543120, guid: de9fe79b38d33d1488489bf31f721893, type: 3}
       propertyPath: m_LocalPosition.x
