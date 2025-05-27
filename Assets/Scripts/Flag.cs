@@ -103,7 +103,6 @@ public class Flag : MonoBehaviour
         float elapsed = 0;
         while (elapsed < tiempo / 10)
         {
-
             player.transform.position = Vector3.Lerp(inicio, fin, elapsed / (tiempo / 10));
             elapsed += Time.deltaTime;
             yield return null;
