@@ -160,7 +160,7 @@ GameObject:
   - component: {fileID: 5393996849253272875}
   - component: {fileID: 7290814020808178888}
   - component: {fileID: 8823253182784075659}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: PipeTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -356,7 +356,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6799924973969551637, guid: de9fe79b38d33d1488489bf31f721893, type: 3}
       propertyPath: sceneName
-      value: 1-1 Underground2
+      value: 1-3 Undgr. 1
       objectReference: {fileID: 0}
     - target: {fileID: 9215525373720543120, guid: de9fe79b38d33d1488489bf31f721893, type: 3}
       propertyPath: m_LocalPosition.x

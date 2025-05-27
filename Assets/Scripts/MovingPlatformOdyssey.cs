@@ -16,9 +16,62 @@ public class MovingPlatformOdyssey : MonoBehaviour
         } 
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
-    {
+    //private void OnCollisionStay2D(Collision2D collision)
+    //{
 
+    //    Player player = collision.gameObject.GetComponent<Player>();
+    //    if (player != null && goesRight == false)
+    //    {
+    //        PlatformMovement();
+    //    }
+
+    //    if (player != null && goesRight)
+    //    {
+    //        platformMovementRight();
+    //    }
+    //}
+
+    public void PlatformMovement()
+    {
+        gameObject.transform.Translate(0, platformVelocity * Time.deltaTime, 0);
+    }
+
+    public void platformMovementRight()
+    {
+        gameObject.transform.Translate(platformVelocity * Time.deltaTime, 0, 0);
+    }
+
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+
+    //    Player player = collision.gameObject.GetComponent<Player>();
+    //    if (player != null)
+    //    {
+    //        player.transform.parent = gameObject.transform;
+    //    }
+    //}
+
+    //private void OnCollisionExit2D(Collision2D collision)
+    //{
+    //    Player player = collision.gameObject.GetComponent<Player>();
+    //    if (player != null)
+    //    {
+    //        player.transform.parent = null;
+    //    }
+
+    //}
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Player player = collision.gameObject.GetComponent<Player>();
+        if (player != null)
+        {
+            player.transform.parent = gameObject.transform;
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
         Player player = collision.gameObject.GetComponent<Player>();
         if (player != null && goesRight == false)
         {
@@ -31,33 +84,12 @@ public class MovingPlatformOdyssey : MonoBehaviour
         }
     }
 
-    public void PlatformMovement()
-    {
-        gameObject.transform.Translate(0, platformVelocity * Time.deltaTime, 0);
-    }
-
-    public void platformMovementRight()
-    {
-        gameObject.transform.Translate(platformVelocity * Time.deltaTime, 0, 0);
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-
-        Player player = collision.gameObject.GetComponent<Player>();
-        if (player != null)
-        {
-            player.transform.parent = gameObject.transform;
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         Player player = collision.gameObject.GetComponent<Player>();
         if (player != null)
         {
             player.transform.parent = null;
         }
-
     }
 }
