@@ -62,4 +62,7 @@ public class Piranhaplant : MonoBehaviour
 
         } else { canMove = true; }
     }
+
+    
+    
 }

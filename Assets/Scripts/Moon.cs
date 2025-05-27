@@ -10,6 +10,10 @@ public class Moon : MonoBehaviour
         {
             GameManager.Instance.AddMoon();
             Destroy(gameObject);
+
+            //puntos
+            GameManager.Instance.AddScore(1000);
+            GameManager.Instance.AddMoon(); 
         }
     }
 }

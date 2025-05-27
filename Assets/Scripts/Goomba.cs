@@ -61,6 +61,9 @@ public class Goomba : MonoBehaviour
         goombaVelocity = 0f;
         Destroy(gameObject, 0.5f);
 
+        //puntos 
+
+        GameManager.Instance.AddScore(100); 
     }
 
     public void goombaDeadByShellOrFire()
@@ -72,6 +75,9 @@ public class Goomba : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().flipY = true;
         
         Destroy(gameObject, 1f);
+
+        //puntos 
+        GameManager.Instance.AddScore(100); 
     }
 
     

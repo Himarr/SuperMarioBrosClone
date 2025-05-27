@@ -20,7 +20,6 @@ public class LoadTest : MonoBehaviour
         
         yield return new WaitForSeconds(time);
         Debug.Log("Han pasado 3 sec");
-        GameManager.Instance.SavePlayerState();
         SceneManager.LoadScene(sceneName);
     }
 

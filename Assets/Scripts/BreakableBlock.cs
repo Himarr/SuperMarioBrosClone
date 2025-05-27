@@ -80,6 +80,9 @@ public class BreakableBlock : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") && contactY > maxPosition && (player.currentStatus == "big" && hasCoins == false|| contactY > maxPosition && player.currentStatus == "fire" && hasCoins == false))
         {
             BlockBreak();
+
+            //puntos 
+            GameManager.Instance.AddScore(50); 
         }
 
         //El siguiente if lo puso Pablo para que el koopa en caparazon rompa bloques
@@ -143,6 +146,7 @@ public class BreakableBlock : MonoBehaviour
         Destroy(transform.Find("Bloques rotos_4").gameObject, 3f);
 
         Destroy(gameObject, 3f);
+ 
     }
     IEnumerator SpawnCoin(Vector3 startPosition, Vector3 endPosition, float time)
     {

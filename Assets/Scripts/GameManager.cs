@@ -97,8 +97,13 @@ public class GameManager : MonoBehaviour
 
     public void SavePlayerState()
     {
-        playerState = player.currentStatus;
-        Debug.Log(playerState);
+       
+       
+
+        if (player != null)
+        {
+           playerState = player.currentStatus;
+        }
     }
 
     public void SetPlayerState()
