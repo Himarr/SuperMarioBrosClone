@@ -155,6 +155,7 @@ public class BreakableBlock : MonoBehaviour
             GameObject coinObject = Instantiate(coin, startPosition, Quaternion.identity).gameObject;
             yield return MoveObject(startPosition, endPosition, time, coinObject);
             GameManager.Instance.AddCoins();
+            GameManager.Instance.AddScore(100);
             coinAmount--;
             AudioSource.PlayClipAtPoint(moneda, gameObject.transform.position);
             
