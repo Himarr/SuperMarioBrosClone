@@ -1,41 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI; 
 
 public class Interface : MonoBehaviour
 {
     //score 
-    public static Interface instance; 
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI coinText;
+    public TextMeshProUGUI lifeText;
+    public TextMeshProUGUI MoonText;
 
-    public Text scoreText;
-    int score = 0;
 
-    private void Awake()
+    public static Interface instance;
+
+    private void Update()
     {
-        instance = this;
-    }
-    void Start()
-    {
-        //scoreText.text = score.ToString() + "00000"; 
-    }
-
-    public void addScoreCoin()
-    {
-        score += 100;
-        
-        string Moneda = score.ToString().PadLeft(6,'0');
-        scoreText.text = Moneda;
-
+        scoreText.text = GameManager.Instance.GetScore().ToString().PadLeft(6,'0'); 
+        coinText.text = GameManager.Instance.GetCoins().ToString().PadLeft(2,'0');
+        //lifeText.text = GameManager.Instance.AddLives()
     }
 
-    /*public void addScoreGoomba()
-    { 
-        score += 200;
-        
-        string puntosGoomba = score.ToString().PadLeft(6, '0');
-        scoreText.text = puntosGoomba;
 
-    }*/
-
+    void LateUpdate()
+    {
+        Vector3 pos = transform.position;
+        float pixelsPerUnit = 16f;
+        pos.x = Mathf.Round(pos.x * pixelsPerUnit) / pixelsPerUnit;
+        pos.y = Mathf.Round(pos.y * pixelsPerUnit) / pixelsPerUnit;
+        transform.position = pos;
+    }
 }

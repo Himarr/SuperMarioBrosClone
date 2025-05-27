@@ -200,7 +200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 967363602750699835}
   - component: {fileID: 9127757109951440448}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: colliderPipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,7 +278,7 @@ GameObject:
   - component: {fileID: 8913071493848612312}
   - component: {fileID: 605622176007510426}
   - component: {fileID: 8861435354066987387}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PipeHorizontalD
   m_TagString: Untagged
   m_Icon: {fileID: 0}

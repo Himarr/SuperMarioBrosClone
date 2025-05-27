@@ -84,6 +84,7 @@ public class MovingPlatforms : MonoBehaviour
         if (player != null)
         {
             player.transform.parent = gameObject.transform;
+            player.transform.position += new Vector3(0, 0.1f);
         }
     }
 

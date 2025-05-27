@@ -23,13 +23,13 @@ public class PipeHorizontal : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (Input.GetKey(KeyCode.D) && trigger == false &&(player.dir == 1))
+        if (Input.GetKey(KeyCode.D) && trigger == false &&(player.direction == 1))
         {
             StartCoroutine(AnimacionPipeR());
             AudioSource.PlayClipAtPoint(pipeDown, gameObject.transform.position);
         }
 
-        if (Input.GetKey(KeyCode.A) && trigger == false && (player.dir == -1))
+        if (Input.GetKey(KeyCode.A) && trigger == false && (player.direction == -1))
         {
             StartCoroutine(AnimacionPipeL());
             AudioSource.PlayClipAtPoint(pipeDown, gameObject.transform.position);

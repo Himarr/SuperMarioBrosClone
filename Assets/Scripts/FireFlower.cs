@@ -20,6 +20,8 @@ public class FireFlower : PowerUp
                 Debug.Log("colision");
             }
         Destroy(gameObject);
+
+            GameManager.Instance.AddScore(1000); 
         }
     }
 }

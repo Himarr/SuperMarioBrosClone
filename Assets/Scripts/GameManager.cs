@@ -82,6 +82,11 @@ public class GameManager : MonoBehaviour
         // TODO - Si tiene 100 monedas transformar en una vida.
     }
 
+    public int GetCoins()
+    {
+        return coins;
+    }
+
     public void AddMoon(int amount = 1)
     {
         moons += amount;
@@ -92,8 +97,13 @@ public class GameManager : MonoBehaviour
 
     public void SavePlayerState()
     {
-        playerState = player.currentStatus;
-        Debug.Log(playerState);
+       
+       
+
+        if (player != null)
+        {
+           playerState = player.currentStatus;
+        }
     }
 
     public void SetPlayerState()
