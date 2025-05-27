@@ -18,7 +18,7 @@ public class TCappy : MonoBehaviour
     {
         initialPositionX = transform.position.x;
 
-        player = GameObject.Find("MarioWithCappy").GetComponent<Player>();
+        player = GameObject.Find("Mario").GetComponent<Player>();
 
         
     }
@@ -43,9 +43,9 @@ public class TCappy : MonoBehaviour
     {
         TestCappy testCappy = collision.gameObject.GetComponent<TestCappy>();
         //Mario rebota en Cappy o la recupera si no le salta encima
-        if (collision.gameObject.CompareTag("Player") && player.jumpForce < 0)
+        if (collision.gameObject.CompareTag("Player") && player.GetVelocityY() < 0)
         {
-            player.jumpForce += 34;
+            player.AddVelocityY(34f);
 
             Debug.Log("Mario toca a Cappy");
         }else if (collision.gameObject.CompareTag("Player"))
