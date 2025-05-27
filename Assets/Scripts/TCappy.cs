@@ -29,9 +29,17 @@ public class TCappy : MonoBehaviour
 
         cappyDistance = initialPositionX - positionX;
 
-        while ((cappyDistance > -4f))
+        while (cappyDistance > -4f && cappyDistance < 4)
         {
-            gameObject.transform.Translate(0.03f, 0, 0);
+            if (player.direction == 1)
+            {
+                gameObject.transform.Translate(0.03f, 0, 0);
+
+            }else if (player.direction == -1)
+            {
+                gameObject.transform.Translate(-0.03f, 0, 0);
+            }
+
 
             break;
         }
@@ -52,7 +60,6 @@ public class TCappy : MonoBehaviour
         {
             Destroy(gameObject);
             gameObject.GetComponent<Animator>().SetTrigger("HaveCappy");
-            //testCappy.nextShot -= 2;
             
         }
 

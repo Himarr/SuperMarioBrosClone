@@ -2819,6 +2819,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 748775476761453607, guid: 98f3951711c8cb340b6921912f31e00b, type: 3}
   m_PrefabInstance: {fileID: 8604354111996602770}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &275689014 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2843731014188900109, guid: 98f3951711c8cb340b6921912f31e00b, type: 3}
+  m_PrefabInstance: {fileID: 8604354111996602770}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275689011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d490e3b34a87d84eb6b97d9919e886b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &302455779
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16261,6 +16272,18 @@ PrefabInstance:
     - target: {fileID: 748775476761453607, guid: 98f3951711c8cb340b6921912f31e00b, type: 3}
       propertyPath: m_Name
       value: Mario
+      objectReference: {fileID: 0}
+    - target: {fileID: 2129635655858896257, guid: 98f3951711c8cb340b6921912f31e00b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2447518482539422675, guid: 98f3951711c8cb340b6921912f31e00b, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 275689014}
+    - target: {fileID: 8173019239967640491, guid: 98f3951711c8cb340b6921912f31e00b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.68
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
