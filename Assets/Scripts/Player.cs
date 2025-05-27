@@ -250,7 +250,7 @@ public class Player : MonoBehaviour
 
             float verticalCastDistance = Mathf.Abs(moveAmount.x) + skinWidth * 2f;
 
-            if (moveAmount.y > 0) { verticalCastDistance = skinWidth * 2f; }
+            if (moveAmount.y > 0) { verticalCastDistance = skinWidth; }
 
 
             RaycastHit2D hit = Physics2D.BoxCast(originV, boxSizeV, 0f, Vector2.up * directionY, verticalCastDistance, collisionMask);
@@ -262,6 +262,7 @@ public class Player : MonoBehaviour
                 currentVelocityY /= 2f;
 
                 if (currentVelocityY > -1f && moveAmount.y < 0) { currentVelocityY = 0f; }
+                if (moveAmount.y > 0) { currentVelocityY = 0f; }
             }
         }
 
