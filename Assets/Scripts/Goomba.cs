@@ -59,10 +59,6 @@ public class Goomba : MonoBehaviour
         goombaVelocity = 0f;
         Destroy(gameObject, 0.5f);
 
-        //add puntos
-
-        Interface.instance.addScoreGoomba();
-
     }
 
     public void goombaDeadByShellOrFire()
