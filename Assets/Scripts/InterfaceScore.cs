@@ -1,15 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI; 
 
 public class Interface : MonoBehaviour
 {
     //score 
-    public Text scoreText;
-    public Text coinText;
-    public Text lifeText;
-    public Text MoonText;
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI coinText;
+    public TextMeshProUGUI lifeText;
+    public TextMeshProUGUI MoonText;
 
 
     public static Interface instance;
@@ -21,6 +22,13 @@ public class Interface : MonoBehaviour
         //lifeText.text = GameManager.Instance.AddLives()
     }
 
-    
-    
+
+    void LateUpdate()
+    {
+        Vector3 pos = transform.position;
+        float pixelsPerUnit = 16f;
+        pos.x = Mathf.Round(pos.x * pixelsPerUnit) / pixelsPerUnit;
+        pos.y = Mathf.Round(pos.y * pixelsPerUnit) / pixelsPerUnit;
+        transform.position = pos;
+    }
 }

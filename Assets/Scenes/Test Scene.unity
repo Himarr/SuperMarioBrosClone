@@ -1418,6 +1418,26 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &445592763 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9089902780492348937, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+  m_PrefabInstance: {fileID: 6408659200748099156}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &445592767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445592763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a13b6f92fe23b9e409be58cebb418df0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  pipeDown: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!20 &471511489 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 927640994104140801, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
@@ -2591,9 +2611,41 @@ PrefabInstance:
       propertyPath: orthographic size
       value: 7.5
       objectReference: {fileID: 0}
+    - target: {fileID: 927640994104140801, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
+      propertyPath: m_NormalizedViewPortRect.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 927640994104140801, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
+      propertyPath: m_NormalizedViewPortRect.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 927640994104140801, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 927640994104140801, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
+      propertyPath: m_NormalizedViewPortRect.height
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3218530543753096223, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 6744194661074851084, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
+      propertyPath: m_CropFrame
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6744194661074851084, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
+      propertyPath: m_FilterMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6744194661074851084, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
+      propertyPath: m_GridSnapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6744194661074851084, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
+      propertyPath: m_RefResolutionY
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 7886646622794184490, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2819,10 +2871,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1044570655118291457, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8913071493848612312, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.44
@@ -2867,14 +2915,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: PipeHorizontal
       objectReference: {fileID: 0}
-    - target: {fileID: 9089902780492348937, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9089902780492348937, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 445592767}
   m_SourcePrefab: {fileID: 100100000, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
 --- !u!1001 &6603049084952464689
 PrefabInstance:
@@ -2951,7 +2998,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1726434986778254719, guid: 8f15b4cc6e102854589979848aebdf76, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.3428829
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 1726434986778254719, guid: 8f15b4cc6e102854589979848aebdf76, type: 3}
       propertyPath: m_LocalPosition.z

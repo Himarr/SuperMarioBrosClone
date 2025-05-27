@@ -85,7 +85,11 @@ public class Player : MonoBehaviour
     {
         if (cam.transform.position.x < this.transform.position.x)
         {
-            cam.transform.position = new Vector3(this.transform.position.x, 0.5f, -10);
+            Vector3 pos = transform.position;
+            float pixelsPerUnit = 16f; // Ajusta a tu PPU
+            pos.x = Mathf.Round(pos.x * pixelsPerUnit) / pixelsPerUnit;
+            pos.y = Mathf.Round(cam.transform.position.y * pixelsPerUnit) / pixelsPerUnit;
+            cam.transform.position = new Vector3(pos.x, pos.y, -10);
         }
     }
 
