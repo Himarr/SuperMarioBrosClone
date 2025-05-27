@@ -6,36 +6,16 @@ using UnityEngine.UI;
 public class Interface : MonoBehaviour
 {
     //score 
-    public static Interface instance; 
-
     public Text scoreText;
-    int score = 0;
+    public Text coinText; 
+    public static Interface instance;
 
-    private void Awake()
+    private void Update()
     {
-        instance = this;
-    }
-    void Start()
-    {
-        //scoreText.text = score.ToString() + "00000"; 
+        scoreText.text = GameManager.Instance.GetScore().ToString().PadLeft(6,'0'); 
+        coinText.text = GameManager.Instance.GetCoins().ToString().PadLeft(2,'0');
     }
 
-    public void addScoreCoin()
-    {
-        score += 100;
-        
-        string Moneda = score.ToString().PadLeft(6,'0');
-        scoreText.text = Moneda;
-
-    }
-
-    /*public void addScoreGoomba()
-    { 
-        score += 200;
-        
-        string puntosGoomba = score.ToString().PadLeft(6, '0');
-        scoreText.text = puntosGoomba;
-
-    }*/
-
+    
+    
 }

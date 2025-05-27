@@ -82,6 +82,11 @@ public class GameManager : MonoBehaviour
         // TODO - Si tiene 100 monedas transformar en una vida.
     }
 
+    public int GetCoins()
+    {
+        return coins;
+    }
+
     public void AddMoon(int amount = 1)
     {
         moons += amount;
