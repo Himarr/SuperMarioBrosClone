@@ -890,9 +890,25 @@ PrefabInstance:
       value: QuestionBlock (3)
       objectReference: {fileID: 0}
     - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 2687851848151669744, guid: 4ccf2c56e90ea2546aa701c1d41e6b65, type: 3}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: moneda
+      value: 
+      objectReference: {fileID: 8300000, guid: c948e8ff850f99f45b00ee2fcb7b1482, type: 3}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: hasCoin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
       propertyPath: powerUp
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 2039217008}
     - target: {fileID: 3943493526646256773, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.2236671
@@ -1461,9 +1477,25 @@ PrefabInstance:
       value: QuestionBlock (8)
       objectReference: {fileID: 0}
     - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 2687851848151669744, guid: 4ccf2c56e90ea2546aa701c1d41e6b65, type: 3}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: moneda
+      value: 
+      objectReference: {fileID: 8300000, guid: c948e8ff850f99f45b00ee2fcb7b1482, type: 3}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: hasCoin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
       propertyPath: powerUp
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 2039217008}
     - target: {fileID: 3943493526646256773, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
       propertyPath: m_LocalPosition.x
       value: 93.22366
@@ -1904,9 +1936,25 @@ PrefabInstance:
       value: QuestionBlock (4)
       objectReference: {fileID: 0}
     - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 2687851848151669744, guid: 4ccf2c56e90ea2546aa701c1d41e6b65, type: 3}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: moneda
+      value: 
+      objectReference: {fileID: 8300000, guid: c948e8ff850f99f45b00ee2fcb7b1482, type: 3}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: hasCoin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
       propertyPath: powerUp
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 2039217008}
     - target: {fileID: 3943493526646256773, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.223667
@@ -2249,9 +2297,25 @@ PrefabInstance:
       value: QuestionBlock (13)
       objectReference: {fileID: 0}
     - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 2687851848151669744, guid: 4ccf2c56e90ea2546aa701c1d41e6b65, type: 3}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: moneda
+      value: 
+      objectReference: {fileID: 8300000, guid: c948e8ff850f99f45b00ee2fcb7b1482, type: 3}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: hasCoin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
       propertyPath: powerUp
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 2039217008}
     - target: {fileID: 3943493526646256773, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
       propertyPath: m_LocalPosition.x
       value: 154.222
@@ -2538,9 +2602,25 @@ PrefabInstance:
       value: QuestionBlock (12)
       objectReference: {fileID: 0}
     - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 2687851848151669744, guid: 4ccf2c56e90ea2546aa701c1d41e6b65, type: 3}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: moneda
+      value: 
+      objectReference: {fileID: 8300000, guid: c948e8ff850f99f45b00ee2fcb7b1482, type: 3}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: hasCoin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
       propertyPath: powerUp
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 2039217008}
     - target: {fileID: 3943493526646256773, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
       propertyPath: m_LocalPosition.x
       value: 114.22366
@@ -3998,9 +4078,25 @@ PrefabInstance:
       value: QuestionBlock (11)
       objectReference: {fileID: 0}
     - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 2687851848151669744, guid: 4ccf2c56e90ea2546aa701c1d41e6b65, type: 3}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: moneda
+      value: 
+      objectReference: {fileID: 8300000, guid: c948e8ff850f99f45b00ee2fcb7b1482, type: 3}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: hasCoin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
       propertyPath: powerUp
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 2039217008}
     - target: {fileID: 3943493526646256773, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
       propertyPath: m_LocalPosition.x
       value: 113.22366
@@ -11946,9 +12042,25 @@ PrefabInstance:
       value: QuestionBlock (6)
       objectReference: {fileID: 0}
     - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 2687851848151669744, guid: 4ccf2c56e90ea2546aa701c1d41e6b65, type: 3}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: moneda
+      value: 
+      objectReference: {fileID: 8300000, guid: c948e8ff850f99f45b00ee2fcb7b1482, type: 3}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: hasCoin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
       propertyPath: powerUp
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 2039217008}
     - target: {fileID: 3943493526646256773, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
       propertyPath: m_LocalPosition.x
       value: 77.22366
@@ -15543,9 +15655,25 @@ PrefabInstance:
       value: QuestionBlock (9)
       objectReference: {fileID: 0}
     - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 2687851848151669744, guid: 4ccf2c56e90ea2546aa701c1d41e6b65, type: 3}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: moneda
+      value: 
+      objectReference: {fileID: 8300000, guid: c948e8ff850f99f45b00ee2fcb7b1482, type: 3}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: hasCoin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
       propertyPath: powerUp
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 2039217008}
     - target: {fileID: 3943493526646256773, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
       propertyPath: m_LocalPosition.x
       value: 96.22366
@@ -19165,6 +19293,11 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!82 &2039217008 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 562905704205458466, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+  m_PrefabInstance: {fileID: 2039217002}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2048209907
 GameObject:
   m_ObjectHideFlags: 0
@@ -19500,9 +19633,25 @@ PrefabInstance:
       value: QuestionBlock (7)
       objectReference: {fileID: 0}
     - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 2687851848151669744, guid: 4ccf2c56e90ea2546aa701c1d41e6b65, type: 3}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: moneda
+      value: 
+      objectReference: {fileID: 8300000, guid: c948e8ff850f99f45b00ee2fcb7b1482, type: 3}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: hasCoin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
       propertyPath: powerUp
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 2039217008}
     - target: {fileID: 3943493526646256773, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
       propertyPath: m_LocalPosition.x
       value: 90.22366

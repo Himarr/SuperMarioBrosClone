@@ -305,6 +305,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: hasCoins
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: isOverworld
       value: 1
       objectReference: {fileID: 0}
@@ -1051,6 +1055,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2518520800134653989, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: hasCoins
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
@@ -1973,6 +1981,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: hasCoins
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: isOverworld
       value: 1
       objectReference: {fileID: 0}
@@ -2235,6 +2247,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: hasCoins
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: isOverworld
       value: 1
       objectReference: {fileID: 0}
@@ -2306,6 +2322,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: hasCoins
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: isOverworld
       value: 1
       objectReference: {fileID: 0}
@@ -2330,6 +2350,26 @@ PrefabInstance:
     - target: {fileID: 510026401723407054, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
       propertyPath: m_Name
       value: QuestionBlock (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 2687851848151669744, guid: 4ccf2c56e90ea2546aa701c1d41e6b65, type: 3}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: moneda
+      value: 
+      objectReference: {fileID: 8300000, guid: c948e8ff850f99f45b00ee2fcb7b1482, type: 3}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: hasCoin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: powerUp
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: audioSource
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3943493526646256773, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3369,6 +3409,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: hasCoins
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: isOverworld
       value: 1
       objectReference: {fileID: 0}
@@ -3879,6 +3923,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: hasCoins
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: isOverworld
       value: 1
       objectReference: {fileID: 0}
@@ -3942,6 +3990,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2518520800134653989, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: hasCoins
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
@@ -4292,6 +4344,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2518520800134653989, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: hasCoins
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
@@ -4752,6 +4808,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2518520800134653989, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: hasCoins
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
@@ -6431,6 +6491,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: hasCoins
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: isOverworld
       value: 1
       objectReference: {fileID: 0}
@@ -7680,6 +7744,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: hasCoins
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: isOverworld
       value: 1
       objectReference: {fileID: 0}
@@ -8044,6 +8112,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: hasCoins
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: isOverworld
       value: 1
       objectReference: {fileID: 0}
@@ -8339,6 +8411,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: hasCoins
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: isOverworld
       value: 1
       objectReference: {fileID: 0}
@@ -8402,6 +8478,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2518520800134653989, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: hasCoins
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
@@ -8639,6 +8719,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: hasCoins
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: isOverworld
       value: 1
       objectReference: {fileID: 0}
@@ -8848,6 +8932,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2518520800134653989, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: hasCoins
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
@@ -9805,6 +9893,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: hasCoins
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: isOverworld
       value: 1
       objectReference: {fileID: 0}
@@ -10337,6 +10429,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: hasCoins
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: isOverworld
       value: 1
       objectReference: {fileID: 0}
@@ -10630,6 +10726,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2518520800134653989, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: hasCoins
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
@@ -12628,6 +12728,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: hasCoins
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: isOverworld
       value: 1
       objectReference: {fileID: 0}
@@ -13100,6 +13204,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: hasCoins
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: isOverworld
       value: 1
       objectReference: {fileID: 0}
@@ -13132,6 +13240,14 @@ PrefabInstance:
     - target: {fileID: 927640994104140801, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
       propertyPath: m_BackGroundColor.r
       value: 0.20784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 927640994104140801, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
+      propertyPath: m_NormalizedViewPortRect.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 927640994104140801, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3218530543753096223, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
       propertyPath: m_Name
@@ -13987,6 +14103,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: hasCoins
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: isOverworld
       value: 1
       objectReference: {fileID: 0}
@@ -14267,6 +14387,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: hasCoins
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: isOverworld
       value: 1
       objectReference: {fileID: 0}
@@ -14333,6 +14457,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: hasCoins
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: isOverworld
       value: 1
       objectReference: {fileID: 0}
@@ -14396,6 +14524,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2518520800134653989, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: hasCoins
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
@@ -16883,6 +17015,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: hasCoins
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: isOverworld
       value: 1
       objectReference: {fileID: 0}
@@ -17282,6 +17418,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2518520800134653989, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: hasCoins
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
@@ -18761,6 +18901,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: hasCoins
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: isOverworld
       value: 1
       objectReference: {fileID: 0}
@@ -19072,6 +19216,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2518520800134653989, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: hasCoins
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}

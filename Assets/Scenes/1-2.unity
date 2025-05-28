@@ -551,7 +551,23 @@ PrefabInstance:
       value: QuestionBlock (4)
       objectReference: {fileID: 0}
     - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 2687851848151669744, guid: 4ccf2c56e90ea2546aa701c1d41e6b65, type: 3}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: moneda
+      value: 
+      objectReference: {fileID: 8300000, guid: c948e8ff850f99f45b00ee2fcb7b1482, type: 3}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: hasCoin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
       propertyPath: powerUp
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: audioSource
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3943493526646256773, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
@@ -1688,7 +1704,23 @@ PrefabInstance:
       value: QuestionBlock (3)
       objectReference: {fileID: 0}
     - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 2687851848151669744, guid: 4ccf2c56e90ea2546aa701c1d41e6b65, type: 3}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: moneda
+      value: 
+      objectReference: {fileID: 8300000, guid: c948e8ff850f99f45b00ee2fcb7b1482, type: 3}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: hasCoin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
       propertyPath: powerUp
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: audioSource
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3943493526646256773, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
@@ -22531,7 +22563,23 @@ PrefabInstance:
       value: QuestionBlock (1)
       objectReference: {fileID: 0}
     - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 2687851848151669744, guid: 4ccf2c56e90ea2546aa701c1d41e6b65, type: 3}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: moneda
+      value: 
+      objectReference: {fileID: 8300000, guid: c948e8ff850f99f45b00ee2fcb7b1482, type: 3}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: hasCoin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
       propertyPath: powerUp
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: audioSource
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3943493526646256773, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
@@ -23159,7 +23207,23 @@ PrefabInstance:
       value: QuestionBlock (2)
       objectReference: {fileID: 0}
     - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 2687851848151669744, guid: 4ccf2c56e90ea2546aa701c1d41e6b65, type: 3}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: moneda
+      value: 
+      objectReference: {fileID: 8300000, guid: c948e8ff850f99f45b00ee2fcb7b1482, type: 3}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: hasCoin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
       propertyPath: powerUp
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
+      propertyPath: audioSource
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3943493526646256773, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
