@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
     public bool playerOnScene = false;
     bool isPaused = false;
 
+    public AudioClip pause;
+    public AudioSource audioSource;
+
     public Player player;
     void Awake()
     {
@@ -46,7 +49,7 @@ public class GameManager : MonoBehaviour
         {
             if (!isPaused) { PauseGame(); }
             else { ResumeGame(); }
-             
+            
         }
     }
     private void OnEnable()
@@ -159,6 +162,7 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0;
         isPaused = true;
+        AudioSource.PlayClipAtPoint(pause, gameObject.transform.position);
     }
 
     void ResumeGame()
