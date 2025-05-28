@@ -7808,7 +7808,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piranhaPlantVelocity: 2
   timer: 0
-  player: {fileID: 0}
+  player: {fileID: 739892044}
   canMove: 1
 --- !u!95 &430580704
 Animator:
@@ -9604,7 +9604,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piranhaPlantVelocity: 2
   timer: 0
-  player: {fileID: 0}
+  player: {fileID: 739892044}
   canMove: 1
 --- !u!95 &518581524
 Animator:
@@ -11235,7 +11235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piranhaPlantVelocity: 2
   timer: 0
-  player: {fileID: 0}
+  player: {fileID: 739892044}
   canMove: 1
 --- !u!95 &605671421
 Animator:
@@ -13089,6 +13089,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98f3951711c8cb340b6921912f31e00b, type: 3}
+--- !u!1 &739892044 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 748775476761453607, guid: 98f3951711c8cb340b6921912f31e00b, type: 3}
+  m_PrefabInstance: {fileID: 739892043}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &740691939 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2518520800134653989, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
@@ -14243,7 +14248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piranhaPlantVelocity: 2
   timer: 0
-  player: {fileID: 0}
+  player: {fileID: 739892044}
   canMove: 1
 --- !u!95 &796998754
 Animator:
@@ -19857,7 +19862,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piranhaPlantVelocity: 2
   timer: 0
-  player: {fileID: 0}
+  player: {fileID: 739892044}
   canMove: 1
 --- !u!95 &1158499614
 Animator:
@@ -27693,7 +27698,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piranhaPlantVelocity: 2
   timer: 0
-  player: {fileID: 0}
+  player: {fileID: 739892044}
   canMove: 1
 --- !u!95 &1634405887
 Animator:
@@ -29128,7 +29133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piranhaPlantVelocity: 2
   timer: 0
-  player: {fileID: 0}
+  player: {fileID: 739892044}
   canMove: 1
 --- !u!95 &1736267452
 Animator:
@@ -35023,7 +35028,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piranhaPlantVelocity: 2
   timer: 0
-  player: {fileID: 0}
+  player: {fileID: 739892044}
   canMove: 1
 --- !u!95 &2083564431
 Animator:

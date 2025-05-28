@@ -7029,7 +7029,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piranhaPlantVelocity: 2
   timer: 0
-  player: {fileID: 0}
+  player: {fileID: 1138932813}
   canMove: 1
 --- !u!95 &393037890
 Animator:
@@ -12155,7 +12155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piranhaPlantVelocity: 2
   timer: 0
-  player: {fileID: 0}
+  player: {fileID: 1138932813}
   canMove: 1
 --- !u!95 &660064843
 Animator:
@@ -13414,7 +13414,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piranhaPlantVelocity: 2
   timer: 0
-  player: {fileID: 0}
+  player: {fileID: 1138932813}
   canMove: 1
 --- !u!95 &750235155
 Animator:
@@ -20056,6 +20056,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98f3951711c8cb340b6921912f31e00b, type: 3}
+--- !u!1 &1138932813 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 748775476761453607, guid: 98f3951711c8cb340b6921912f31e00b, type: 3}
+  m_PrefabInstance: {fileID: 1138932812}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1140021539
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27549,7 +27554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piranhaPlantVelocity: 2
   timer: 0
-  player: {fileID: 0}
+  player: {fileID: 1138932813}
   canMove: 1
 --- !u!95 &1611407800
 Animator:
@@ -27996,7 +28001,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piranhaPlantVelocity: 2
   timer: 0
-  player: {fileID: 0}
+  player: {fileID: 1138932813}
   canMove: 1
 --- !u!95 &1640884817
 Animator:
@@ -28376,7 +28381,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piranhaPlantVelocity: 2
   timer: 0
-  player: {fileID: 0}
+  player: {fileID: 1138932813}
   canMove: 1
 --- !u!95 &1653817841
 Animator:
@@ -29177,7 +29182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piranhaPlantVelocity: 2
   timer: 0
-  player: {fileID: 0}
+  player: {fileID: 1138932813}
   canMove: 1
 --- !u!95 &1717021776
 Animator:
@@ -32345,7 +32350,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piranhaPlantVelocity: 2
   timer: 0
-  player: {fileID: 0}
+  player: {fileID: 1138932813}
   canMove: 1
 --- !u!95 &1922027468
 Animator:
