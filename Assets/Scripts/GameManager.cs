@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     float timer = 400;
 
     int moons = 0;
+    public HashSet<string> collectedMoons = new HashSet<string>();
     int life = 3;
 
     public bool playerOnScene = false;
