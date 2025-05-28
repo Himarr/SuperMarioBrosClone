@@ -14,8 +14,12 @@ public class QuestionBlock : MonoBehaviour
 
     public PowerUp powerUp;
     SpriteRenderer spriteRenderer;
-     public AudioClip bump;
+    public AudioClip bump;
+    public AudioClip moneda;
     public AudioSource audioSource;
+
+    public GameObject coin;
+    public bool hasCoin = false;
 
     void Start()
     {
@@ -48,6 +52,14 @@ public class QuestionBlock : MonoBehaviour
                 StartCoroutine(MoveCoroutine(startPosition, endPosition, time, this.gameObject));
                 isEmpty = true;
                 spriteRenderer.enabled = true;
+
+                if (hasCoin)
+                {
+                    StartCoroutine(SpawnCoin(startPosition, endPosition + new Vector3(0, 1.5f), 0.2f));
+                    hasCoin = false;
+                    isEmpty = true;
+                    return;
+                }
             }
         }
     }
@@ -89,6 +101,19 @@ public class QuestionBlock : MonoBehaviour
             {
                 powerUp.canMove = true;
             }
+        }
+    }
+    IEnumerator SpawnCoin(Vector3 startPosition, Vector3 endPosition, float time)
+    {
+        if (coin != null)
+        {
+            GameObject coinObject = Instantiate(coin, startPosition, Quaternion.identity).gameObject;
+            yield return MoveObject(startPosition, endPosition, time, coinObject);
+            GameManager.Instance.AddCoins();
+            GameManager.Instance.AddScore(100);
+            AudioSource.PlayClipAtPoint(moneda, gameObject.transform.position);
+
+            Destroy(coinObject);
         }
     }
 }
