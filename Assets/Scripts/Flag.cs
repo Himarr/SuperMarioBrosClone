@@ -16,7 +16,8 @@ public class Flag : MonoBehaviour
     private float vel = 1;
     private GameObject flag;
 
-
+    public AudioClip flagPole , flagPoleMusic;
+    public AudioSource audioSource;
 
 
 
@@ -44,8 +45,11 @@ public class Flag : MonoBehaviour
 
     IEnumerator MarioDown()
     {
+
         Vector3 inicio = player.transform.position;
         Vector3 fin = new Vector3(inicio.x, coords, inicio.z);
+
+        audioSource.PlayOneShot(flagPole, 0.25f);
 
         Vector3 inicioF = flag.transform.position;
         Vector3 finF = new Vector3(inicio.x, coords, inicio.z);
@@ -53,11 +57,12 @@ public class Flag : MonoBehaviour
         float elapsed = 0;
         while (elapsed < tiempo)
         {
-            flag.transform.position = Vector3.Lerp(inicioF, finF, elapsed / tiempo);
-            player.transform.position = Vector3.Lerp(inicio, fin, elapsed / tiempo);
+            flag.transform.position = Vector3.Lerp(inicioF, finF, elapsed / (tiempo / 2));
+            player.transform.position = Vector3.Lerp(inicio, fin, elapsed / (tiempo/2));
             elapsed += Time.deltaTime;
             yield return null;
         }
+        audioSource.PlayOneShot(flagPoleMusic);
 
         yield return StartCoroutine(MarioFlip()); ;
 
@@ -68,6 +73,9 @@ public class Flag : MonoBehaviour
     {
         Vector3 inicio = player.transform.position;
         Vector3 fin = new Vector3(inicio.x += 0.9f, coords, inicio.z);
+
+        
+
         float elapsed = 0;
         while (elapsed < tiempo / 2)
         {
@@ -100,6 +108,7 @@ public class Flag : MonoBehaviour
     {
         Vector3 inicio = player.transform.position;
         Vector3 fin = new Vector3(inicio.x, inicio.y - 0.8f, inicio.z);
+
         float elapsed = 0;
         while (elapsed < tiempo / 10)
         {

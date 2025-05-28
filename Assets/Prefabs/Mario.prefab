@@ -74,7 +74,7 @@ MonoBehaviour:
   death: {fileID: 8300000, guid: b3a2bb90c92d16d44b2aa21849171044, type: 3}
   jump: {fileID: 8300000, guid: 240c17586b35eb8488bdaef82bf66e2e, type: 3}
   powerup: {fileID: 8300000, guid: c1bb42aadebcf3a4a9467eedf8e1bd36, type: 3}
-  powerdown: {fileID: 8300000, guid: 849c04807fd618f4d981850179f977c2, type: 3}
+  powerdown: {fileID: 8300000, guid: 9d67797cd89b2a641a0e8eb562f4fc2e, type: 3}
   ballfire: {fileID: 8300000, guid: 9cc167b9043df8d4282f189577e66a1e, type: 3}
   audioSource: {fileID: 1601473113978412102}
 --- !u!212 &6009284312523568197
