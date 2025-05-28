@@ -31,6 +31,7 @@ public class Koopa : MonoBehaviour
         {
             gameObject.transform.Translate(koopaVelocity * Time.deltaTime, 0, 0);
         }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -94,6 +95,11 @@ public class Koopa : MonoBehaviour
 
             ThrowShell();
         }
+
+        if(collision.gameObject.CompareTag("FireBall") || collision.gameObject.CompareTag("Cappy"))
+        {
+            koopaDead();
+        }
     }
 
     public void KoopaInShell()
@@ -110,5 +116,20 @@ public class Koopa : MonoBehaviour
         {
             gameObject.tag = "KoopaInShell";
         }
+    }
+
+    //Muerte del goomba
+    public void koopaDead()
+    {
+        rb2D.AddForce(new Vector2(12 * Time.deltaTime, 4 * Time.deltaTime));
+        gameObject.GetComponent<Animator>().enabled = false;
+        canMove = false;
+        gameObject.layer = LayerMask.NameToLayer("NoColission");
+        gameObject.GetComponent<SpriteRenderer>().flipY = true;
+
+        Destroy(gameObject, 1f);
+
+        //puntos 
+        GameManager.Instance.AddScore(100);
     }
 }

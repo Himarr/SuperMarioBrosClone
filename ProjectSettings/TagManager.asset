@@ -16,6 +16,7 @@ TagManager:
   - PipeTriggerH
   - Ground
   - MortalEnemy
+  - Cappy
   layers:
   - Default
   - TransparentFX

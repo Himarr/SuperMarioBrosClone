@@ -92,6 +92,13 @@ public class BreakableBlock : MonoBehaviour
             BlockBreak();
         }
 
+        //Cappy rompe bloques
+        TCappy cappy = collision.gameObject.GetComponent<TCappy>();
+        if (cappy != null && collision.gameObject.CompareTag("Cappy") && hasCoins == false)
+        {
+            BlockBreak();
+        }
+
     }
     IEnumerator Mover(Vector3 startPosition, Vector3 endPosition, float time, GameObject gameObj)
     {
