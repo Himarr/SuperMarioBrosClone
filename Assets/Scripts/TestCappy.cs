@@ -12,11 +12,14 @@ public class ThrowCappy : MonoBehaviour
     [SerializeField]
     Transform Left;
 
+    public Player player;
+
     public float nextShot;
    
     void Start()
     {
         gameObject.GetComponent<Animator>();
+        
     }
 
     
@@ -27,7 +30,7 @@ public class ThrowCappy : MonoBehaviour
 
     public void CappyThrow()
     {
-        if (Input.GetKeyDown(KeyCode.K) && Time.time >= nextShot)
+        if (Input.GetKeyDown(KeyCode.K) && Time.time >= nextShot && player.direction == 1)
         {
             gameObject.GetComponent<Animator>().SetTrigger("DontHaveCappy");
             GameObject currentCappy = Instantiate(Cappy, Right.transform);
@@ -36,6 +39,14 @@ public class ThrowCappy : MonoBehaviour
 
             StartCoroutine(WaitAndGetCappy(2f));
 
+        }else if (Input.GetKeyDown(KeyCode.K) && Time.time >= nextShot && player.direction == -1)
+        {
+            gameObject.GetComponent<Animator>().SetTrigger("DontHaveCappy");
+            GameObject currentCappy = Instantiate(Cappy, Left.transform);
+            nextShot = Time.time + 2;
+            Destroy(currentCappy, 2);
+
+            StartCoroutine(WaitAndGetCappy(2f));
         }
     }
     private IEnumerator WaitAndGetCappy(float time)

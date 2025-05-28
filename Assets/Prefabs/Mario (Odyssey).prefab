@@ -234,6 +234,7 @@ MonoBehaviour:
   Cappy: {fileID: 3562413156628012742, guid: 08b19ebf289325648b3322454df80844, type: 3}
   Right: {fileID: 2129635655858896257}
   Left: {fileID: 8173019239967640491}
+  player: {fileID: 2843731014188900109}
   nextShot: 0
 --- !u!1 &3372122602520268395
 GameObject:
@@ -291,7 +292,7 @@ Transform:
   m_GameObject: {fileID: 5730570102700582568}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5, y: -0.14, z: 0}
+  m_LocalPosition: {x: -3.68, y: -0.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

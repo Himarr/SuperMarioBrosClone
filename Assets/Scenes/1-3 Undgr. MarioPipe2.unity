@@ -2212,7 +2212,6 @@ Transform:
   - {fileID: 1306535519}
   - {fileID: 947037138}
   - {fileID: 1770351818}
-  - {fileID: 2037529927}
   - {fileID: 201096571}
   - {fileID: 2060780452}
   - {fileID: 1552444420}
@@ -4749,67 +4748,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &263628547
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 138580969}
-    m_Modifications:
-    - target: {fileID: 3260569238280048395, guid: b8137bf2e4d8eae43bd9d39d5d79e077, type: 3}
-      propertyPath: sceneName
-      value: 1-3 Undgr. MarioPipe3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4785015173845330305, guid: b8137bf2e4d8eae43bd9d39d5d79e077, type: 3}
-      propertyPath: m_Name
-      value: Pipe
-      objectReference: {fileID: 0}
-    - target: {fileID: 8822405948630493920, guid: b8137bf2e4d8eae43bd9d39d5d79e077, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -82.311905
-      objectReference: {fileID: 0}
-    - target: {fileID: 8822405948630493920, guid: b8137bf2e4d8eae43bd9d39d5d79e077, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.72056913
-      objectReference: {fileID: 0}
-    - target: {fileID: 8822405948630493920, guid: b8137bf2e4d8eae43bd9d39d5d79e077, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.9813452
-      objectReference: {fileID: 0}
-    - target: {fileID: 8822405948630493920, guid: b8137bf2e4d8eae43bd9d39d5d79e077, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8822405948630493920, guid: b8137bf2e4d8eae43bd9d39d5d79e077, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8822405948630493920, guid: b8137bf2e4d8eae43bd9d39d5d79e077, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8822405948630493920, guid: b8137bf2e4d8eae43bd9d39d5d79e077, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8822405948630493920, guid: b8137bf2e4d8eae43bd9d39d5d79e077, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8822405948630493920, guid: b8137bf2e4d8eae43bd9d39d5d79e077, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8822405948630493920, guid: b8137bf2e4d8eae43bd9d39d5d79e077, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -90
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b8137bf2e4d8eae43bd9d39d5d79e077, type: 3}
 --- !u!1 &268863380
 GameObject:
   m_ObjectHideFlags: 0
@@ -7389,6 +7327,14 @@ PrefabInstance:
       propertyPath: m_BackGroundColor.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 927640994104140801, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
+      propertyPath: m_NormalizedViewPortRect.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 927640994104140801, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3218530543753096223, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
       propertyPath: m_Name
       value: Main Camera
@@ -7774,7 +7720,7 @@ GameObject:
   - component: {fileID: 430580703}
   m_Layer: 0
   m_Name: UndergroundPiranhaPlant (7)
-  m_TagString: Enemy
+  m_TagString: MortalEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7808,7 +7754,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piranhaPlantVelocity: 2
   timer: 0
-  player: {fileID: 0}
+  player: {fileID: 739892044}
   canMove: 1
 --- !u!95 &430580704
 Animator:
@@ -9570,7 +9516,7 @@ GameObject:
   - component: {fileID: 518581523}
   m_Layer: 0
   m_Name: UndergroundPiranhaPlant
-  m_TagString: Enemy
+  m_TagString: MortalEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9604,7 +9550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piranhaPlantVelocity: 2
   timer: 0
-  player: {fileID: 0}
+  player: {fileID: 739892044}
   canMove: 1
 --- !u!95 &518581524
 Animator:
@@ -11201,7 +11147,7 @@ GameObject:
   - component: {fileID: 605671420}
   m_Layer: 0
   m_Name: UndergroundPiranhaPlant (8)
-  m_TagString: Enemy
+  m_TagString: MortalEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11235,7 +11181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piranhaPlantVelocity: 2
   timer: 0
-  player: {fileID: 0}
+  player: {fileID: 739892044}
   canMove: 1
 --- !u!95 &605671421
 Animator:
@@ -13089,6 +13035,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98f3951711c8cb340b6921912f31e00b, type: 3}
+--- !u!1 &739892044 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 748775476761453607, guid: 98f3951711c8cb340b6921912f31e00b, type: 3}
+  m_PrefabInstance: {fileID: 739892043}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &740691939 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2518520800134653989, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
@@ -14209,7 +14160,7 @@ GameObject:
   - component: {fileID: 796998753}
   m_Layer: 0
   m_Name: UndergroundPiranhaPlant (3)
-  m_TagString: Enemy
+  m_TagString: MortalEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14243,7 +14194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piranhaPlantVelocity: 2
   timer: 0
-  player: {fileID: 0}
+  player: {fileID: 739892044}
   canMove: 1
 --- !u!95 &796998754
 Animator:
@@ -19823,7 +19774,7 @@ GameObject:
   - component: {fileID: 1158499613}
   m_Layer: 0
   m_Name: UndergroundPiranhaPlant (5)
-  m_TagString: Enemy
+  m_TagString: MortalEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19857,7 +19808,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piranhaPlantVelocity: 2
   timer: 0
-  player: {fileID: 0}
+  player: {fileID: 739892044}
   canMove: 1
 --- !u!95 &1158499614
 Animator:
@@ -23936,6 +23887,188 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1403981379
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 605622176007510426, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 608639552, guid: 92f2c9aae99fe124887cb1f833aa013d, type: 3}
+    - target: {fileID: 812475495825511882, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 812475495825511882, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.927
+      objectReference: {fileID: 0}
+    - target: {fileID: 812475495825511882, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 812475495825511882, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 812475495825511882, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 812475495825511882, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 812475495825511882, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 967363602750699835, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 967363602750699835, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 967363602750699835, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 967363602750699835, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 967363602750699835, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 967363602750699835, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 967363602750699835, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1677452004026263385, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1677452004026263385, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1677452004026263385, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1677452004026263385, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1677452004026263385, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1677452004026263385, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1677452004026263385, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2707705577510989998, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2707705577510989998, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_TagString
+      value: Block
+      objectReference: {fileID: 0}
+    - target: {fileID: 3962518453020371420, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: sceneName
+      value: 1-3 Undgr. MarioPipe3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8861435354066987387, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_Size.x
+      value: 1.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 8861435354066987387, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_Size.y
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8861435354066987387, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8861435354066987387, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8913071493848612312, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8913071493848612312, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8913071493848612312, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 8913071493848612312, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8913071493848612312, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8913071493848612312, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8913071493848612312, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8913071493848612312, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8913071493848612312, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8913071493848612312, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 9089902780492348937, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_Name
+      value: PipeHorizontalD
+      objectReference: {fileID: 0}
+    - target: {fileID: 9089902780492348937, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9089902780492348937, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_TagString
+      value: Block
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8861435354066987387, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
 --- !u!1001 &1404863072
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27659,7 +27792,7 @@ GameObject:
   - component: {fileID: 1634405886}
   m_Layer: 0
   m_Name: UndergroundPiranhaPlant (9)
-  m_TagString: Enemy
+  m_TagString: MortalEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27693,7 +27826,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piranhaPlantVelocity: 2
   timer: 0
-  player: {fileID: 0}
+  player: {fileID: 739892044}
   canMove: 1
 --- !u!95 &1634405887
 Animator:
@@ -29094,7 +29227,7 @@ GameObject:
   - component: {fileID: 1736267451}
   m_Layer: 0
   m_Name: UndergroundPiranhaPlant (1)
-  m_TagString: Enemy
+  m_TagString: MortalEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29128,7 +29261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piranhaPlantVelocity: 2
   timer: 0
-  player: {fileID: 0}
+  player: {fileID: 739892044}
   canMove: 1
 --- !u!95 &1736267452
 Animator:
@@ -33877,11 +34010,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2518520800134653989, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
   m_PrefabInstance: {fileID: 1416667200}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &2037529927 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8822405948630493920, guid: b8137bf2e4d8eae43bd9d39d5d79e077, type: 3}
-  m_PrefabInstance: {fileID: 263628547}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2038460446
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34359,6 +34487,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 138580969}
     m_Modifications:
+    - target: {fileID: 3260569238280048395, guid: b8137bf2e4d8eae43bd9d39d5d79e077, type: 3}
+      propertyPath: sceneName
+      value: 1-3 Undgr.2-1
+      objectReference: {fileID: 0}
     - target: {fileID: 4785015173845330305, guid: b8137bf2e4d8eae43bd9d39d5d79e077, type: 3}
       propertyPath: m_Name
       value: Pipe
@@ -34989,7 +35121,7 @@ GameObject:
   - component: {fileID: 2083564430}
   m_Layer: 0
   m_Name: UndergroundPiranhaPlant (6)
-  m_TagString: Enemy
+  m_TagString: MortalEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35023,7 +35155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piranhaPlantVelocity: 2
   timer: 0
-  player: {fileID: 0}
+  player: {fileID: 739892044}
   canMove: 1
 --- !u!95 &2083564431
 Animator:
@@ -36036,3 +36168,4 @@ SceneRoots:
   - {fileID: 442496017}
   - {fileID: 893825634}
   - {fileID: 739892043}
+  - {fileID: 1403981379}

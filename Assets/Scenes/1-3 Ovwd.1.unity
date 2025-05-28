@@ -186,7 +186,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 49.99567, y: 1.9969392}
+  m_Size: {x: 56.98859, y: 1.9969392}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -201,7 +201,7 @@ Transform:
   m_GameObject: {fileID: 7160323}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -57.3104, y: -1.2744308, z: 0.018654818}
+  m_LocalPosition: {x: -53.8139, y: -1.2744308, z: 0.018654818}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -244,13 +244,13 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
-    newSize: {x: 49.99567, y: 1.9969392}
+    newSize: {x: 56.98859, y: 1.9969392}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 60.5, y: 2}
+  m_Size: {x: 67.5, y: 2}
   m_EdgeRadius: 0
 --- !u!1 &12319280
 GameObject:
@@ -570,6 +570,14 @@ PrefabInstance:
       propertyPath: m_BackGroundColor.r
       value: 0.20784314
       objectReference: {fileID: 0}
+    - target: {fileID: 927640994104140801, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
+      propertyPath: m_NormalizedViewPortRect.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 927640994104140801, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3218530543753096223, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
       propertyPath: m_Name
       value: Main Camera
@@ -788,7 +796,7 @@ GameObject:
   - component: {fileID: 75938822}
   m_Layer: 0
   m_Name: UndergroundPiranhaPlant
-  m_TagString: Enemy
+  m_TagString: MortalEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1772,7 +1780,7 @@ GameObject:
   - component: {fileID: 194257294}
   m_Layer: 0
   m_Name: UndergroundPiranhaPlant (2)
-  m_TagString: Enemy
+  m_TagString: MortalEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2259,7 +2267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 619c2fcfd0a9cff42bad04bce970bf4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 8604354111996602771}
   vine: {fileID: 1740521886}
 --- !u!1001 &230563157
 PrefabInstance:
@@ -4929,7 +4937,7 @@ GameObject:
   - component: {fileID: 623530787}
   m_Layer: 0
   m_Name: UndergroundPiranhaPlant (3)
-  m_TagString: Enemy
+  m_TagString: MortalEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10011,7 +10019,7 @@ GameObject:
   - component: {fileID: 1239827494}
   m_Layer: 0
   m_Name: UndergroundPiranhaPlant (4)
-  m_TagString: Enemy
+  m_TagString: MortalEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10505,7 +10513,7 @@ GameObject:
   - component: {fileID: 1289086623}
   m_Layer: 0
   m_Name: UndergroundPiranhaPlant (5)
-  m_TagString: Enemy
+  m_TagString: MortalEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11644,7 +11652,7 @@ GameObject:
   - component: {fileID: 1419178042}
   m_Layer: 0
   m_Name: UndergroundPiranhaPlant (1)
-  m_TagString: Enemy
+  m_TagString: MortalEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16267,6 +16275,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98f3951711c8cb340b6921912f31e00b, type: 3}
+--- !u!114 &8604354111996602771 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2843731014188900109, guid: 98f3951711c8cb340b6921912f31e00b, type: 3}
+  m_PrefabInstance: {fileID: 8604354111996602770}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275689011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d490e3b34a87d84eb6b97d9919e886b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

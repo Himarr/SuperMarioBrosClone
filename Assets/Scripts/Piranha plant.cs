@@ -63,6 +63,22 @@ public class Piranhaplant : MonoBehaviour
         } else { canMove = true; }
     }
 
-    
-    
+
+    public void PiranhaDead()
+    {
+        Debug.Log("Planta piraña muere");
+
+        Destroy(gameObject);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Player player = collision.gameObject.GetComponent<Player>();
+        if (player != null)
+        {
+            player.onHit();
+        }
+    }
+
+
 }
