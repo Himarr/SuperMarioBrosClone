@@ -1988,7 +1988,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piranhaPlantVelocity: 2
   timer: 0
-  player: {fileID: 0}
+  player: {fileID: 1878186265}
   canMove: 1
 --- !u!95 &123709926
 Animator:
@@ -4051,7 +4051,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piranhaPlantVelocity: 2
   timer: 0
-  player: {fileID: 0}
+  player: {fileID: 1878186265}
   canMove: 1
 --- !u!95 &226213059
 Animator:
@@ -7406,7 +7406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piranhaPlantVelocity: 2
   timer: 0
-  player: {fileID: 0}
+  player: {fileID: 1878186265}
   canMove: 1
 --- !u!95 &411422132
 Animator:
@@ -13210,7 +13210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piranhaPlantVelocity: 2
   timer: 0
-  player: {fileID: 0}
+  player: {fileID: 1878186265}
   canMove: 1
 --- !u!95 &727337381
 Animator:
@@ -15190,7 +15190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piranhaPlantVelocity: 2
   timer: 0
-  player: {fileID: 0}
+  player: {fileID: 1878186265}
   canMove: 1
 --- !u!95 &833005618
 Animator:
@@ -21760,7 +21760,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piranhaPlantVelocity: 2
   timer: 0
-  player: {fileID: 0}
+  player: {fileID: 1878186265}
   canMove: 1
 --- !u!95 &1212739552
 Animator:
@@ -22922,7 +22922,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piranhaPlantVelocity: 2
   timer: 0
-  player: {fileID: 0}
+  player: {fileID: 1878186265}
   canMove: 1
 --- !u!95 &1271668556
 Animator:
@@ -25585,7 +25585,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piranhaPlantVelocity: 2
   timer: 0
-  player: {fileID: 0}
+  player: {fileID: 1878186265}
   canMove: 1
 --- !u!95 &1422487947
 Animator:
@@ -31242,6 +31242,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98f3951711c8cb340b6921912f31e00b, type: 3}
+--- !u!1 &1878186265 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 748775476761453607, guid: 98f3951711c8cb340b6921912f31e00b, type: 3}
+  m_PrefabInstance: {fileID: 1878186264}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1881599802 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2518520800134653989, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}

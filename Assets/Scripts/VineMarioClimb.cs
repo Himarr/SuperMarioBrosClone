@@ -35,6 +35,7 @@ public class VineMarioClimb : MonoBehaviour
 
             player.canMove = false;
             player.gravity = 0;
+            player.GetComponent<Animator>().SetBool("isClimbing", true);
         }
     }
 
