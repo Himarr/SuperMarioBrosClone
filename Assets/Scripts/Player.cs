@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
     bool isShooting;
     bool isBraking;
     bool isInvincible;
-    public int dir;
+    bool isAlive = true;
 
     public Rigidbody2D rb;
     Camera cam;
@@ -216,7 +216,7 @@ public class Player : MonoBehaviour
         Vector2 moveAmount = new Vector2(currentVelocityX, currentVelocityY) * Time.fixedDeltaTime;
 
         // BoxCast horizontal
-        if (moveAmount.x != 0)
+        if (moveAmount.x != 0 && isAlive)
         {
             direction = Mathf.Sign(moveAmount.x);
 
@@ -243,7 +243,7 @@ public class Player : MonoBehaviour
             }
         }
         // BoxCast Vertical
-        if (moveAmount.y != 0)
+        if (moveAmount.y != 0 && isAlive)
         {
             float directionY = Mathf.Sign(moveAmount.y);
 
@@ -268,7 +268,6 @@ public class Player : MonoBehaviour
                 if (moveAmount.y > 0) { currentVelocityY = 0f; }
             }
         }
-
         Vector2 origin = (Vector2)col.bounds.center - new Vector2(0, col.bounds.extents.y - skinWidth);
         Vector2 boxSize = new Vector2(col.bounds.size.x - skinWidth * 2f, skinWidth);
         float castDistance = skinWidth * 5f;
@@ -278,6 +277,11 @@ public class Player : MonoBehaviour
         bool grounded = groundHit.collider != null;
        
         isJumping = !grounded;
+
+        if (!isAlive)
+        {
+            isJumping = true;
+        }
 
         rb.MovePosition(rb.position + moveAmount);
     }
@@ -397,7 +401,7 @@ public class Player : MonoBehaviour
     {
         if (currentStatus == "small")
         {
-            
+            Die();
         }
         else if (currentStatus == "big" || currentStatus == "fire")
         {
@@ -440,6 +444,6 @@ public class Player : MonoBehaviour
         gameObject.GetComponent<Animator>().SetBool("IsDead", true);
         gameObject.layer = LayerMask.NameToLayer("NoColission");
 
-        // TODO - Hacer que caiga
+        isAlive = false;
     }
 }
