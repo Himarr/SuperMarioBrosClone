@@ -397,13 +397,7 @@ public class Player : MonoBehaviour
     {
         if (currentStatus == "small")
         {
-            // Die
-            playerCanInput = false;
-            speed = 0;
-            gameObject.GetComponent<Animator>().SetBool("IsDead", true);
-            gameObject.layer = LayerMask.NameToLayer("NoColission");
-
-            // TODO - Hacer que caiga
+            
         }
         else if (currentStatus == "big" || currentStatus == "fire")
         {
@@ -436,5 +430,16 @@ public class Player : MonoBehaviour
     public void AddVelocityY(float amount)
     {
         currentVelocityY += amount;
+    }
+
+    public void Die()
+    {
+        // Die
+        playerCanInput = false;
+        speed = 0;
+        gameObject.GetComponent<Animator>().SetBool("IsDead", true);
+        gameObject.layer = LayerMask.NameToLayer("NoColission");
+
+        // TODO - Hacer que caiga
     }
 }

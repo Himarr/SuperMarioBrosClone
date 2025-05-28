@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     int lives = 3;
     int coins = 0;
     string playerState;
+    float timer = 400;
 
     int moons = 0;
     int life = 3;
@@ -32,7 +33,13 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        
+        if (timer > 0)
+        {
+            timer -= Time.deltaTime * 3f;
+        } else if (timer <= 0)
+        {
+            player.Die();
+        }
     }
     private void OnEnable()
     {
@@ -47,10 +54,9 @@ public class GameManager : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         player = FindAnyObjectByType<Player>();
-        
-        // TODO - quitar spawnpoint
-
         SetPlayerState();
+
+        timer = 400;
     }
 
     public Player GetPlayer()
@@ -134,5 +140,10 @@ public class GameManager : MonoBehaviour
             player.currentStatus = playerState;
             Debug.Log(playerState);
         }
+    }
+
+    public int GetTimer()
+    {
+        return Mathf.RoundToInt(timer);
     }
 }
