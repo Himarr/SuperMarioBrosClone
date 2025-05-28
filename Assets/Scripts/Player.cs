@@ -1,9 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.Burst.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -40,6 +42,8 @@ public class Player : MonoBehaviour
     bool isInvincible;
     bool isAlive = true;
 
+    public string currentSceneName;
+
     public Rigidbody2D rb;
     Camera cam;
     public Animator anim;
@@ -55,6 +59,9 @@ public class Player : MonoBehaviour
     string[] status = {"small", "big", "fire", "star"};
     public string currentStatus;
 
+    public AudioClip death, jump, powerup, powerdown, ballfire;
+    public AudioSource audioSource;
+
     private void Awake()
     {
         currentStatus = "small";
@@ -64,6 +71,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         isJumping = true;
+        currentSceneName = SceneManager.GetActiveScene().name;
     }
 
     void Update()
@@ -291,6 +299,8 @@ public class Player : MonoBehaviour
         {
             isJumping = true;
             currentVelocityY = jumpForce;
+            audioSource.PlayOneShot(jump);
+
         } else if (currentVelocityY > 0)
         {
             currentVelocityY += holdJumpForce * Time.fixedDeltaTime;
@@ -323,6 +333,7 @@ public class Player : MonoBehaviour
     public void Grow(string trigger)
     {
         StartCoroutine(GrowCoroutine(trigger));
+        AudioSource.PlayClipAtPoint(powerup, gameObject.transform.position);
     }
 
     private IEnumerator GrowCoroutine(string trigger)
@@ -346,6 +357,7 @@ public class Player : MonoBehaviour
             anim.SetBool("isSmall", false);
             ExtendCollider();
             currentStatus = "big";
+            
         }
         else if (trigger == "Hit")
         {
@@ -394,6 +406,7 @@ public class Player : MonoBehaviour
         col.size = new Vector2(0.75f, 0.95f);
         canMove = true;
         Debug.Log("chikito");
+        AudioSource.PlayClipAtPoint(powerdown, gameObject.transform.position);
     }
 
     public void onHit()
@@ -418,6 +431,7 @@ public class Player : MonoBehaviour
         anim.SetTrigger("isShooting");
         isShooting = false;
         Instantiate(fireBall, new Vector3(transform.position.x + (0.2f * direction), transform.position.y + 0.25f), Quaternion.identity);
+        AudioSource.PlayClipAtPoint(ballfire, gameObject.transform.position);
     }
 
     public float GetVelocityX()
@@ -438,11 +452,52 @@ public class Player : MonoBehaviour
     public void Die()
     {
         // Die
+        currentStatus = "small";
         playerCanInput = false;
         speed = 0;
+        currentVelocityX = 0;
         gameObject.GetComponent<Animator>().SetBool("IsDead", true);
         gameObject.layer = LayerMask.NameToLayer("NoColission");
+        AudioSource.PlayClipAtPoint(death, gameObject.transform.position);
 
         isAlive = false;
+        GameManager.Instance.AddLives(-1);
+
+        // Volver a escena de carga y reiniciar nivel
+        string[] scenes = currentSceneName.Split(' ');
+
+        // Si no quedan vidas
+        if (GameManager.Instance.GetLives() < 0)
+        {
+            StartCoroutine(SceneLoader("Death Screen"));
+            GameManager.Instance.AddLives(3);
+            return;
+        }
+
+        // Si está en 1-1
+        if (scenes.Contains("1-1") || currentSceneName == "1-1")
+        {
+            StartCoroutine(SceneLoader("Load 1-1"));
+            return;
+        }
+
+        // Si está en 1-2
+        if (scenes.Contains("1-2") || currentSceneName == "1-2")
+        {
+            StartCoroutine(SceneLoader("Load 1-2"));
+            return;
+        }
+
+        // Si está en 1-4
+        if (scenes.Contains("1-3") || currentSceneName == "1-3")
+        {
+            StartCoroutine(SceneLoader("Load 1-3"));
+            return;
+        }
+    }
+    IEnumerator SceneLoader(string sceneName)
+    {
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene(sceneName);
     }
 }

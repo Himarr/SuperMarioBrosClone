@@ -14,13 +14,13 @@ public class MainMenu : MonoBehaviour
     //Saltar a pantalla de carga tras darle a Classic Mode  
     public void GoToLoadScreen()
     {
-        SceneManager.LoadScene("Test Load"); 
+        SceneManager.LoadScene("Load 1-1"); 
     }
 
     //Ir a pantalla de carga tras darle a Odyssey Mode (Mario sin gorra) 
     public void GoToLoadScreenOdyssey()
     {
-        SceneManager.LoadScene("Load Odyssey");
+        SceneManager.LoadScene("Load 1-3");
     }
 
     //Salir del juego 

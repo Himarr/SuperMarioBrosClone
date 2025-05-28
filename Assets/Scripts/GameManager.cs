@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     int score;
-    int lives = 3;
+    int lives = 2;
     int coins = 0;
     string playerState;
     float timer = 400;
@@ -18,6 +18,9 @@ public class GameManager : MonoBehaviour
 
     public bool playerOnScene = false;
     bool isPaused = false;
+
+    public AudioClip pause;
+    public AudioSource audioSource;
 
     public Player player;
     void Awake()
@@ -46,7 +49,7 @@ public class GameManager : MonoBehaviour
         {
             if (!isPaused) { PauseGame(); }
             else { ResumeGame(); }
-             
+            
         }
     }
     private void OnEnable()
@@ -88,6 +91,8 @@ public class GameManager : MonoBehaviour
         Debug.Log(lives);
     }
 
+    public int GetLives() { return lives; }
+
     public void AddCoins(int amount = 1)
     {
         coins += amount;
@@ -105,15 +110,11 @@ public class GameManager : MonoBehaviour
     {
         moons += amount;
         Debug.Log(moons);
-
     }
 
 
     public void SavePlayerState()
     {
-       
-       
-
         if (player != null)
         {
            playerState = player.currentStatus;
@@ -159,6 +160,7 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0;
         isPaused = true;
+        audioSource.PlayOneShot(pause);
     }
 
     void ResumeGame()
