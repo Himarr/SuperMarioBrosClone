@@ -13,10 +13,9 @@ public class Flag : MonoBehaviour
     public float moveSpeed;
     public float tiempo;
     public float coords = -3.5f;
-    private float vel = 1;
     private GameObject flag;
 
-    public AudioClip flagPole , flagPoleMusic;
+    public AudioClip flagPole;
     public AudioSource audioSource;
 
 
@@ -62,7 +61,7 @@ public class Flag : MonoBehaviour
             elapsed += Time.deltaTime;
             yield return null;
         }
-        audioSource.PlayOneShot(flagPoleMusic);
+        
 
         yield return StartCoroutine(MarioFlip()); ;
 
@@ -73,9 +72,6 @@ public class Flag : MonoBehaviour
     {
         Vector3 inicio = player.transform.position;
         Vector3 fin = new Vector3(inicio.x += 0.9f, coords, inicio.z);
-
-        
-
         float elapsed = 0;
         while (elapsed < tiempo / 2)
         {
@@ -83,7 +79,6 @@ public class Flag : MonoBehaviour
             elapsed += Time.deltaTime;
             yield return player.transform.localRotation = Quaternion.Euler(0, 180, 0);
         }
-        OnCollisionExit2D exit2D = null;
         anim.SetBool("isFlagDown", false);
         yield return StartCoroutine(MarioSuelta());
     }
@@ -108,7 +103,6 @@ public class Flag : MonoBehaviour
     {
         Vector3 inicio = player.transform.position;
         Vector3 fin = new Vector3(inicio.x, inicio.y - 0.8f, inicio.z);
-
         float elapsed = 0;
         while (elapsed < tiempo / 10)
         {

@@ -13,15 +13,13 @@ public class Interface : MonoBehaviour
     public TextMeshProUGUI lifeText;
     public TextMeshProUGUI MoonText;
 
-
-    public static Interface instance;
-
     private void Update()
     {
         scoreText.text = GameManager.Instance.GetScore().ToString().PadLeft(6,'0'); 
         coinText.text = GameManager.Instance.GetCoins().ToString().PadLeft(2,'0');
         timerText.text = GameManager.Instance.GetTimer().ToString().PadLeft(3,'0');
-        //lifeText.text = GameManager.Instance.AddLives()
+        
+        if (lifeText != null) { lifeText.text = GameManager.Instance.GetLives().ToString(); }
     }
 
 

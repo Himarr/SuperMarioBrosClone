@@ -78,6 +78,11 @@ public class Piranhaplant : MonoBehaviour
         {
             player.onHit();
         }
+
+        if (collision.gameObject.CompareTag("Cappy") || collision.gameObject.CompareTag("FireBall"))
+        {
+            Destroy(gameObject);
+        }
     }
 
 
