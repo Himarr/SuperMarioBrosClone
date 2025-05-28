@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     int life = 3;
 
     public bool playerOnScene = false;
+    bool isPaused = false;
 
     public Player player;
     void Awake()
@@ -39,6 +40,13 @@ public class GameManager : MonoBehaviour
         } else if (timer <= 0)
         {
             player.Die();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (!isPaused) { PauseGame(); }
+            else { ResumeGame(); }
+             
         }
     }
     private void OnEnable()
@@ -145,5 +153,17 @@ public class GameManager : MonoBehaviour
     public int GetTimer()
     {
         return Mathf.RoundToInt(timer);
+    }
+
+    void PauseGame()
+    {
+        Time.timeScale = 0;
+        isPaused = true;
+    }
+
+    void ResumeGame()
+    {
+        Time.timeScale = 1;
+        isPaused = false;
     }
 }
