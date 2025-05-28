@@ -12,6 +12,8 @@ public class Koopa : MonoBehaviour
     BoxCollider2D boxCollider;
     Player player;
 
+    bool inShell = false;
+
     public bool canMove = false;
 
     private void Start()
@@ -38,8 +40,12 @@ public class Koopa : MonoBehaviour
             canMove = true;
         }
         //Rebote en la pared
-        if (collision.gameObject.CompareTag("Block") || collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Breakable"))
+        if (collision.gameObject.CompareTag("Block") || collision.gameObject.CompareTag("Breakable") || collision.gameObject.CompareTag("Enemy"))
         {
+            if (inShell && collision.gameObject.CompareTag("Enemy"))
+            {
+                return;
+            }
             koopaVelocity = koopaVelocity * -1;
         }
         
@@ -81,7 +87,7 @@ public class Koopa : MonoBehaviour
         {
             Debug.Log("Koopa caparazon");
 
-            koopaInShell();
+            KoopaInShell();
 
             player.AddVelocityY(15f);
             player.bounceOnEnenemy = true;
@@ -90,9 +96,11 @@ public class Koopa : MonoBehaviour
         }
     }
 
-    public void koopaInShell()
+    public void KoopaInShell()
     {
         gameObject.GetComponent<Animator>().SetBool("IsInShell", true);
+        inShell = true;
+
         koopaVelocity = 0f;
     }
 
