@@ -58,7 +58,6 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
-        cam = GameObject.Find("Main Camera").GetComponent<Camera>();
         currentStatus = "small";
         anim.SetBool("isSmall", true);
     }
@@ -72,7 +71,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.A)) { isMoving = false; }
         if (playerCanInput) { HandleInput(); }
-        MoveCamera(cam);
+        MoveCamera();
     }
 
     private void FixedUpdate()
@@ -81,15 +80,19 @@ public class Player : MonoBehaviour
         HandleAnimations();
     }
 
-    private void MoveCamera(Camera cam)
+    private void MoveCamera()
     {
-        if (cam.transform.position.x < this.transform.position.x)
+        if(GameObject.Find("Main Camera"))
         {
-            Vector3 pos = transform.position;
-            float pixelsPerUnit = 16f; // Ajusta a tu PPU
-            pos.x = Mathf.Round(pos.x * pixelsPerUnit) / pixelsPerUnit;
-            pos.y = Mathf.Round(cam.transform.position.y * pixelsPerUnit) / pixelsPerUnit;
-            cam.transform.position = new Vector3(pos.x, pos.y, -10);
+            cam = GameObject.Find("Main Camera").GetComponent<Camera>();
+            if (cam.transform.position.x < this.transform.position.x)
+            {
+                Vector3 pos = transform.position;
+                float pixelsPerUnit = 16f; // Ajusta a tu PPU
+                pos.x = Mathf.Round(pos.x * pixelsPerUnit) / pixelsPerUnit;
+                pos.y = Mathf.Round(cam.transform.position.y * pixelsPerUnit) / pixelsPerUnit;
+                cam.transform.position = new Vector3(pos.x, pos.y, -10);
+            }
         }
     }
 
