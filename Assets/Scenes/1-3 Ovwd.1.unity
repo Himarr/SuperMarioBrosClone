@@ -570,6 +570,14 @@ PrefabInstance:
       propertyPath: m_BackGroundColor.r
       value: 0.20784314
       objectReference: {fileID: 0}
+    - target: {fileID: 927640994104140801, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
+      propertyPath: m_NormalizedViewPortRect.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 927640994104140801, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3218530543753096223, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
       propertyPath: m_Name
       value: Main Camera
@@ -788,7 +796,7 @@ GameObject:
   - component: {fileID: 75938822}
   m_Layer: 0
   m_Name: UndergroundPiranhaPlant
-  m_TagString: Enemy
+  m_TagString: MortalEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1772,7 +1780,7 @@ GameObject:
   - component: {fileID: 194257294}
   m_Layer: 0
   m_Name: UndergroundPiranhaPlant (2)
-  m_TagString: Enemy
+  m_TagString: MortalEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4929,7 +4937,7 @@ GameObject:
   - component: {fileID: 623530787}
   m_Layer: 0
   m_Name: UndergroundPiranhaPlant (3)
-  m_TagString: Enemy
+  m_TagString: MortalEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10011,7 +10019,7 @@ GameObject:
   - component: {fileID: 1239827494}
   m_Layer: 0
   m_Name: UndergroundPiranhaPlant (4)
-  m_TagString: Enemy
+  m_TagString: MortalEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10505,7 +10513,7 @@ GameObject:
   - component: {fileID: 1289086623}
   m_Layer: 0
   m_Name: UndergroundPiranhaPlant (5)
-  m_TagString: Enemy
+  m_TagString: MortalEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11644,7 +11652,7 @@ GameObject:
   - component: {fileID: 1419178042}
   m_Layer: 0
   m_Name: UndergroundPiranhaPlant (1)
-  m_TagString: Enemy
+  m_TagString: MortalEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

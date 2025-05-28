@@ -71,6 +71,14 @@ public class TCappy : MonoBehaviour
 
         }
 
+        //Cappy mata a las planta piraña
+        Piranhaplant piranhaplant = collision.gameObject.GetComponent<Piranhaplant>();
+        if(collision.gameObject.CompareTag("MortalEnemy"))
+        {
+            piranhaplant.PiranhaDead();
+        }
+
+
         //Cappy rompe bloques
         BreakableBlock breakableblock = collision.gameObject.GetComponent<BreakableBlock>();
         if (collision.gameObject.CompareTag("Breakable"))
