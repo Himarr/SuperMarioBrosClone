@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,17 +21,23 @@ public class GameManager : MonoBehaviour
     public bool playerOnScene = false;
     bool isPaused = false;
 
-    public AudioClip pause;
+    public AudioClip pause, hurryUpOverW, songOverW, songUnderW, hurryUpU;
     public AudioSource audioSource;
+    public string currentSceneName;
 
     public Player player;
+
     void Awake()
     {
+        currentSceneName = SceneManager.GetActiveScene().name;
+
         if (Instance != null)
         {
             Destroy(gameObject);
             return;
         }
+
+        
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
@@ -46,13 +53,56 @@ public class GameManager : MonoBehaviour
             player.Die();
         }
 
+        bool hurryUpTriggered = false;
+
+        if (!hurryUpTriggered && GetTimer() == 100)
+        {
+            hurryUpTriggered = true;
+            audioSource.Stop();
+            audioSource.PlayOneShot(hurryUpOverW);
+        }
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (!isPaused) { PauseGame(); }
             else { ResumeGame(); }
             
         }
+
     }
+    public void Scene()
+    {
+        string[] scenes = currentSceneName.Split(' ');
+
+
+        if (scenes.Contains("1-1") || currentSceneName == "1-1")
+        {
+            audioSource.PlayOneShot(songOverW);
+            StartCoroutine(SceneLoader("Load 1-1"));
+            return;
+        }
+
+        if (scenes.Contains("1-2") || currentSceneName == "1-2")
+        {
+            audioSource.PlayOneShot(songUnderW);
+            StartCoroutine(SceneLoader("Load 1-2"));
+            return;
+        }
+
+        if (scenes.Contains("1-3") || currentSceneName == "1-3")
+        {
+            audioSource.PlayOneShot(songOverW);
+            StartCoroutine(SceneLoader("Load 1-3"));
+            return;
+        }
+
+        IEnumerator SceneLoader(string sceneName)
+        {
+            yield return new WaitForSeconds(3);
+            SceneManager.LoadScene(sceneName);
+        }
+    }
+
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;

@@ -333,7 +333,7 @@ public class Player : MonoBehaviour
     public void Grow(string trigger)
     {
         StartCoroutine(GrowCoroutine(trigger));
-        AudioSource.PlayClipAtPoint(powerup, gameObject.transform.position);
+        
     }
 
     private IEnumerator GrowCoroutine(string trigger)
@@ -361,6 +361,7 @@ public class Player : MonoBehaviour
         }
         else if (trigger == "Hit")
         {
+            AudioSource.PlayClipAtPoint(powerdown, gameObject.transform.position);
             anim.SetBool("isSmall", true);
             anim.SetBool("isBig", false);
             anim.SetBool("isFire", false);
@@ -382,6 +383,7 @@ public class Player : MonoBehaviour
             currentStatus = "fire";
         }
 
+        AudioSource.PlayClipAtPoint(powerup, gameObject.transform.position);
         canMove = true;
         Debug.Log(isInvincible);
         yield return new WaitForSeconds(1f);
@@ -406,7 +408,7 @@ public class Player : MonoBehaviour
         col.size = new Vector2(0.75f, 0.95f);
         canMove = true;
         Debug.Log("chikito");
-        AudioSource.PlayClipAtPoint(powerdown, gameObject.transform.position);
+        
     }
 
     public void onHit()
@@ -458,7 +460,7 @@ public class Player : MonoBehaviour
         currentVelocityX = 0;
         gameObject.GetComponent<Animator>().SetBool("IsDead", true);
         gameObject.layer = LayerMask.NameToLayer("NoColission");
-        AudioSource.PlayClipAtPoint(death, gameObject.transform.position);
+        audioSource.PlayOneShot(death, 0.5f);
 
         isAlive = false;
         GameManager.Instance.AddLives(-1);
