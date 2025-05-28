@@ -108,6 +108,8 @@ public class Koopa : MonoBehaviour
         inShell = true;
 
         koopaVelocity = 0f;
+
+        gameObject.GetComponentInChildren<BoxCollider2D>().size = new Vector2(1.1f, 0);
     }
 
     public void ThrowShell()
@@ -118,7 +120,7 @@ public class Koopa : MonoBehaviour
         }
     }
 
-    //Muerte del goomba
+    //Muerte del koopa
     public void koopaDead()
     {
         rb2D.AddForce(new Vector2(12 * Time.deltaTime, 4 * Time.deltaTime));
