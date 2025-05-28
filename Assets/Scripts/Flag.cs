@@ -13,7 +13,6 @@ public class Flag : MonoBehaviour
     public float moveSpeed;
     public float tiempo;
     public float coords = -3.5f;
-    private float vel = 1;
     private GameObject flag;
 
 
@@ -75,7 +74,6 @@ public class Flag : MonoBehaviour
             elapsed += Time.deltaTime;
             yield return player.transform.localRotation = Quaternion.Euler(0, 180, 0);
         }
-        OnCollisionExit2D exit2D = null;
         anim.SetBool("isFlagDown", false);
         yield return StartCoroutine(MarioSuelta());
     }

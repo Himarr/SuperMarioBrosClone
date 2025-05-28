@@ -19,6 +19,7 @@ public class QuestionBlock : MonoBehaviour
     public AudioSource audioSource;
 
     public GameObject coin;
+    public PowerUp fireFlower;
     public bool hasCoin = false;
 
     void Start()
@@ -93,7 +94,10 @@ public class QuestionBlock : MonoBehaviour
     {
         if (powerUp != null)
         {
-            
+            if (powerUp.GetType() == typeof(Mushroom) && player.currentStatus != "small")
+            {
+                powerUp = fireFlower;
+            }
             GameObject powerUpObject = Instantiate(powerUp, startPosition, Quaternion.identity).gameObject;
             yield return MoveObject(startPosition, endPosition, time, powerUpObject);
             

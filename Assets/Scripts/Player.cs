@@ -28,11 +28,10 @@ public class Player : MonoBehaviour
     [Header("Collision")]
     public LayerMask collisionMask;
     public float skinWidth = 0.02f;
-    
+
     // Variables iniciales
     bool isMoving;
     public bool isJumping;
-    bool isGrounded = false;
     public bool canMove = true;
     bool isRunning;
     bool isCrouching;

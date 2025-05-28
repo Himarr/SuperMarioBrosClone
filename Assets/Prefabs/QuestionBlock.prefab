@@ -124,7 +124,11 @@ MonoBehaviour:
   isInvisible: 0
   powerUp: {fileID: 157340763301656438, guid: e3a067db0d33a3044867f7fb4621ce23, type: 3}
   bump: {fileID: 8300000, guid: 4657f616026be73499ccb0edaec4c12a, type: 3}
+  moneda: {fileID: 0}
   audioSource: {fileID: 562905704205458466}
+  coin: {fileID: 0}
+  fireFlower: {fileID: 8905009499649637934, guid: 2eaeec7c64d77f04e94698c8be21bf3b, type: 3}
+  hasCoin: 0
 --- !u!61 &324871126887576173
 BoxCollider2D:
   m_ObjectHideFlags: 0
