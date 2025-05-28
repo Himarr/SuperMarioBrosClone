@@ -470,7 +470,7 @@ public class Player : MonoBehaviour
         if (GameManager.Instance.GetLives() < 0)
         {
             StartCoroutine(SceneLoader("Death Screen"));
-            GameManager.Instance.AddLives(4);
+            GameManager.Instance.AddLives(3);
             return;
         }
 
