@@ -91,6 +91,8 @@ public class GameManager : MonoBehaviour
         Debug.Log(lives);
     }
 
+    public int GetLives() { return lives; }
+
     public void AddCoins(int amount = 1)
     {
         coins += amount;
@@ -108,15 +110,11 @@ public class GameManager : MonoBehaviour
     {
         moons += amount;
         Debug.Log(moons);
-
     }
 
 
     public void SavePlayerState()
     {
-       
-       
-
         if (player != null)
         {
            playerState = player.currentStatus;
@@ -163,7 +161,6 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
         isPaused = true;
         audioSource.PlayOneShot(pause);
-
     }
 
     void ResumeGame()
