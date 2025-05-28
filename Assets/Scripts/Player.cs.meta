@@ -3,7 +3,18 @@ guid: 4d490e3b34a87d84eb6b97d9919e886b
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - rb: {instanceID: 0}
+  - anim: {instanceID: 0}
+  - col: {instanceID: 0}
+  - sprite: {instanceID: 0}
+  - fireBall: {instanceID: 0}
+  - death: {fileID: 8300000, guid: b3a2bb90c92d16d44b2aa21849171044, type: 3}
+  - jump: {fileID: 8300000, guid: 240c17586b35eb8488bdaef82bf66e2e, type: 3}
+  - powerup: {instanceID: 0}
+  - powerdown: {instanceID: 0}
+  - ballfire: {instanceID: 0}
+  - audioSource: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
