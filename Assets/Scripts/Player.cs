@@ -295,7 +295,7 @@ public class Player : MonoBehaviour
         {
             isJumping = true;
             currentVelocityY = jumpForce;
-            audioSource.PlayOneShot(jump);
+            audioSource.PlayOneShot(jump , 0.05f);
 
         } else if (currentVelocityY > 0)
         {
