@@ -21,7 +21,8 @@ public class Interface : MonoBehaviour
         scoreText.text = GameManager.Instance.GetScore().ToString().PadLeft(6,'0'); 
         coinText.text = GameManager.Instance.GetCoins().ToString().PadLeft(2,'0');
         timerText.text = GameManager.Instance.GetTimer().ToString().PadLeft(3,'0');
-        //lifeText.text = GameManager.Instance.AddLives()
+        lifeText.text = GameManager.Instance.GetLives().ToString();
+        MoonText.text = GameManager.Instance.GetMoons().ToString();
     }
 
 

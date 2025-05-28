@@ -80,6 +80,13 @@ public class GameManager : MonoBehaviour
         Debug.Log(lives);
     }
 
+    //add vidas
+
+    public int GetLives()
+    {
+        return lives; 
+    }
+
     public void AddCoins(int amount = 1)
     {
         coins += amount;
@@ -98,6 +105,13 @@ public class GameManager : MonoBehaviour
         moons += amount;
         Debug.Log(moons);
 
+    }
+
+    //obtener lunas
+
+    public int GetMoons()
+    {
+        return moons;
     }
 
 
