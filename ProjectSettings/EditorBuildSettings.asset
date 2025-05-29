@@ -98,4 +98,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Death Screen.unity
     guid: d070f173386a0ce44b6d515fa836afdf
+  - enabled: 1
+    path: Assets/Scenes/FinalOdyssey.unity
+    guid: 7389bbd3fad8e3448ac05f1c6012dd90
   m_configObjects: {}

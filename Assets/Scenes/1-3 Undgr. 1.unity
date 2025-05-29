@@ -3903,6 +3903,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moonId: Underground 1
+  moonSong: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!4 &166983605 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2518520800134653989, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
@@ -10404,11 +10406,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 927640994104140801, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0
+      value: 0.10000001
       objectReference: {fileID: 0}
     - target: {fileID: 927640994104140801, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 1
+      value: 0.80000013
       objectReference: {fileID: 0}
     - target: {fileID: 3218530543753096223, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
       propertyPath: m_Name
@@ -36149,6 +36151,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goomba (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4265139651559625878, guid: dbf532283d1c31840a768f3bfd42fdb5, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5553634568857173284, guid: dbf532283d1c31840a768f3bfd42fdb5, type: 3}
       propertyPath: m_Controller
       value: 
@@ -39907,6 +39913,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moonId: Underground 2
+  moonSong: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!1001 &1458984275
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50616,6 +50624,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goomba (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4265139651559625878, guid: dbf532283d1c31840a768f3bfd42fdb5, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5553634568857173284, guid: dbf532283d1c31840a768f3bfd42fdb5, type: 3}
       propertyPath: m_Controller
       value: 
@@ -52697,6 +52709,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1317528651}
     m_Modifications:
+    - target: {fileID: 375025044977683027, guid: 4540359f5273d8e408427f56b404d8d1, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1359348239384174597, guid: 4540359f5273d8e408427f56b404d8d1, type: 3}
       propertyPath: m_Name
       value: Koopa (2)
@@ -52741,10 +52757,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3278182948462863889, guid: 4540359f5273d8e408427f56b404d8d1, type: 3}
+      propertyPath: obstacleLayers.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379946169973285393, guid: 4540359f5273d8e408427f56b404d8d1, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5379946169973285393, guid: 4540359f5273d8e408427f56b404d8d1, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1205014229, guid: 9d3d677c563255d4d9ff443b44774b5d, type: 3}
+    - target: {fileID: 5850999484021400288, guid: 4540359f5273d8e408427f56b404d8d1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1625
+      objectReference: {fileID: 0}
+    - target: {fileID: 5850999484021400288, guid: 4540359f5273d8e408427f56b404d8d1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.04075
+      objectReference: {fileID: 0}
     - target: {fileID: 8079096317194971710, guid: 4540359f5273d8e408427f56b404d8d1, type: 3}
       propertyPath: m_Controller
       value: 
