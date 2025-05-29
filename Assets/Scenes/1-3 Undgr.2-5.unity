@@ -7988,7 +7988,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3962518453020371420, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
       propertyPath: sceneName
-      value: 1-3 Ovwd.1
+      value: 1-3
       objectReference: {fileID: 0}
     - target: {fileID: 8861435354066987387, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
       propertyPath: m_Size.x
@@ -8470,7 +8470,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1456238054833340321, guid: afc12905991fa9b4ca3bdc5d4d804d23, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.572149
+      value: -9.42
       objectReference: {fileID: 0}
     - target: {fileID: 1456238054833340321, guid: afc12905991fa9b4ca3bdc5d4d804d23, type: 3}
       propertyPath: m_LocalPosition.z
