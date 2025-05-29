@@ -112,9 +112,9 @@ public class Koopa : MonoBehaviour
             player.onHit();
         }
 
-        if ((koopaVelocity == 6 || koopaVelocity == -6) && collision.gameObject.CompareTag("Enemy"))
+        if ((koopaVelocity == 6 || koopaVelocity == -6) && collision.gameObject.GetComponent<Koopa>())
         {
-            GameObject.FindWithTag("Enemy").GetComponent<Koopa>().koopaDead();
+            collision.gameObject.GetComponent<Koopa>().koopaDead();
         }
     }
 

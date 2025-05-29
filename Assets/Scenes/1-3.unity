@@ -2180,7 +2180,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3260569238280048395, guid: b8137bf2e4d8eae43bd9d39d5d79e077, type: 3}
       propertyPath: sceneName
-      value: 1-3 Ovwd.1
+      value: 1-3
       objectReference: {fileID: 0}
     - target: {fileID: 4785015173845330305, guid: b8137bf2e4d8eae43bd9d39d5d79e077, type: 3}
       propertyPath: m_Name
