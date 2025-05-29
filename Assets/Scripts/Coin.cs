@@ -16,7 +16,7 @@ public class Coin : MonoBehaviour
             Destroy(gameObject);
 
             //a�adir puntos 
-            GameManager.Instance.AddScore(100); 
+            GameManager.Instance.AddScore(200); 
 
 
         }
