@@ -11141,6 +11141,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 506172674834839183, guid: 8f15b4cc6e102854589979848aebdf76, type: 3}
+      propertyPath: m_text
+      value: 1-2
+      objectReference: {fileID: 0}
     - target: {fileID: 912183863916637672, guid: 8f15b4cc6e102854589979848aebdf76, type: 3}
       propertyPath: m_Camera
       value: 
@@ -11184,6 +11188,10 @@ PrefabInstance:
     - target: {fileID: 1726434986778254719, guid: 8f15b4cc6e102854589979848aebdf76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384701420796513016, guid: 8f15b4cc6e102854589979848aebdf76, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 85.9
       objectReference: {fileID: 0}
     - target: {fileID: 4854731927314287347, guid: 8f15b4cc6e102854589979848aebdf76, type: 3}
       propertyPath: m_Name
@@ -23487,11 +23495,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 927640994104140801, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.10000001
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 927640994104140801, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.80000013
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3218530543753096223, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
       propertyPath: m_Name
