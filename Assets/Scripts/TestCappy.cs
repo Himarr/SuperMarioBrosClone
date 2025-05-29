@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ThrowCappy : MonoBehaviour
+public class TestCappy : MonoBehaviour
 {
     [SerializeField]
     GameObject Cappy;
@@ -29,12 +29,12 @@ public class ThrowCappy : MonoBehaviour
     {
         if (canThrowCappy) 
         {
-            CappyThrow();
+            CappyThrew();
         }
         
     }
 
-    public void CappyThrow()
+    public void CappyThrew()
     {
         if (Input.GetKeyDown(KeyCode.K) && Time.time >= nextShot && player.direction == 1)
         {
@@ -77,6 +77,11 @@ public class ThrowCappy : MonoBehaviour
 
         }
         
+    }
+
+    public bool GetCappy()
+    {
+        return canThrowCappy;
     }
 
 }

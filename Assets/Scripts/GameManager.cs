@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
     public AudioSource audioSource;
 
     public Player player;
+    bool playerHasCappy;
+    TestCappy cappy;
     void Awake()
     {
         if (Instance != null)
@@ -65,6 +67,7 @@ public class GameManager : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         player = FindAnyObjectByType<Player>();
+        cappy = FindAnyObjectByType<TestCappy>();
         SetPlayerState();
 
         timer = 400;
@@ -117,13 +120,18 @@ public class GameManager : MonoBehaviour
     {
         if (player != null)
         {
-           playerState = player.currentStatus;
+            playerState = player.currentStatus;
+        }
+        if (cappy != null)
+        {
+            playerHasCappy = cappy.GetCappy();
         }
     }
 
     public void SetPlayerState()
     {
         player = FindAnyObjectByType<Player>();
+        cappy = FindAnyObjectByType<TestCappy>();
 
         if (playerState == "big")
         {
@@ -148,6 +156,17 @@ public class GameManager : MonoBehaviour
             player.ExtendCollider();
             player.currentStatus = playerState;
             Debug.Log(playerState);
+        }
+
+        if (cappy != null)
+        {
+            cappy.canThrowCappy = playerHasCappy;
+
+            if (playerHasCappy)
+            {
+                cappy.GetComponent<Animator>().SetTrigger("HaveCappy");
+            }
+            
         }
     }
 

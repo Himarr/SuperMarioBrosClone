@@ -657,7 +657,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 417119388952799437, guid: 98f3951711c8cb340b6921912f31e00b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.545
+      value: 3.41
       objectReference: {fileID: 0}
     - target: {fileID: 417119388952799437, guid: 98f3951711c8cb340b6921912f31e00b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2559,16 +2559,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedComponents:
+    - {fileID: 5336858987974608957, guid: b8137bf2e4d8eae43bd9d39d5d79e077, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 4756055754938140424, guid: b8137bf2e4d8eae43bd9d39d5d79e077, type: 3}
+    - {fileID: 6256029106316570878, guid: b8137bf2e4d8eae43bd9d39d5d79e077, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4785015173845330305, guid: b8137bf2e4d8eae43bd9d39d5d79e077, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1107600084}
   m_SourcePrefab: {fileID: 100100000, guid: b8137bf2e4d8eae43bd9d39d5d79e077, type: 3}
 --- !u!4 &1107600082 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8822405948630493920, guid: b8137bf2e4d8eae43bd9d39d5d79e077, type: 3}
   m_PrefabInstance: {fileID: 1107600081}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1107600083 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4785015173845330305, guid: b8137bf2e4d8eae43bd9d39d5d79e077, type: 3}
+  m_PrefabInstance: {fileID: 1107600081}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1107600084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107600083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4fe117aaae739448b212429b05dbd12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  pipeDown: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!1 &1164773969
 GameObject:
   m_ObjectHideFlags: 0
