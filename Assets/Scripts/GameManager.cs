@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     int score;
-    int lives = 2;
+    int lives = 3;
     int coins = 0;
     string playerState;
     float timer = 400;

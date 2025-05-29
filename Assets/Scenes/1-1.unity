@@ -3070,7 +3070,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2622438011600583145, guid: 0a76d12e31117ae468115ff236c30996, type: 3}
       propertyPath: sceneName
-      value: 1-2
+      value: Load 1-2
       objectReference: {fileID: 0}
     - target: {fileID: 2760988093104806589, guid: 0a76d12e31117ae468115ff236c30996, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11073,7 +11073,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 927640994104140801, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.10000001
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 927640994104140801, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
@@ -11081,7 +11081,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 927640994104140801, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.80000013
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 927640994104140801, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
@@ -11259,6 +11259,8 @@ MonoBehaviour:
   moveSpeed: 0
   tiempo: 2.15
   coords: -3.549
+  flagPole: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!61 &1304855219
 BoxCollider2D:
   m_ObjectHideFlags: 0

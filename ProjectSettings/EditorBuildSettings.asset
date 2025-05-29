@@ -29,7 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/1-1 MarioPipe.unity
     guid: 42f87257ff197f34283228e14cff4f06
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/1-2 Intro.unity
     guid: 0ef91d238a813cc41ad7df5fc0d2a89f
   - enabled: 1
