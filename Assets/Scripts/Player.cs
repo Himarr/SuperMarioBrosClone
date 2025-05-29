@@ -58,13 +58,16 @@ public class Player : MonoBehaviour
     // Estado de mario
     string[] status = {"small", "big", "fire", "star"};
     public string currentStatus;
+    public bool isOdyssey;
 
+    [Header("Sound")]
     public AudioClip death, jump, powerup, powerdown, ballfire;
     public AudioSource audioSource;
 
     private void Awake()
     {
         currentStatus = "small";
+        if (isOdyssey) { currentStatus = "odyssey"; }
         anim.SetBool("isSmall", true);
     }
 
@@ -169,8 +172,8 @@ public class Player : MonoBehaviour
             if (Input.GetKeyUp(KeyCode.L)) { moveUp = false; currentVelocityY /= 2; }
 
             // Agacharse
-            if (Input.GetKeyDown(KeyCode.S) && currentStatus != "small") { isCrouching = true; ResetCollider(); }
-            if (Input.GetKeyUp(KeyCode.S) && currentStatus != "small") { isCrouching = false; ExtendCollider(); }
+            if (Input.GetKeyDown(KeyCode.S) && currentStatus != "small" && currentStatus != "odyssey") { isCrouching = true; ResetCollider(); }
+            if (Input.GetKeyUp(KeyCode.S) && currentStatus != "small" && currentStatus != "odyssey") { isCrouching = false; ExtendCollider(); }
 
             // Disparar
             if (Input.GetKeyDown(KeyCode.K) && currentStatus == "fire") { isShooting = true; }
@@ -345,11 +348,11 @@ public class Player : MonoBehaviour
         canMove = false;
         isInvincible = true;
 
-        if (currentStatus != "small") { ResetCollider(); }
+        if (currentStatus != "small" && currentStatus != "odyssey") { ResetCollider(); }
 
         yield return new WaitForSeconds(0.4f);
 
-        if (currentStatus != "small") { ExtendCollider(); }
+        if (currentStatus != "small" && currentStatus != "odyssey") { ExtendCollider(); }
 
         if (trigger == "Big")
         {
@@ -423,6 +426,16 @@ public class Player : MonoBehaviour
         else if (currentStatus == "star")
         {
             // Hacer invulnerable
+        }
+        else if (currentStatus == "odyssey")
+        {
+            if (GameManager.Instance.GetHealth() == 0)
+            {
+                Die();
+            }
+
+            GameManager.Instance.AddHealth(-1);
+            StartCoroutine(GiveInvulnerability(0.5f));
         }
     }
 
@@ -499,5 +512,12 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         SceneManager.LoadScene(sceneName);
+    }
+
+    IEnumerator GiveInvulnerability(float time)
+    {
+        isInvincible = true;
+        yield return new WaitForSeconds(time);
+        isInvincible = false;
     }
 }
