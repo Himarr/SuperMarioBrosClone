@@ -54,6 +54,8 @@ public class GameManager : MonoBehaviour
             else { ResumeGame(); }
             
         }
+
+        moons = collectedMoons.Count;
     }
     private void OnEnable()
     {
@@ -116,6 +118,7 @@ public class GameManager : MonoBehaviour
         Debug.Log(moons);
     }
 
+    public int GetMoons () { return moons; }
 
     public void SavePlayerState()
     {
