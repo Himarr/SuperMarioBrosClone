@@ -11803,6 +11803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 347637893e107064cad26b7fc82f6a6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moonId: Underground Bonus 2
 --- !u!1001 &969399398
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20448,6 +20449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 347637893e107064cad26b7fc82f6a6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moonId: Underground Bonus 1
 --- !u!1001 &1598881807
 PrefabInstance:
   m_ObjectHideFlags: 0
