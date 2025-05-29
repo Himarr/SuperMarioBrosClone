@@ -65,7 +65,7 @@ public class TCappy : MonoBehaviour
 
         //Cappy mata a los goomba
         Goomba goomba = collision.gameObject.GetComponent<Goomba>();
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy") && goomba != null)
         {
             goomba.goombaDeadByShellOrFire();
 

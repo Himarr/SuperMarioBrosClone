@@ -22,6 +22,8 @@ public class Koopa : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
         player = GameObject.Find("Mario").GetComponent<Player>();
+
+        boxCollider.offset = new Vector2(0.06f, 0);
     }
 
     void Update()
@@ -49,15 +51,19 @@ public class Koopa : MonoBehaviour
             }
             koopaVelocity = koopaVelocity * -1;
         }
+
+        if(anim.GetBool("IsInShell") == false)
+        {
+            if (gameObject.GetComponent<SpriteRenderer>().flipX == false)
+            {
+                gameObject.GetComponent<SpriteRenderer>().flipX = true;
+            }
+            else
+            {
+                gameObject.GetComponent<SpriteRenderer>().flipX = false;
+            }
+        }
         
-        if (gameObject.GetComponent<SpriteRenderer>().flipX == false)
-        {
-           gameObject.GetComponent<SpriteRenderer>().flipX = true;
-        }
-        else
-        {
-            gameObject.GetComponent<SpriteRenderer>().flipX = false;
-        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -99,6 +105,16 @@ public class Koopa : MonoBehaviour
         if(collision.gameObject.CompareTag("FireBall") || collision.gameObject.CompareTag("Cappy"))
         {
             koopaDead();
+        }
+
+        if (player != null && collision.gameObject.CompareTag("Player") && anim.GetBool("IsInShell") == true && player.bounceOnEnenemy == false && player.GetVelocityY() == 0)
+        {
+            player.onHit();
+        }
+
+        if ((koopaVelocity == 6 || koopaVelocity == -6) && collision.gameObject.GetComponent<Koopa>())
+        {
+            collision.gameObject.GetComponent<Koopa>().koopaDead();
         }
     }
 

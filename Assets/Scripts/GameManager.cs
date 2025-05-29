@@ -2,14 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Linq;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
     int score;
-    int lives = 2;
+    int lives = 3;
     int coins = 0;
     string playerState;
     float timer = 400;
@@ -21,23 +20,19 @@ public class GameManager : MonoBehaviour
     public bool playerOnScene = false;
     bool isPaused = false;
 
-    public AudioClip pause, hurryUpOverW, songOverW, songUnderW, hurryUpU;
+    public AudioClip pause;
     public AudioSource audioSource;
-    public string currentSceneName;
 
     public Player player;
-
+    bool playerHasCappy;
+    TestCappy cappy;
     void Awake()
     {
-        currentSceneName = SceneManager.GetActiveScene().name;
-
         if (Instance != null)
         {
             Destroy(gameObject);
             return;
         }
-
-        
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
@@ -53,15 +48,6 @@ public class GameManager : MonoBehaviour
             player.Die();
         }
 
-        bool hurryUpTriggered = false;
-
-        if (!hurryUpTriggered && GetTimer() == 100)
-        {
-            hurryUpTriggered = true;
-            audioSource.Stop();
-            audioSource.PlayOneShot(hurryUpOverW);
-        }
-
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (!isPaused) { PauseGame(); }
@@ -69,40 +55,8 @@ public class GameManager : MonoBehaviour
             
         }
 
+        moons = collectedMoons.Count;
     }
-    public void Scene()
-    {
-        string[] scenes = currentSceneName.Split(' ');
-
-
-        if (scenes.Contains("1-1") || currentSceneName == "1-1")
-        {
-            audioSource.PlayOneShot(songOverW);
-            StartCoroutine(SceneLoader("Load 1-1"));
-            return;
-        }
-
-        if (scenes.Contains("1-2") || currentSceneName == "1-2")
-        {
-            audioSource.PlayOneShot(songUnderW);
-            StartCoroutine(SceneLoader("Load 1-2"));
-            return;
-        }
-
-        if (scenes.Contains("1-3") || currentSceneName == "1-3")
-        {
-            audioSource.PlayOneShot(songOverW);
-            StartCoroutine(SceneLoader("Load 1-3"));
-            return;
-        }
-
-        IEnumerator SceneLoader(string sceneName)
-        {
-            yield return new WaitForSeconds(3);
-            SceneManager.LoadScene(sceneName);
-        }
-    }
-
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -116,6 +70,7 @@ public class GameManager : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         player = FindAnyObjectByType<Player>();
+        cappy = FindAnyObjectByType<TestCappy>();
         SetPlayerState();
 
         timer = 400;
@@ -163,18 +118,24 @@ public class GameManager : MonoBehaviour
         Debug.Log(moons);
     }
 
+    public int GetMoons () { return moons; }
 
     public void SavePlayerState()
     {
         if (player != null)
         {
-           playerState = player.currentStatus;
+            playerState = player.currentStatus;
+        }
+        if (cappy != null)
+        {
+            playerHasCappy = cappy.GetCappy();
         }
     }
 
     public void SetPlayerState()
     {
         player = FindAnyObjectByType<Player>();
+        cappy = FindAnyObjectByType<TestCappy>();
 
         if (playerState == "big")
         {
@@ -199,6 +160,17 @@ public class GameManager : MonoBehaviour
             player.ExtendCollider();
             player.currentStatus = playerState;
             Debug.Log(playerState);
+        }
+
+        if (cappy != null)
+        {
+            cappy.canThrowCappy = playerHasCappy;
+
+            if (playerHasCappy)
+            {
+                cappy.GetComponent<Animator>().SetTrigger("HaveCappy");
+            }
+            
         }
     }
 

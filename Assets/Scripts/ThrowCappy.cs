@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestCappy : MonoBehaviour
+public class ThrowCappy : MonoBehaviour
 {
     //Animator anim;
    
