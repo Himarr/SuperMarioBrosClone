@@ -3903,6 +3903,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moonId: Underground 1
+  moonSong: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!4 &166983605 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2518520800134653989, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
@@ -40004,6 +40006,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moonId: Underground 2
+  moonSong: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!1001 &1458984275
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54874,7 +54878,7 @@ PrefabInstance:
     - target: {fileID: 2278840260124803932, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
       propertyPath: powerUp
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 315304469004699469, guid: 2d4847b3727d06749a5d5e735fcb2c56, type: 3}
     - target: {fileID: 3943493526646256773, guid: d19f62d5d7b47934f8277ae561e674de, type: 3}
       propertyPath: m_LocalPosition.x
       value: 48.22
