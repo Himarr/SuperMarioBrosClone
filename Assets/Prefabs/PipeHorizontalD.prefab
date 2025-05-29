@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1964212001696880787}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.3598447, y: -4.5289297, z: -0.05257472}
+  m_LocalPosition: {x: -1.894, y: -3.052, z: -0.05257472}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a13b6f92fe23b9e409be58cebb418df0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 2
   pipeDown: {fileID: 8300000, guid: 849c04807fd618f4d981850179f977c2, type: 3}
   audioSource: {fileID: 6989724702569118471}
 --- !u!82 &6989724702569118471
@@ -216,7 +216,7 @@ Transform:
   m_GameObject: {fileID: 2707705577510989998}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.00015497208, y: -4.44893, z: 7.551344}
+  m_LocalPosition: {x: -0.5339942, y: -2.9720001, z: 7.551344}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -278,7 +278,6 @@ GameObject:
   - component: {fileID: 8913071493848612312}
   - component: {fileID: 605622176007510426}
   - component: {fileID: 8861435354066987387}
-  - component: {fileID: 4593145080329041380}
   m_Layer: 6
   m_Name: PipeHorizontalD
   m_TagString: Untagged
@@ -345,7 +344,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1797991663, guid: 51de5a8aba3c0224c9adfcbd04b8867a, type: 3}
+  m_Sprite: {fileID: 335322012, guid: 51de5a8aba3c0224c9adfcbd04b8867a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -392,7 +391,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.9375, y: 11}
+    oldSize: {x: 3.875, y: 8}
     newSize: {x: 2.9375, y: 11}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -401,21 +400,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.84, y: 10.87}
   m_EdgeRadius: 0
---- !u!114 &4593145080329041380
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9089902780492348937}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a13b6f92fe23b9e409be58cebb418df0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  pipeDown: {fileID: 0}
-  audioSource: {fileID: 0}
 --- !u!1001 &7540044154117986505
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -438,7 +422,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9215525373720543120, guid: de9fe79b38d33d1488489bf31f721893, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.48431
+      value: -3.02
       objectReference: {fileID: 0}
     - target: {fileID: 9215525373720543120, guid: de9fe79b38d33d1488489bf31f721893, type: 3}
       propertyPath: m_LocalPosition.z

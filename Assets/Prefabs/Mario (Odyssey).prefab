@@ -184,7 +184,7 @@ MonoBehaviour:
   skinWidth: 0.05
   isJumping: 0
   canMove: 1
-  dir: 0
+  currentSceneName: 
   rb: {fileID: 6339846993621496287}
   anim: {fileID: 366150286601170961}
   col: {fileID: 209289708408949836}
@@ -192,6 +192,12 @@ MonoBehaviour:
   fireBall: {fileID: 1005791740582593381, guid: 287f3f20f786b264fb57e9c8576bdac5, type: 3}
   bounceOnEnenemy: 0
   currentStatus: 
+  death: {fileID: 8300000, guid: b3a2bb90c92d16d44b2aa21849171044, type: 3}
+  jump: {fileID: 0}
+  powerup: {fileID: 0}
+  powerdown: {fileID: 0}
+  ballfire: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!50 &6339846993621496287
 Rigidbody2D:
   serializedVersion: 4
@@ -236,6 +242,7 @@ MonoBehaviour:
   Left: {fileID: 8173019239967640491}
   player: {fileID: 2843731014188900109}
   nextShot: 0
+  canThrowCappy: 0
 --- !u!1 &3372122602520268395
 GameObject:
   m_ObjectHideFlags: 0
