@@ -77,9 +77,28 @@ public class MovingPlatforms : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
 
+    //    Player player = collision.gameObject.GetComponent<Player>();
+    //    if (player != null)
+    //    {
+    //        player.transform.parent = gameObject.transform;
+    //        player.transform.position += new Vector3(0, 0.1f);
+    //    }
+    //}
+
+    //private void OnCollisionExit2D(Collision2D collision)
+    //{
+    //    Player player = collision.gameObject.GetComponent<Player>();
+    //    if (player != null)
+    //    {
+    //        player.transform.parent = null;
+    //    }
+        
+    //}
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
         Player player = collision.gameObject.GetComponent<Player>();
         if (player != null)
         {
@@ -88,14 +107,13 @@ public class MovingPlatforms : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         Player player = collision.gameObject.GetComponent<Player>();
         if (player != null)
         {
             player.transform.parent = null;
         }
-        
     }
 
 }
