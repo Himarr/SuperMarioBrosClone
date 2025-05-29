@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
 
     int moons = 0;
     public HashSet<string> collectedMoons = new HashSet<string>();
-    int life = 3;
+    int health = 3;
 
     public bool playerOnScene = false;
     bool isPaused = false;
@@ -191,4 +191,10 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         isPaused = false;
     }
+
+    public int GetHealth() { return health; }
+
+    public void AddHealth(int amount) { health += amount; }
+
+    public void SetHealth(int amount) { health = amount;  }
 }

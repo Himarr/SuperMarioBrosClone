@@ -15,7 +15,7 @@ public class Flag : MonoBehaviour
     public float coords = -3.5f;
     private GameObject flag;
 
-    public AudioClip flagPole;
+    public AudioClip flagPole, flagPoleMusic;
     public AudioSource audioSource;
 
 
@@ -61,7 +61,8 @@ public class Flag : MonoBehaviour
             elapsed += Time.deltaTime;
             yield return null;
         }
-        
+
+        audioSource.PlayOneShot(flagPoleMusic, 0.25f);
 
         yield return StartCoroutine(MarioFlip()); ;
 

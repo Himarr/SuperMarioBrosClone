@@ -38,7 +38,7 @@ public class FireBall : MonoBehaviour
             // Matar enemigo y destruir bola
             Destroy(gameObject);
         }
-        else if (collision.gameObject.CompareTag("Block") || collision.gameObject.CompareTag("Breakable"))
+        else if (collision.gameObject.CompareTag("Block") || collision.gameObject.CompareTag("Breakable") || collision.gameObject.CompareTag("Ground"))
         {
             if (lowPos > contactPos)
             {

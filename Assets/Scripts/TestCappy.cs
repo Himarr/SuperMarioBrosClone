@@ -18,6 +18,8 @@ public class TestCappy : MonoBehaviour
 
     public bool canThrowCappy;
    
+    public AudioClip thorwCappy;
+    public AudioSource audioSource;
     void Start()
     {
         gameObject.GetComponent<Animator>();
@@ -38,6 +40,7 @@ public class TestCappy : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.K) && Time.time >= nextShot && player.direction == 1)
         {
+            audioSource.PlayOneShot(thorwCappy);
             gameObject.GetComponent<Animator>().SetTrigger("DontHaveCappy");
             GameObject currentCappy = Instantiate(Cappy, Right.transform);
             nextShot = Time.time + 2;
@@ -47,6 +50,7 @@ public class TestCappy : MonoBehaviour
 
         }else if (Input.GetKeyDown(KeyCode.K) && Time.time >= nextShot && player.direction == -1)
         {
+            audioSource.PlayOneShot(thorwCappy);
             gameObject.GetComponent<Animator>().SetTrigger("DontHaveCappy");
             GameObject currentCappy = Instantiate(Cappy, Left.transform);
             nextShot = Time.time + 2;

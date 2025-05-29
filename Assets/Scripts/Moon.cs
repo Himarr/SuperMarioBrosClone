@@ -6,6 +6,9 @@ public class Moon : MonoBehaviour
 {
     [SerializeField]
     string moonId;
+
+    public AudioClip moonSong;
+    public AudioSource audioSource;
     private void Start()
     {
         if (GameManager.Instance.collectedMoons.Contains(moonId))
@@ -18,6 +21,7 @@ public class Moon : MonoBehaviour
     {
         if (collision.CompareTag("Player") && moonId != null)
         {
+            AudioSource.PlayClipAtPoint(moonSong, gameObject.transform.position);
             GameManager.Instance.collectedMoons.Add(moonId);
             GameManager.Instance.AddScore(1000);
             Destroy(gameObject);
