@@ -7988,7 +7988,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3962518453020371420, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
       propertyPath: sceneName
-      value: 1-3 Ovwd.1
+      value: 1-3
       objectReference: {fileID: 0}
     - target: {fileID: 8861435354066987387, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
       propertyPath: m_Size.x
