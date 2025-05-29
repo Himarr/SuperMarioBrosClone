@@ -837,7 +837,7 @@ GameObject:
   - component: {fileID: 1726434986778254719}
   - component: {fileID: 727616250435295229}
   m_Layer: 0
-  m_Name: UIOdyssey
+  m_Name: UIMalo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
