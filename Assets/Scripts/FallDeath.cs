@@ -5,19 +5,13 @@ using UnityEngine;
 public class FallDeath : MonoBehaviour
 {
     Player player;
-    // Start is called before the first frame update
+
     void Start()
     {
         if (GameObject.Find("Mario"))
         {
             player = GameObject.Find("Mario").GetComponent<Player>();
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

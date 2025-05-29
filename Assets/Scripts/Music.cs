@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Linq;
 
-public class Music : MonoBehaviour
+public class GameOverMusic : MonoBehaviour
 {
     public AudioClip  hurryUpOverW, songOverW, songUnderW, hurryUpU;
     public AudioSource audioSource;
@@ -17,6 +17,7 @@ public class Music : MonoBehaviour
     void Start()
     {
         currentSceneName = SceneManager.GetActiveScene().name;
+        Scene();
     }
 
     public void Scene()
@@ -26,26 +27,20 @@ public class Music : MonoBehaviour
 
         if (scenes.Contains("1-1") || currentSceneName == "1-1")
         {
-            StartCoroutine(SceneLoader("Load 1-1"));
+            audioSource.PlayOneShot(songOverW);
+            Debug.Log("sonido sonidete chambal");
             return;
         }
 
         if (scenes.Contains("1-2") || currentSceneName == "1-2")
         {
-            StartCoroutine(SceneLoader("Load 1-2"));
+            audioSource.PlayOneShot(songUnderW);
             return;
         }
 
-        if (scenes.Contains("1-3") || currentSceneName == "1-3")
+        if (scenes.Contains("1-3 Undgr") || currentSceneName == "1-3 Undgr")
         {
-            StartCoroutine(SceneLoader("Load 1-3"));
             return;
-        }
-
-        IEnumerator SceneLoader(string sceneName)
-        {
-            yield return new WaitForSeconds(3);
-            SceneManager.LoadScene(sceneName);
         }
     }
 
