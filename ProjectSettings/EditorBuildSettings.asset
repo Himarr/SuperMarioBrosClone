@@ -101,4 +101,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FinalOdyssey.unity
     guid: 7389bbd3fad8e3448ac05f1c6012dd90
+  - enabled: 1
+    path: Assets/Scenes/FinalOdyssey 1.unity
+    guid: 383f3964a72f4b043baf1fae5a16a516
   m_configObjects: {}

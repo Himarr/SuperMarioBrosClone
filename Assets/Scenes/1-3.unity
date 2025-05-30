@@ -572,11 +572,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 927640994104140801, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0
+      value: 0.10000001
       objectReference: {fileID: 0}
     - target: {fileID: 927640994104140801, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 1
+      value: 0.80000013
       objectReference: {fileID: 0}
     - target: {fileID: 3218530543753096223, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
       propertyPath: m_Name
@@ -14970,8 +14970,8 @@ Transform:
   m_GameObject: {fileID: 1878691526}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6, y: -4.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -2.42, y: -4.11, z: 0}
+  m_LocalScale: {x: 1, y: 1.9824219, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
