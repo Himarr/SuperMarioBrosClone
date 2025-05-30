@@ -13,7 +13,7 @@ public class Flag : MonoBehaviour
     public float moveSpeed;
     public float tiempo;
     public float coords = -3.5f;
-    private GameObject flag;
+    public GameObject flag;
 
     public AudioClip flagPole, flagPoleMusic;
     public AudioSource audioSource;
@@ -38,12 +38,13 @@ public class Flag : MonoBehaviour
             player.canMove = false;
             anim.SetBool("isFlagDown", true);
             StartCoroutine(MarioDown());
-
         }
     }
 
     IEnumerator MarioDown()
     {
+        AudioSource stopMusic = GameManager.Instance.GetAudio();
+        stopMusic.Stop();
 
         Vector3 inicio = player.transform.position;
         Vector3 fin = new Vector3(inicio.x, coords, inicio.z);
@@ -80,7 +81,6 @@ public class Flag : MonoBehaviour
             elapsed += Time.deltaTime;
             yield return player.transform.localRotation = Quaternion.Euler(0, 180, 0);
         }
-        anim.SetBool("isFlagDown", false);
         yield return StartCoroutine(MarioSuelta());
     }
 
@@ -96,14 +96,30 @@ public class Flag : MonoBehaviour
             elapsed += Time.deltaTime;
             yield return null;
         }
-        anim.SetBool("isMoving", true);
+        
+
+        if (player.currentStatus == "small" )
+        {
+            anim.Play("Base Layer.Small Mario.Mario_Walk 0" , 0);
+        }
+
+        if (player.currentStatus == "big" )
+        {
+            anim.Play("Base Layer.Big Mario.BigMario_Walk 0" , 0);
+        }
+        
+        if (player.currentStatus == "fire")
+        {
+            anim.Play("Base Layer.Fire.Fire_Walk 0" , 0);
+        }
+
         yield return StartCoroutine(MarioMarcha());
     }
 
     IEnumerator MarioMarcha()
     {
         Vector3 inicio = player.transform.position;
-        Vector3 fin = new Vector3(inicio.x, inicio.y - 0.8f, inicio.z);
+        Vector3 fin = new Vector3(inicio.x, inicio.y - 0.3f, inicio.z);
         float elapsed = 0;
         while (elapsed < tiempo / 10)
         {
@@ -116,13 +132,12 @@ public class Flag : MonoBehaviour
 
     IEnumerator CaminarCastle()
     {
-        float duration = 2f; 
+        float duration = 2f;
         float elapsed = 0;
         Vector3 inicio = player.transform.position;
         Vector3 fin = inicio + new Vector3(7f, 0, 0);
 
         player.canMove = false;
-        anim.SetBool("isMoving", true);
 
         while (elapsed < duration)
         {
@@ -130,5 +145,5 @@ public class Flag : MonoBehaviour
             elapsed += Time.deltaTime;
             yield return null;
         }
-    }
+    }   
 }

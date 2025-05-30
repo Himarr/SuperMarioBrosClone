@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,12 +21,17 @@ public class GameManager : MonoBehaviour
     public bool playerOnScene = false;
     bool isPaused = false;
 
-    public AudioClip pause;
+    public AudioClip pause, hurryUpOverW, songOverW, songUnderW, hurryUpU, gameOver;
+
     public AudioSource audioSource;
 
     public Player player;
     bool playerHasCappy;
     TestCappy cappy;
+    public string currentSceneName;
+
+
+
     void Awake()
     {
         if (Instance != null)
@@ -43,7 +49,8 @@ public class GameManager : MonoBehaviour
         if (timer > 0)
         {
             timer -= Time.deltaTime * 3f;
-        } else if (timer <= 0)
+        }
+        else if (timer <= 0)
         {
             player.Die();
         }
@@ -52,7 +59,7 @@ public class GameManager : MonoBehaviour
         {
             if (!isPaused) { PauseGame(); }
             else { ResumeGame(); }
-            
+
         }
 
         moons = collectedMoons.Count;
@@ -69,6 +76,9 @@ public class GameManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        currentSceneName = SceneManager.GetActiveScene().name;
+        SceneMusic();
+
         player = FindAnyObjectByType<Player>();
         cappy = FindAnyObjectByType<TestCappy>();
         SetPlayerState();
@@ -118,7 +128,7 @@ public class GameManager : MonoBehaviour
         Debug.Log(moons);
     }
 
-    public int GetMoons () { return moons; }
+    public int GetMoons() { return moons; }
 
     public void SavePlayerState()
     {
@@ -170,7 +180,7 @@ public class GameManager : MonoBehaviour
             {
                 cappy.GetComponent<Animator>().SetTrigger("HaveCappy");
             }
-            
+
         }
     }
 
@@ -181,13 +191,37 @@ public class GameManager : MonoBehaviour
 
     void PauseGame()
     {
-        Time.timeScale = 0;
-        isPaused = true;
+         StartCoroutine(PausePlay());
+    }
+
+    IEnumerator PausePlay()
+    {
         audioSource.PlayOneShot(pause);
+        isPaused = true;
+
+        yield return new WaitForSeconds(0.691f);
+        yield return StartCoroutine(PauseSounds());
+    }
+
+    IEnumerator PauseSounds()
+    {
+        audioSource.clip = songOverW;
+        audioSource.Pause();
+        yield return null;
+
+        Time.timeScale = 0;
+    }
+
+    IEnumerator ResumeSounds()
+    {
+        audioSource.clip = songOverW;
+        audioSource.UnPause();
+        yield return null;
     }
 
     void ResumeGame()
     {
+        StartCoroutine(ResumeSounds());
         Time.timeScale = 1;
         isPaused = false;
     }
@@ -196,5 +230,57 @@ public class GameManager : MonoBehaviour
 
     public void AddHealth(int amount) { health += amount; }
 
-    public void SetHealth(int amount) { health = amount;  }
+    public void SetHealth(int amount) { health = amount; }
+
+    public void SceneMusic()
+    {
+        string[] scenes = currentSceneName.Split(' ');
+
+
+        if (currentSceneName == "1-1")
+        {
+            audioSource.clip = songOverW;
+            audioSource.Play();
+            return;
+        }
+
+        if (currentSceneName == "1-2")
+        {
+            audioSource.clip = songUnderW;
+            audioSource.Play();
+            return;
+        }
+
+        if (currentSceneName == "1-3")
+        {
+            audioSource.clip = songOverW;
+            audioSource.Play();
+            return;
+        }
+
+        if (currentSceneName == "1-3 Undgr. 1")
+        {
+            audioSource.clip = songUnderW;
+            audioSource.Play();
+            return;
+        }
+
+        if (currentSceneName == "Death Screen")
+        {
+            audioSource.clip = gameOver;
+            audioSource.Play();
+            return;
+        }
+
+        if (scenes.Contains("Load") || currentSceneName == "Load")
+        {
+            audioSource.Stop();
+            return;
+        }
+    }
+
+    public AudioSource GetAudio()
+    {
+        return audioSource;
+    }
 }
