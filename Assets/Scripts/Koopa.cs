@@ -23,7 +23,6 @@ public class Koopa : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
         player = GameObject.Find("Mario").GetComponent<Player>();
 
-        boxCollider.offset = new Vector2(0.06f, 0);
     }
 
     void Update()

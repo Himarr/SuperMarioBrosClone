@@ -329,7 +329,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 256, y: 240}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0.5
+  m_MatchWidthOrHeight: 0.75
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -887,6 +887,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1906737040264993257, guid: 8f15b4cc6e102854589979848aebdf76, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 1981380668385600370, guid: 8f15b4cc6e102854589979848aebdf76, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 81.159996
@@ -895,9 +899,21 @@ PrefabInstance:
       propertyPath: m_PresetInfoIsWorld
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2306650051990390690, guid: 8f15b4cc6e102854589979848aebdf76, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384701420796513016, guid: 8f15b4cc6e102854589979848aebdf76, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 71.25999
+      objectReference: {fileID: 0}
     - target: {fileID: 2464613365553651267, guid: 8f15b4cc6e102854589979848aebdf76, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 70.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 2950812847076867455, guid: 8f15b4cc6e102854589979848aebdf76, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 3245669334955151104, guid: 8f15b4cc6e102854589979848aebdf76, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -918,6 +934,10 @@ PrefabInstance:
     - target: {fileID: 6470148842913847349, guid: 8f15b4cc6e102854589979848aebdf76, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 71.259995
+      objectReference: {fileID: 0}
+    - target: {fileID: 6903579678589462218, guid: 8f15b4cc6e102854589979848aebdf76, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 7669126544087069975, guid: 8f15b4cc6e102854589979848aebdf76, type: 3}
       propertyPath: m_AnchoredPosition.y

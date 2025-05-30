@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 366150286601170961}
   - component: {fileID: 209289708408949836}
   - component: {fileID: 2843731014188900109}
+  - component: {fileID: 8039070473654541407}
   - component: {fileID: 6339846993621496287}
   - component: {fileID: 2447518482539422675}
-  - component: {fileID: 8039070473654541407}
   m_Layer: 3
   m_Name: Mario (Odyssey)
   m_TagString: Player
@@ -196,57 +196,10 @@ MonoBehaviour:
   currentStatus: 
   isOdyssey: 1
   death: {fileID: 8300000, guid: b3a2bb90c92d16d44b2aa21849171044, type: 3}
-  jump: {fileID: 0}
-  powerup: {fileID: 0}
-  powerdown: {fileID: 0}
-  ballfire: {fileID: 0}
-  audioSource: {fileID: 0}
---- !u!50 &6339846993621496287
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 748775476761453607}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!114 &2447518482539422675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 748775476761453607}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52a242698cfe1994c993ed7f4164d4cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cappy: {fileID: 3562413156628012742, guid: 08b19ebf289325648b3322454df80844, type: 3}
-  Right: {fileID: 2129635655858896257}
-  Left: {fileID: 8173019239967640491}
-  player: {fileID: 2843731014188900109}
-  nextShot: 0
-  canThrowCappy: 0
-  thorwCappy: {fileID: 8300000, guid: 68355ca7c3750c24592530f6ae0ac406, type: 3}
+  jump: {fileID: 8300000, guid: 240c17586b35eb8488bdaef82bf66e2e, type: 3}
+  powerup: {fileID: 8300000, guid: c1bb42aadebcf3a4a9467eedf8e1bd36, type: 3}
+  powerdown: {fileID: 8300000, guid: 9d67797cd89b2a641a0e8eb562f4fc2e, type: 3}
+  ballfire: {fileID: 8300000, guid: 9cc167b9043df8d4282f189577e66a1e, type: 3}
   audioSource: {fileID: 8039070473654541407}
 --- !u!82 &8039070473654541407
 AudioSource:
@@ -344,6 +297,53 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!50 &6339846993621496287
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748775476761453607}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &2447518482539422675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748775476761453607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52a242698cfe1994c993ed7f4164d4cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cappy: {fileID: 3562413156628012742, guid: 08b19ebf289325648b3322454df80844, type: 3}
+  Right: {fileID: 2129635655858896257}
+  Left: {fileID: 8173019239967640491}
+  player: {fileID: 2843731014188900109}
+  nextShot: 0
+  canThrowCappy: 0
+  thorwCappy: {fileID: 8300000, guid: 68355ca7c3750c24592530f6ae0ac406, type: 3}
+  audioSource: {fileID: 8039070473654541407}
 --- !u!1 &3372122602520268395
 GameObject:
   m_ObjectHideFlags: 0

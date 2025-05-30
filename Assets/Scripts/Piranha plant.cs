@@ -69,6 +69,10 @@ public class Piranhaplant : MonoBehaviour
         Debug.Log("Planta piraña muere");
 
         Destroy(gameObject);
+
+        //Puntous
+
+        GameManager.Instance.AddScore(200); 
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

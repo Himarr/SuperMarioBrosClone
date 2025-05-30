@@ -67,7 +67,6 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         currentStatus = "small";
-        if (isOdyssey) { currentStatus = "odyssey"; }
         anim.SetBool("isSmall", true);
     }
 
@@ -88,6 +87,7 @@ public class Player : MonoBehaviour
     {
         HandlePhysics();
         HandleAnimations();
+        if (isOdyssey) { currentStatus = "odyssey"; }
     }
 
     private void MoveCamera()
@@ -437,6 +437,7 @@ public class Player : MonoBehaviour
             }
 
             GameManager.Instance.AddHealth(-1);
+            AudioSource.PlayClipAtPoint(powerdown, gameObject.transform.position);
             StartCoroutine(GiveInvulnerability(0.5f));
         }
     }

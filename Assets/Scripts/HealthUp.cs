@@ -11,5 +11,8 @@ public class HealthUp : PowerUp
         AudioSource.PlayClipAtPoint(health, gameObject.transform.position);
         GameManager.Instance.SetHealth(3);
         Destroy(gameObject);
+
+        
+        GameManager.Instance.AddScore(100); 
     }
 }
