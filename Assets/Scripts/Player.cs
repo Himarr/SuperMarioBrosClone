@@ -61,7 +61,7 @@ public class Player : MonoBehaviour
     public bool isOdyssey;
 
     [Header("Sound")]
-    public AudioClip death, jump, powerup, powerdown, ballfire;
+    public AudioClip jump, powerup, powerdown, ballfire;
     public AudioSource audioSource;
 
     private void Awake()
@@ -474,7 +474,6 @@ public class Player : MonoBehaviour
         currentVelocityX = 0;
         gameObject.GetComponent<Animator>().SetBool("IsDead", true);
         gameObject.layer = LayerMask.NameToLayer("NoColission");
-        audioSource.PlayOneShot(death, 0.5f);
 
         isAlive = false;
         GameManager.Instance.AddLives(-1);
