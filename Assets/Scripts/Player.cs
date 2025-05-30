@@ -523,4 +523,9 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(time);
         isInvincible = false;
     }
+
+    public void SetVelocityX(float amount)
+    {
+        currentVelocityX = amount;
+    }
 }
