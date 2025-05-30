@@ -5126,11 +5126,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 927640994104140801, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.06031746
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 927640994104140801, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.8804233
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3218530543753096223, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
       propertyPath: m_Name
@@ -11681,6 +11681,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 185360035}
     m_Modifications:
+    - target: {fileID: 731397025829741492, guid: 9bd5f90ccca3a0145a66bd51946c5747, type: 3}
+      propertyPath: moonId
+      value: Underground Bonus 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1614658198684035425, guid: 9bd5f90ccca3a0145a66bd51946c5747, type: 3}
       propertyPath: m_LocalPosition.x
       value: -18.32
@@ -20329,6 +20333,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 185360035}
     m_Modifications:
+    - target: {fileID: 731397025829741492, guid: 9bd5f90ccca3a0145a66bd51946c5747, type: 3}
+      propertyPath: moonId
+      value: Underground Bonus 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1614658198684035425, guid: 9bd5f90ccca3a0145a66bd51946c5747, type: 3}
       propertyPath: m_LocalPosition.x
       value: -59.853
