@@ -119,11 +119,21 @@ public class Flag : MonoBehaviour
     IEnumerator MarioMarcha()
     {
         Vector3 inicio = player.transform.position;
-        Vector3 fin = new Vector3(inicio.x, inicio.y - 0.3f, inicio.z);
+        Vector3 finG;
+        
+        if (player.currentStatus == "big" || player.currentStatus == "fire")
+        {
+            finG  = new Vector3(inicio.x, inicio.y - 0.3f, inicio.z);
+        }
+        else
+        {
+            finG  = new Vector3(inicio.x, inicio.y - 0.8f, inicio.z);
+        }
+       
         float elapsed = 0;
         while (elapsed < tiempo / 10)
         {
-            player.transform.position = Vector3.Lerp(inicio, fin, elapsed / (tiempo / 10));
+            player.transform.position = Vector3.Lerp(inicio, finG, elapsed / (tiempo / 10));
             elapsed += Time.deltaTime;
             yield return null;
         }

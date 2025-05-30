@@ -231,11 +231,14 @@ public class GameManager : MonoBehaviour
     }
 
     void DeathSounds()
-    { 
-        if (player.isAlive == false && player.deathTrigger == false)
+    {
+        if (player != null)
         {
-            player.deathTrigger = true;
-             StartCoroutine(StopSounds());
+            if (player.isAlive == false && player.deathTrigger == false)
+            {
+                player.deathTrigger = true;
+                StartCoroutine(StopSounds());
+            }
         }
     }
 

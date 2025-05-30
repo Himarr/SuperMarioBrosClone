@@ -361,6 +361,7 @@ public class Player : MonoBehaviour
 
         if (trigger == "Big")
         {
+            AudioSource.PlayClipAtPoint(powerup, gameObject.transform.position);
             anim.SetBool("isBig", true);
             anim.SetBool("isSmall", false);
             ExtendCollider();
@@ -369,7 +370,6 @@ public class Player : MonoBehaviour
         }
         else if (trigger == "Hit")
         {
-            AudioSource.PlayClipAtPoint(powerdown, gameObject.transform.position);
             anim.SetBool("isSmall", true);
             anim.SetBool("isBig", false);
             anim.SetBool("isFire", false);
@@ -378,6 +378,7 @@ public class Player : MonoBehaviour
         }
         else if (trigger == "Fire")
         {
+            AudioSource.PlayClipAtPoint(powerup, gameObject.transform.position);
             anim.SetBool("isFire", true);
             if (currentStatus == "small")
             {
@@ -391,7 +392,7 @@ public class Player : MonoBehaviour
             currentStatus = "fire";
         }
 
-        AudioSource.PlayClipAtPoint(powerup, gameObject.transform.position);
+        
         canMove = true;
         Debug.Log(isInvincible);
         yield return new WaitForSeconds(1f);
@@ -401,7 +402,7 @@ public class Player : MonoBehaviour
     public void ExtendCollider()
     {
         // Extiende el collider de Mario a su versi�n grande.
-
+        
         transform.position += new Vector3(0, 0.5f);
         col.size = new Vector2(1, col.size.y * 2);
         canMove = true;
@@ -429,6 +430,8 @@ public class Player : MonoBehaviour
         {
             // Hacer chikito
             Grow("Hit");
+            AudioSource.PlayClipAtPoint(powerdown, gameObject.transform.position, 2f);
+
         }
         else if (currentStatus == "star")
         {

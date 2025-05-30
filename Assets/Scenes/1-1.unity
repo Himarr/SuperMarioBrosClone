@@ -3805,12 +3805,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4051030228315471540, guid: 0b719dc061efc5d4c9796018981e5c17, type: 3}
       propertyPath: m_Volume
-      value: 0.4
+      value: 0.25
       objectReference: {fileID: 0}
-    - target: {fileID: 4963951868751686952, guid: 0b719dc061efc5d4c9796018981e5c17, type: 3}
-      propertyPath: death
-      value: 
-      objectReference: {fileID: 8300000, guid: b3a2bb90c92d16d44b2aa21849171044, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
