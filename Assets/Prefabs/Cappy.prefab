@@ -173,6 +173,7 @@ MonoBehaviour:
   player: {fileID: 0}
   boing: {fileID: 8300000, guid: a83d867398f01aa45a8b6015af51eb10, type: 3}
   audioSource: {fileID: 9153851786120714458}
+  speed: 10
 --- !u!50 &-6286965841572233319
 Rigidbody2D:
   serializedVersion: 4

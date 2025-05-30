@@ -14,6 +14,8 @@ public class TCappy : MonoBehaviour
 
     public AudioClip boing;
     public AudioSource audioSource;
+
+    public float speed;
     
 
     void Start()
@@ -35,11 +37,11 @@ public class TCappy : MonoBehaviour
         {
             if (player.direction == 1)
             {
-                gameObject.transform.Translate(0.03f, 0, 0);
+                gameObject.transform.Translate(speed * player.direction * Time.deltaTime, 0, 0);
 
             }else if (player.direction == -1)
             {
-                gameObject.transform.Translate(-0.03f, 0, 0);
+                gameObject.transform.Translate(speed * player.direction * Time.deltaTime, 0, 0);
             }
 
 
