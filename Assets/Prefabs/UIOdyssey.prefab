@@ -122,6 +122,7 @@ MonoBehaviour:
   timerText: {fileID: 0}
   lifeText: {fileID: 0}
   MoonText: {fileID: 0}
+  isOdyssey: 1
 --- !u!1 &3993090189375509594
 GameObject:
   m_ObjectHideFlags: 0

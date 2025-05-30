@@ -12,11 +12,15 @@ public class Interface : MonoBehaviour
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI lifeText;
     public TextMeshProUGUI MoonText;
+    public bool isOdyssey = false;
 
     private void Update()
     {
         scoreText.text = GameManager.Instance.GetScore().ToString().PadLeft(6,'0'); 
-        coinText.text = GameManager.Instance.GetCoins().ToString().PadLeft(2,'0');
+        if (!isOdyssey)
+        {
+            coinText.text = GameManager.Instance.GetCoins().ToString().PadLeft(2, '0');
+        }
         timerText.text = GameManager.Instance.GetTimer().ToString().PadLeft(3,'0');
         
         if (lifeText != null) { lifeText.text = GameManager.Instance.GetLives().ToString(); }

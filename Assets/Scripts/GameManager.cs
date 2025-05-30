@@ -117,8 +117,6 @@ public class GameManager : MonoBehaviour
     {
         coins += amount;
         Debug.Log(coins);
-
-        // TODO - Si tiene 100 monedas transformar en una vida.
     }
 
     public int GetCoins()

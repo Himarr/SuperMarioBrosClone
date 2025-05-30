@@ -88,7 +88,7 @@ public class Player : MonoBehaviour
     {
         HandlePhysics();
         HandleAnimations();
-        if (isOdyssey) { currentStatus = "odyssey"; }
+        if (isOdyssey) { currentStatus = "odyssey"; ResetCollider(); }
     }
 
     private void MoveCamera()
@@ -107,24 +107,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    //private void OnCollisionStay2D(Collision2D collision)
-    //{
-    //    float minPosition = col.bounds.min.y;
-
-    //    if (collision.GetContact(0).point.y < minPosition)
-    //    {
-    //        isGrounded = true;
-    //        jumpForce = 0;
-    //    }
-    //    else
-    //    {
-    //        isGrounded = false;
-    //        jumpForce = 0;
-    //    }
-
-    //    isJumping = !isGrounded;
-    //    anim.SetBool("isJumping", isJumping);
-    //}
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
@@ -148,11 +130,6 @@ public class Player : MonoBehaviour
             // TODO haz que caiga hacia abajo
         }
     }
-
-    //private void OnCollisionExit2D(Collision2D collision)
-    //{
-    //    isJumping = true;
-    //}
 
     private void HandleInput()
     {
@@ -404,7 +381,7 @@ public class Player : MonoBehaviour
         // Extiende el collider de Mario a su versi�n grande.
         
         transform.position += new Vector3(0, 0.5f);
-        col.size = new Vector2(1, col.size.y * 2);
+        col.size = new Vector2(0.9f, col.size.y * 2);
         canMove = true;
         Debug.Log("ta grande");
     }
@@ -412,8 +389,7 @@ public class Player : MonoBehaviour
     public void ResetCollider()
     {
         // Devuelve el collider a su tama�o original.
-
-        transform.position -= new Vector3(0, 0.5f);
+        if (!isOdyssey) { transform.position -= new Vector3(0, 0.5f); }
         col.size = new Vector2(0.75f, 0.95f);
         canMove = true;
         Debug.Log("chikito");
@@ -484,6 +460,7 @@ public class Player : MonoBehaviour
         gameObject.layer = LayerMask.NameToLayer("NoColission");
         isAlive = false;
 
+        GameManager.Instance.SavePlayerState();
         GameManager.Instance.AddLives(-1);
 
         // Volver a escena de carga y reiniciar nivel
