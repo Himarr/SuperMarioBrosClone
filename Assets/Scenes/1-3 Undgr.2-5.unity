@@ -5126,11 +5126,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 927640994104140801, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0
+      value: 0.06031746
       objectReference: {fileID: 0}
     - target: {fileID: 927640994104140801, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 1
+      value: 0.8804233
       objectReference: {fileID: 0}
     - target: {fileID: 3218530543753096223, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
       propertyPath: m_Name
@@ -7956,7 +7956,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1677452004026263385, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.1
+      value: 0.61
       objectReference: {fileID: 0}
     - target: {fileID: 1677452004026263385, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11804,6 +11804,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moonId: Underground Bonus 2
+  moonSong: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!1001 &969399398
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20450,6 +20452,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moonId: Underground Bonus 1
+  moonSong: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!1001 &1598881807
 PrefabInstance:
   m_ObjectHideFlags: 0
