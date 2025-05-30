@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Linq;
 
-public class GameOverMusic : MonoBehaviour
+/*public class GameOverMusic : MonoBehaviour
 {
     public AudioClip  hurryUpOverW, songOverW, songUnderW, hurryUpU;
     public AudioSource audioSource;
@@ -44,6 +44,6 @@ public class GameOverMusic : MonoBehaviour
         }
     }
 
-}
+}*/
 
 

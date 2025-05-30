@@ -572,11 +572,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 927640994104140801, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.10000001
+      value: 0.06031746
       objectReference: {fileID: 0}
     - target: {fileID: 927640994104140801, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.80000013
+      value: 0.8804233
       objectReference: {fileID: 0}
     - target: {fileID: 3218530543753096223, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
       propertyPath: m_Name
@@ -11615,6 +11615,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 138580969}
     m_Modifications:
+    - target: {fileID: 902389320454406542, guid: b8137bf2e4d8eae43bd9d39d5d79e077, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.59
+      objectReference: {fileID: 0}
     - target: {fileID: 3260569238280048395, guid: b8137bf2e4d8eae43bd9d39d5d79e077, type: 3}
       propertyPath: sceneName
       value: 1-3
@@ -16631,6 +16635,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moonId: Overworld 1
+  moonSong: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!61 &125543155552607047
 BoxCollider2D:
   m_ObjectHideFlags: 0
