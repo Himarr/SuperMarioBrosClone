@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
     bool isShooting;
     bool isBraking;
     bool isInvincible;
-    bool isAlive = true;
+    public bool isAlive = true;
 
     public string currentSceneName;
 
@@ -51,17 +51,18 @@ public class Player : MonoBehaviour
     public SpriteRenderer sprite;
     public GameObject fireBall;
 
+    public bool deathTrigger = false;
+
     //Variables declarada por Pablo
     bool playerCanInput = true;
     public bool bounceOnEnenemy = false;
 
     // Estado de mario
-    string[] status = {"small", "big", "fire", "star"};
+    string[] status = { "small", "big", "fire", "star" };
     public string currentStatus;
     public bool isOdyssey;
 
-    [Header("Sound")]
-    public AudioClip death, jump, powerup, powerdown, ballfire;
+    public AudioClip jump, powerup, powerdown, ballfire;
     public AudioSource audioSource;
 
     private void Awake()
@@ -92,7 +93,7 @@ public class Player : MonoBehaviour
 
     private void MoveCamera()
     {
-        if(GameObject.Find("Main Camera"))
+        if (GameObject.Find("Main Camera"))
         {
             cam = GameObject.Find("Main Camera").GetComponent<Camera>();
             if (cam.transform.position.x < this.transform.position.x)
@@ -126,7 +127,7 @@ public class Player : MonoBehaviour
     //}
     private void OnCollisionEnter2D(Collision2D collision)
     {
- 
+
         Goomba goomba = collision.gameObject.GetComponent<Goomba>();
         if (goomba != null && currentVelocityY < 0)
         {
@@ -134,9 +135,10 @@ public class Player : MonoBehaviour
 
             AddVelocityY(15f);
             bounceOnEnenemy = true;
-        } else
+        }
+        else
         {
-            bounceOnEnenemy=false;
+            bounceOnEnenemy = false;
         }
 
         // Muerte de Mario por tocar un enemigo
@@ -188,18 +190,19 @@ public class Player : MonoBehaviour
         if (moveRight) target += 1f;
         if (moveLeft) target -= 1f;
 
-        // Aceleración o fricción
+        // Aceleraciï¿½n o fricciï¿½n
         if (target != 0)
         {
             float desiredVelocityX = target * speed;
             float accel = acceleration;
 
-            // Aumenta la fuerza si va en dirección opuesta
+            // Aumenta la fuerza si va en direcciï¿½n opuesta
             if (Mathf.Sign(desiredVelocityX) != Mathf.Sign(currentVelocityX) && currentVelocityX != 0)
             {
                 accel *= 2f;
                 isBraking = true;
-            } else { isBraking = false; }
+            }
+            else { isBraking = false; }
 
             currentVelocityX = Mathf.MoveTowards(currentVelocityX, desiredVelocityX, accel * Time.fixedDeltaTime);
         }
@@ -236,7 +239,8 @@ public class Player : MonoBehaviour
             if (isJumping)
             {
                 boxSizeH = new Vector2(skinWidth, col.bounds.size.y - skinWidth * 10);
-            } else
+            }
+            else
             {
                 boxSizeH = new Vector2(skinWidth, col.bounds.size.y - skinWidth * 2);
             }
@@ -285,7 +289,7 @@ public class Player : MonoBehaviour
         RaycastHit2D groundHit = Physics2D.BoxCast(origin, boxSize, 0f, Vector2.down, castDistance, collisionMask);
 
         bool grounded = groundHit.collider != null;
-       
+
         isJumping = !grounded;
 
         if (!isAlive)
@@ -302,9 +306,10 @@ public class Player : MonoBehaviour
         {
             isJumping = true;
             currentVelocityY = jumpForce;
-            audioSource.PlayOneShot(jump , 0.05f);
+            audioSource.PlayOneShot(jump, 0.05f);
 
-        } else if (currentVelocityY > 0)
+        }
+        else if (currentVelocityY > 0)
         {
             currentVelocityY += holdJumpForce * Time.fixedDeltaTime;
         }
@@ -336,15 +341,15 @@ public class Player : MonoBehaviour
     public void Grow(string trigger)
     {
         StartCoroutine(GrowCoroutine(trigger));
-        
+
     }
 
     private IEnumerator GrowCoroutine(string trigger)
     {
-        // Corrutina que maneja los cambios en el collider durante la animación de PowerUp.
+        // Corrutina que maneja los cambios en el collider durante la animaciï¿½n de PowerUp.
 
         anim.SetTrigger(trigger);
-        
+
         canMove = false;
         isInvincible = true;
 
@@ -360,7 +365,7 @@ public class Player : MonoBehaviour
             anim.SetBool("isSmall", false);
             ExtendCollider();
             currentStatus = "big";
-            
+
         }
         else if (trigger == "Hit")
         {
@@ -377,10 +382,10 @@ public class Player : MonoBehaviour
             if (currentStatus == "small")
             {
                 ExtendCollider();
-                
+
                 Debug.Log("fuego a la cachimba");
-            } 
-            
+            }
+
             anim.SetBool("isSmall", false);
             anim.SetBool("isBig", false);
             currentStatus = "fire";
@@ -395,7 +400,7 @@ public class Player : MonoBehaviour
     }
     public void ExtendCollider()
     {
-        // Extiende el collider de Mario a su versión grande.
+        // Extiende el collider de Mario a su versiï¿½n grande.
 
         transform.position += new Vector3(0, 0.5f);
         col.size = new Vector2(1, col.size.y * 2);
@@ -405,13 +410,13 @@ public class Player : MonoBehaviour
 
     public void ResetCollider()
     {
-        // Devuelve el collider a su tamaño original.
+        // Devuelve el collider a su tamaï¿½o original.
 
         transform.position -= new Vector3(0, 0.5f);
         col.size = new Vector2(0.75f, 0.95f);
         canMove = true;
         Debug.Log("chikito");
-        
+
     }
 
     public void onHit()
@@ -474,9 +479,8 @@ public class Player : MonoBehaviour
         currentVelocityX = 0;
         gameObject.GetComponent<Animator>().SetBool("IsDead", true);
         gameObject.layer = LayerMask.NameToLayer("NoColission");
-        audioSource.PlayOneShot(death, 0.5f);
-
         isAlive = false;
+
         GameManager.Instance.AddLives(-1);
 
         // Volver a escena de carga y reiniciar nivel
@@ -490,21 +494,21 @@ public class Player : MonoBehaviour
             return;
         }
 
-        // Si está en 1-1
+        // Si estï¿½ en 1-1
         if (scenes.Contains("1-1") || currentSceneName == "1-1")
         {
             StartCoroutine(SceneLoader("Load 1-1"));
             return;
         }
 
-        // Si está en 1-2
+        // Si estï¿½ en 1-2
         if (scenes.Contains("1-2") || currentSceneName == "1-2")
         {
             StartCoroutine(SceneLoader("Load 1-2"));
             return;
         }
 
-        // Si está en 1-4
+        // Si estï¿½ en 1-4
         if (scenes.Contains("1-3") || currentSceneName == "1-3")
         {
             StartCoroutine(SceneLoader("Load 1-3"));
@@ -522,5 +526,9 @@ public class Player : MonoBehaviour
         isInvincible = true;
         yield return new WaitForSeconds(time);
         isInvincible = false;
+    }
+    public void SetVelocityX(float amount)
+    {
+        currentVelocityX = amount;
     }
 }

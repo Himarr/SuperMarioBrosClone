@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Linq;
+using Unity.VisualScripting;
 
 public class GameManager : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class GameManager : MonoBehaviour
     public bool playerOnScene = false;
     bool isPaused = false;
 
-    public AudioClip pause, hurryUpOverW, songOverW, songUnderW, hurryUpU, gameOver;
+    public AudioClip pause, hurryUpOverW, songOverW, songUnderW, hurryUpU, gameOver, death;
 
     public AudioSource audioSource;
 
@@ -29,6 +30,8 @@ public class GameManager : MonoBehaviour
     bool playerHasCappy;
     TestCappy cappy;
     public string currentSceneName;
+
+    
 
 
 
@@ -63,6 +66,7 @@ public class GameManager : MonoBehaviour
         }
 
         moons = collectedMoons.Count;
+        DeathSounds();
     }
     private void OnEnable()
     {
@@ -184,6 +188,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+   
     public int GetTimer()
     {
         return Mathf.RoundToInt(timer);
@@ -205,7 +210,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator PauseSounds()
     {
-        audioSource.clip = songOverW;
+        
         audioSource.Pause();
         yield return null;
 
@@ -214,7 +219,6 @@ public class GameManager : MonoBehaviour
 
     IEnumerator ResumeSounds()
     {
-        audioSource.clip = songOverW;
         audioSource.UnPause();
         yield return null;
     }
@@ -225,6 +229,29 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         isPaused = false;
     }
+
+    void DeathSounds()
+    { 
+        if (player.isAlive == false && player.deathTrigger == false)
+        {
+            player.deathTrigger = true;
+             StartCoroutine(StopSounds());
+        }
+    }
+
+    IEnumerator StopSounds()
+    {
+        audioSource.Stop();
+        yield return StartCoroutine(DeathSound());
+    }
+
+    IEnumerator DeathSound()
+    {
+        audioSource.clip = death;
+        audioSource.Play();
+        yield return null;
+    }
+
 
     public int GetHealth() { return health; }
 
@@ -272,7 +299,7 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        if (scenes.Contains("Load") || currentSceneName == "Load")
+        if (scenes.Contains("Load") || currentSceneName == "Load" )
         {
             audioSource.Stop();
             return;
