@@ -1181,6 +1181,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 562841621}
     m_Modifications:
+    - target: {fileID: 1278813118475432032, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1455299347, guid: 8994244b1ae85504197675db6ef69ca1, type: 3}
     - target: {fileID: 1632935041407327363, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: m_Name
       value: Breakable Block (56)
@@ -1225,10 +1229,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3395982529528065909, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1455299347, guid: 8994244b1ae85504197675db6ef69ca1, type: 3}
+    - target: {fileID: 3957849094907899114, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1455299347, guid: 8994244b1ae85504197675db6ef69ca1, type: 3}
+    - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: hasCoins
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: isOverworld
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9001137660260512296, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1455299347, guid: 8994244b1ae85504197675db6ef69ca1, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1561,6 +1581,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 562841621}
     m_Modifications:
+    - target: {fileID: 1278813118475432032, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1455299347, guid: 8994244b1ae85504197675db6ef69ca1, type: 3}
     - target: {fileID: 1632935041407327363, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: m_Name
       value: Breakable Block (57)
@@ -1605,10 +1629,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3395982529528065909, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1455299347, guid: 8994244b1ae85504197675db6ef69ca1, type: 3}
+    - target: {fileID: 3957849094907899114, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1455299347, guid: 8994244b1ae85504197675db6ef69ca1, type: 3}
+    - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: hasCoins
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: isOverworld
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9001137660260512296, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1455299347, guid: 8994244b1ae85504197675db6ef69ca1, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1792,7 +1832,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 927640994104140801, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.009615385
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 927640994104140801, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
@@ -1800,7 +1840,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 927640994104140801, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.9789663
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3218530543753096223, guid: d83d7b5066ef17a4598a70b3d276c898, type: 3}
       propertyPath: m_Name
@@ -2690,6 +2730,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 562841621}
     m_Modifications:
+    - target: {fileID: 1278813118475432032, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1455299347, guid: 8994244b1ae85504197675db6ef69ca1, type: 3}
     - target: {fileID: 1632935041407327363, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: m_Name
       value: Breakable Block (52)
@@ -2734,10 +2778,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3395982529528065909, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1455299347, guid: 8994244b1ae85504197675db6ef69ca1, type: 3}
+    - target: {fileID: 3957849094907899114, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1455299347, guid: 8994244b1ae85504197675db6ef69ca1, type: 3}
+    - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: hasCoins
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: isOverworld
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9001137660260512296, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1455299347, guid: 8994244b1ae85504197675db6ef69ca1, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2817,6 +2877,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 562841621}
     m_Modifications:
+    - target: {fileID: 1278813118475432032, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1455299347, guid: 8994244b1ae85504197675db6ef69ca1, type: 3}
     - target: {fileID: 1632935041407327363, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: m_Name
       value: Breakable Block (55)
@@ -2861,10 +2925,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3395982529528065909, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1455299347, guid: 8994244b1ae85504197675db6ef69ca1, type: 3}
+    - target: {fileID: 3957849094907899114, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1455299347, guid: 8994244b1ae85504197675db6ef69ca1, type: 3}
+    - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: hasCoins
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: isOverworld
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9001137660260512296, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1455299347, guid: 8994244b1ae85504197675db6ef69ca1, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3279,6 +3359,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 562841621}
     m_Modifications:
+    - target: {fileID: 1278813118475432032, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1455299347, guid: 8994244b1ae85504197675db6ef69ca1, type: 3}
     - target: {fileID: 1632935041407327363, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: m_Name
       value: Breakable Block (53)
@@ -3323,10 +3407,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3395982529528065909, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1455299347, guid: 8994244b1ae85504197675db6ef69ca1, type: 3}
+    - target: {fileID: 3957849094907899114, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1455299347, guid: 8994244b1ae85504197675db6ef69ca1, type: 3}
+    - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: hasCoins
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: isOverworld
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9001137660260512296, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1455299347, guid: 8994244b1ae85504197675db6ef69ca1, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3406,6 +3506,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 562841621}
     m_Modifications:
+    - target: {fileID: 1278813118475432032, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1455299347, guid: 8994244b1ae85504197675db6ef69ca1, type: 3}
     - target: {fileID: 1632935041407327363, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: m_Name
       value: Breakable Block (54)
@@ -3450,10 +3554,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3395982529528065909, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1455299347, guid: 8994244b1ae85504197675db6ef69ca1, type: 3}
+    - target: {fileID: 3957849094907899114, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1455299347, guid: 8994244b1ae85504197675db6ef69ca1, type: 3}
+    - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: hasCoins
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: isOverworld
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9001137660260512296, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1455299347, guid: 8994244b1ae85504197675db6ef69ca1, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3594,9 +3714,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 605622176007510426, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1797991663, guid: 51de5a8aba3c0224c9adfcbd04b8867a, type: 3}
+    - target: {fileID: 812475495825511882, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 812475495825511882, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 967363602750699835, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.16999388
+      objectReference: {fileID: 0}
+    - target: {fileID: 967363602750699835, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.4799995
+      objectReference: {fileID: 0}
     - target: {fileID: 1677452004026263385, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.37
+      value: -0.0059996843
+      objectReference: {fileID: 0}
+    - target: {fileID: 1677452004026263385, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.528
       objectReference: {fileID: 0}
     - target: {fileID: 2707705577510989998, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
       propertyPath: m_Layer
@@ -3620,7 +3764,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8913071493848612312, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.98
+      value: 0.53
       objectReference: {fileID: 0}
     - target: {fileID: 8913071493848612312, guid: 99486a0c2e0d78641ab1ab3271087cc2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3750,6 +3894,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 562841621}
     m_Modifications:
+    - target: {fileID: 1278813118475432032, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1455299347, guid: 8994244b1ae85504197675db6ef69ca1, type: 3}
     - target: {fileID: 1632935041407327363, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: m_Name
       value: Breakable Block (58)
@@ -3794,10 +3942,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3395982529528065909, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1455299347, guid: 8994244b1ae85504197675db6ef69ca1, type: 3}
+    - target: {fileID: 3957849094907899114, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1455299347, guid: 8994244b1ae85504197675db6ef69ca1, type: 3}
+    - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: hasCoins
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5867959413610872904, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
       propertyPath: isOverworld
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9001137660260512296, guid: 923c6c8d2ec63524e8f7677a39aa2eae, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1455299347, guid: 8994244b1ae85504197675db6ef69ca1, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
